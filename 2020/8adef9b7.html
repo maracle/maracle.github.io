@@ -1,0 +1,754 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>windows CMD命令大全及详细解释和语法 | 彭彭和丁满</title><meta name="description" content="批处理介绍 纯以dos系统而言，可执行程序大约可以细分为五类，依照执行优先级由高到低排列分别是： DOSKEY宏命令（预先驻留内存） COMMAND.COM中的内部命令（根据内存的环境随时进驻内存） 以com为扩展名的可执行程序（由command.com 直接载入内存） 以exe位扩展名的可执行程序（由command.com 重定位后载入内存） 以bat位扩展名的批处理程序（由command.co"><meta name="keywords" content="cmd"><meta name="author" content="蕾米亚"><meta name="copyright" content="蕾米亚"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://hm.baidu.com"/><link rel="dns-prefetch" href="https://hm.baidu.com"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="windows CMD命令大全及详细解释和语法"><meta name="twitter:description" content="批处理介绍 纯以dos系统而言，可执行程序大约可以细分为五类，依照执行优先级由高到低排列分别是： DOSKEY宏命令（预先驻留内存） COMMAND.COM中的内部命令（根据内存的环境随时进驻内存） 以com为扩展名的可执行程序（由command.com 直接载入内存） 以exe位扩展名的可执行程序（由command.com 重定位后载入内存） 以bat位扩展名的批处理程序（由command.co"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover5.gif"><meta property="og:type" content="article"><meta property="og:title" content="windows CMD命令大全及详细解释和语法"><meta property="og:url" content="http://omimo.ga/2020/8adef9b7.html"><meta property="og:site_name" content="彭彭和丁满"><meta property="og:description" content="批处理介绍 纯以dos系统而言，可执行程序大约可以细分为五类，依照执行优先级由高到低排列分别是： DOSKEY宏命令（预先驻留内存） COMMAND.COM中的内部命令（根据内存的环境随时进驻内存） 以com为扩展名的可执行程序（由command.com 直接载入内存） 以exe位扩展名的可执行程序（由command.com 重定位后载入内存） 以bat位扩展名的批处理程序（由command.co"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover5.gif"><meta property="article:published_time" content="2020-04-30T14:52:17.000Z"><meta property="article:modified_time" content="2020-04-30T15:15:44.852Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="http://omimo.ga/2020/8adef9b7.html"><link rel="prev" title="20200501新冠新闻" href="http://omimo.ga/2020/c72e2148.html"><link rel="next" title="20200430新冠新闻" href="http://omimo.ga/2020/df2206fe.html"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?568a96aacae5c6fda285d9376b556b06";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"http://www.omimo.ga","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: true  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/img/longmao.gif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">127</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">51</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">23</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 列表</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-folder-open"></i><span> 书籍</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/front/"><i class="fa-fw fa fa-link"></i><span> 导航</span></a></li><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#批处理介绍"><span class="toc-number">1.</span> <span class="toc-text">批处理介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#特殊标记符"><span class="toc-number">1.1.</span> <span class="toc-text">特殊标记符</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><div class="post-bg" id="nav" style="background-image: url(https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover5.gif)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">彭彭和丁满</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 列表</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-folder-open"></i><span> 书籍</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/front/"><i class="fa-fw fa fa-link"></i><span> 导航</span></a></li><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">windows CMD命令大全及详细解释和语法</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-04-30 22:52:17"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-04-30</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-04-30 23:15:44"><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-04-30</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Windows/">Windows</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>字数总计:</span><span class="word-count">11.6k</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>阅读时长: 39 分钟</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-comment-o" aria-hidden="true"></i><span>评论数:</span><a href="/2020/8adef9b7.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2020/8adef9b7.html" itemprop="commentCount"></span></a></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><html><head></head><body><h2 id="批处理介绍"><a href="#批处理介绍" class="headerlink" title="批处理介绍"></a>批处理介绍</h2><ul>
+<li>纯以dos系统而言，可执行程序大约可以细分为五类，依照执行优先级由高到低排列分别是：<ol>
+<li>DOSKEY宏命令（预先驻留内存）</li>
+<li>COMMAND.COM中的内部命令（根据内存的环境随时进驻内存）</li>
+<li>以com为扩展名的可执行程序（由command.com 直接载入内存）</li>
+<li>以exe位扩展名的可执行程序（由command.com 重定位后载入内存）</li>
+<li>以bat位扩展名的批处理程序（由command.com 解释分析，根据其内容按优先级顺序调用第2，3，4，5种可执行程序，分析一行，执行一行，文件本身不载入内存）</li>
+</ol>
+</li>
+</ul>
+<h3 id="特殊标记符"><a href="#特殊标记符" class="headerlink" title="特殊标记符"></a>特殊标记符</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">CR(0D) 命令行结束符</span><br><span class="line">Escape(1B) ANSI转义字符引导符</span><br><span class="line">Space(20) 常用的参数界定符</span><br><span class="line">Tab(09) ; = 不常用的参数界定符</span><br><span class="line">+ COPY命令文件连接符</span><br><span class="line">* ? 文件通配符</span><br><span class="line">"" 字符串界定符</span><br><span class="line">| 命令管道符</span><br><span class="line">< > >> 文件重定向符</span><br><span class="line">@ 命令行回显屏蔽符</span><br><span class="line">/ 参数开关引导符</span><br><span class="line">: 批处理标签引导符</span><br><span class="line">% 批处理变量引导符</span><br></pre></td></tr></tbody></table></figure></div>
+
+<ul>
+<li><pre><code>::
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  确实可以起到rem 的注释作用, 而且更简洁有效; 但有两点需要注意:</span><br><span class="line"></span><br><span class="line">  1. 除了 `::` 之外, 任何以`:`开头的字符行, 在批处理中都被视作标号, 而直接忽略其后的所有内容, 只是为了与正常的标号相区别, 建议使用 goto 所无法识别的标号, 即在`:`后紧跟一个非字母数字的一个特殊符号。</span><br><span class="line">  2. 与`rem`不同的是, `::`后的字符行在执行时不会回显, 无论是否用echo on打开命令行回显状态, 因为命令解释器不认为他是一个有效的命令行, 就此点来看, rem 在某些场合下将比 `::` 更为适用。另外，rem 可以用于 config.sys 文件中。</span><br><span class="line"></span><br><span class="line">### 批处理的参数</span><br><span class="line"></span><br><span class="line">批处理文件还可以像C语言的函数一样使用参数（相当于DOS命令的命令行参数），这需要用到一个参数表示符`%`。</span><br><span class="line"></span><br><span class="line">`%[1-9]`表示参数，参数是指在运行批处理文件时在文件名后加的以空格（或者Tab）分隔的字符串。变量可以从`%0`到`%9`，`%0`表示批处理命令本身，其它参数字符串用`%1`到`%9`顺序表示。</span><br><span class="line"></span><br><span class="line">例2：C:根目录下有一批处理文件名为f.bat，内容为：</span><br></pre></td></tr></tbody></table></figure></div>
+@echo off
+format %1
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">如果执行`C:\>f a:`，那么在执行f.bat时，`%1`就表示`a:`，这样`format %1`就相当于`format a:`，于是上面的命令运行时实际执行的是`format a:`。</span><br><span class="line"></span><br><span class="line">例3：C:根目录下一批处理文件名为t.bat，内容为:</span><br></pre></td></tr></tbody></table></figure></div>
+@echo off
+type %1
+type %2
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">那么运行`C:\>t a.txt b.txt`</span><br><span class="line"></span><br><span class="line">`%1` : 表示a.txt</span><br><span class="line"></span><br><span class="line">`%2` : 表示b.txt</span><br><span class="line"></span><br><span class="line">于是上面的命令将顺序地显示a.txt和b.txt文件的内容。</span><br><span class="line"></span><br><span class="line">参数在批处理中也作为变量处理, 所以同样使用百分号作为引导符, 其后跟0-9中的一个数字构成参数引用符。引用符和参数之间 (例如上文中的 %1 与 a: ) 的关系类似于变量指针与变量值的关系。</span><br><span class="line"></span><br><span class="line">当我们要引用第十一个或更多个参数时, 就必须移动DOS的参数起始指针。shift 命令正充当了这个移动指针的角色, 它将参数的起始指针移动到下一个参数, 类似C 语言中的指针操作。图示如下:</span><br></pre></td></tr></tbody></table></figure></div>
+初始状态, cmd 为命令名, 可以用 %0 引用
+cmd arg1 arg2 arg3 arg4 arg5 arg6 arg7 arg8 arg9 arg10
+^ ^ ^ ^ ^ ^ ^ ^ ^ ^
+| | | | | | | | | |
+%0 %1 %2 %3 %4 %5 %6 %7 %8 %9
+</code></pre></li>
+</ul>
+<p>经过1次shift后, cmd 将无法被引用<br>cmd arg1 arg2 arg3 arg4 arg5 arg6 arg7 arg8 arg9 arg10<br>^ ^ ^ ^ ^ ^ ^ ^ ^ ^<br>| | | | | | | | | |<br>%0 %1 %2 %3 %4 %5 %6 %7 %8 %9</p>
+<p>经过2次shift后, arg1也被废弃, %9指向为空, 没有引用意义<br>cmd arg1 arg2 arg3 arg4 arg5 arg6 arg7 arg8 arg9 arg10<br>^ ^ ^ ^ ^ ^ ^ ^ ^<br>| | | | | | | | |<br>%0 %1 %2 %3 %4 %5 %6 %7 %8</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">遗憾的是, win9x 和DOS下均不支持 shift 的逆操作。只有在 nt 内核命令行环境下, shift 才支持 /n 参数, 可以以第一参数为基准返复移动起始指针。</span><br><span class="line"></span><br><span class="line">### 特殊命令</span><br><span class="line"></span><br><span class="line">`if`, `goto`, `choice`, `for`是批处理文件中比较高级的命令，如果这几个你用得很熟练，你就是批处理文件的专家啦。</span><br><span class="line"></span><br><span class="line">#### IF语句</span><br><span class="line"></span><br><span class="line">if 是条件语句，用来判断是否符合规定的条件，从而决定执行不同的命令。 有三种格式:</span><br></pre></td></tr></tbody></table></figure></div>
+<p>IF [NOT] ERRORLEVEL number command<br>IF [NOT] string1==string2 command<br>IF [NOT] EXIST filename command</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- `if [not] "参数" == "字符串" 待执行的命令`</span><br><span class="line"></span><br><span class="line">参数如果等于(not表示不等，下同)指定的字符串，则条件成立，运行命令，否则运行下一句。</span><br><span class="line"></span><br><span class="line">例：`if "%1"=="a" format a:`</span><br><span class="line"></span><br><span class="line">if 的命令行帮助中关于此点的描述为: `IF [NOT] string1==string2 command`</span><br><span class="line"></span><br><span class="line">在此有以下几点需要注意:</span><br><span class="line"></span><br><span class="line">1. 包含字符串的双引号不是语法所必须的, 而只是习惯上使用的一种"防空"字符</span><br><span class="line">2. string1 未必是参数, 它也可以是环境变量, 循环变量以及其他字符串常量或变量</span><br><span class="line">3. command 不是语法所必须的, string2 后跟一个空格就可以构成一个有效的命令行</span><br><span class="line"></span><br><span class="line">- `if [not] exist [路径\]文件名 待执行的命令`</span><br><span class="line"></span><br><span class="line">如果有指定的文件，则条件成立，运行命令，否则运行下一句。</span><br><span class="line"></span><br><span class="line">如: `if exist c:\config.sys type c:\config.sys`</span><br><span class="line"></span><br><span class="line">表示如果存在c:\config.sys文件，则显示它的内容。</span><br><span class="line"></span><br><span class="line">也可以使用以下的用法:</span><br></pre></td></tr></tbody></table></figure></div>
+<p>if exist command</p>
+<p>device 是指DOS系统中已加载的设备, 在win98下通常有:<br>AUX, PRN, CON, NUL<br>COM1, COM2, COM3, COM4<br>LPT1, LPT2, LPT3, LPT4<br>XMSXXXX0, EMMXXXX0<br>A: B: C: …,<br>CLOCK$, CONFIG$, DblBuff$, IFS$HLP$</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">具体的内容会因硬软件环境的不同而略有差异, 使用这些设备名称时, 需要保证以下三点:</span><br><span class="line"></span><br><span class="line">1. 该设备确实存在(由软件虚拟的设备除外)</span><br><span class="line">2. 该设备驱动程序已加载(aux, prn等标准设备由系统缺省定义)</span><br><span class="line">3. 该设备已准备好(主要是指a: b: ..., com1..., lpt1...等)</span><br><span class="line"></span><br><span class="line">可通过命令 `mem/d | find "device" /i` 来检阅你的系统中所加载的设备</span><br><span class="line"></span><br><span class="line">另外, 在DOS系统中, 设备也被认为是一种特殊的文件, 而文件也可以称作字符设备; 因为设备(device)与文件都是使用句柄(handle)来管理的, 句柄就是名字, 类似于文件名, 只不过句柄不是应用于磁盘管理, 而是应用于内存管理而已, 所谓设备加载也即指在内存中为其分配可引用的句柄.</span><br><span class="line"></span><br><span class="line">- `if errorlevel <数字> 待执行的命令`</span><br><span class="line"></span><br><span class="line">很多DOS程序在运行结束后会返回一个数字值用来表示程序运行的结果(或者状态)，通过if errorlevel命令可以判断程序的返回值，根据不同的返回值来决定执行不同的命令(返回值必须按照从大到小的顺序排列)。如果返回值等于指定的数字，则条件成立，运行命令，否则运行下一句。</span><br><span class="line"></span><br><span class="line">如:`if errorlevel 2 goto x2`</span><br><span class="line"></span><br><span class="line">返回值从大到小的顺序排列不是必须的, 而只是执行命令为 goto 时的习惯用法, 当使用 set 作为执行命令时, 通常会从小到大顺序排列, 比如需将返回码置入环境变量, 就需使用以下的顺序形式:</span><br></pre></td></tr></tbody></table></figure></div>
+<p>if errorlevel 1 set el=1<br>if errorlevel 2 set el=2<br>if errorlevel 3 set el=3<br>if errorlevel 4 set el=4<br>if errorlevel 5 set el=5<br>…</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">当然, 也可以使用以下循环来替代, 原理是一致的: `for %%e in (1 2 3 4 5 6 7 8...) do if errorlevel %%e set el=%%e`</span><br><span class="line"></span><br><span class="line">更高效简洁的用法, 可以参考我写的另一篇关于获取 errorlevel 的文章。</span><br><span class="line"></span><br><span class="line">出现此种现象的原因是, if errorlevel比较返回码的判断条件并非等于, 而是 **大于等于(>=)** 。由于 goto 的跳转特性, 由小到大排序会导致在较小的返回码处就跳出; 而由于 set命令的 "重复" 赋值特性, 由大到小排序会导致较小的返回码 "覆盖" 较大的返回码。</span><br><span class="line"></span><br><span class="line">另外, 虽然 `if errorlevel=<数字> command` 也是有效的命令行, 但也只是 command.com 解释命令行时将 = 作为命令行切分符而忽略掉罢了。</span><br><span class="line"></span><br><span class="line">#### GOTO语句</span><br><span class="line"></span><br><span class="line">goto 批处理文件运行到这里将跳到goto所指定的标号(标号即label，标号用:后跟标准字符串来定义)处，goto语句一般与if配合使用，根据不同的条件来执行不同的命令组。</span><br><span class="line"></span><br><span class="line">如:</span><br></pre></td></tr></tbody></table></figure></div>
+<p>goto end</p>
+<p>:end<br>echo this is the end</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">标号用 `:字符串` 来定义，标号所在行不被执行。</span><br><span class="line"></span><br><span class="line">label 常被译为 "标签" , 但是这并不具有广泛的约定性。</span><br><span class="line"></span><br><span class="line">`goto` 与 `:` 联用可实现执行中途的跳转, 再结合 if 可实现执行过程的条件分支, 多个 if 即可实现命令的分组, 类似 C 中 switch case 结构或者 Basic 中的 select case 结构, 大规模且结构化的命令分组即可实现高级语言中的函数功能。</span><br><span class="line"></span><br><span class="line">#### choice语句</span><br><span class="line"></span><br><span class="line">choice 使用此命令可以让用户输入一个字符（用于选择），从而根据用户的选择返回不同的errorlevel，然后于if errorlevel配合，根据用户的选择运行不同的命令。</span><br><span class="line"></span><br><span class="line">注意：choice命令为DOS或者Windows系统提供的外部命令，不同版本的choice命令语法会稍有不同，请用choice /?查看用法。</span><br><span class="line"></span><br><span class="line">choice的命令语法（该语法为Windows 2003中choice命令的语法，其它版本的choice的命令语法与此大同小异）:</span><br></pre></td></tr></tbody></table></figure></div>
+<p>CHOICE [/C choices] [/N] [/CS] [/T timeout /D choice] [/M text]</p>
+<p>描述:该工具允许用户从选择列表选择一个项目并返回所选项目的索引。</p>
+<p>参数列表:<br>/C choices 指定要创建的选项列表。默认列表是 “YN”。</p>
+<p>/N 在提示符中隐藏选项列表。提示前面的消息得到显示，<br>选项依旧处于启用状态。</p>
+<p>/CS 允许选择分大小写的选项。在默认情况下，这个工具<br>是不分大小写的。</p>
+<p>/T timeout 做出默认选择之前，暂停的秒数。可接受的值是从 0<br>到 9999。如果指定了 0，就不会有暂停，默认选项<br>会得到选择。</p>
+<p>/D choice 在 nnnn 秒之后指定默认选项。字符必须在用 /C 选<br>项指定的一组选择中; 同时，必须用 /T 指定 nnnn。</p>
+<p>/M text 指定提示之前要显示的消息。如果没有指定，工具只<br>显示提示。</p>
+<p>/? 显示帮助消息。</p>
+<p>注意:<br>ERRORLEVEL 环境变量被设置为从选择集选择的键索引。列出的第一个选<br>择返回 1，第二个选择返回 2，等等。如果用户按的键不是有效的选择，<br>该工具会发出警告响声。如果该工具检测到错误状态，它会返回 255 的<br>ERRORLEVEL 值。如果用户按 Ctrl+Break 或 Ctrl+C 键，该工具会返回 0<br>的 ERRORLEVEL 值。在一个批程序中使用 ERRORLEVEL 参数时，将参数降<br>序排列。</p>
+<p>示例:<br>CHOICE /?<br>CHOICE /C YNC /M “确认请按 Y，否请按 N，或者取消请按 C。”<br>CHOICE /T 10 /C ync /CS /D y<br>CHOICE /C ab /M “选项 1 请选择 a，选项 2 请选择 b。”<br>CHOICE /C ab /N /M “选项 1 请选择 a，选项 2 请选择 b。”</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">例：test.bat的内容如下（****注意，用if errorlevel判断返回值时，要按返回值从高到低排列****）:</span><br></pre></td></tr></tbody></table></figure></div>
+<p>@echo off<br>choice /C dme /M “defrag,mem,end”<br>if errorlevel 3 goto end<br>if errorlevel 2 goto mem<br>if errorlevel 1 goto defrag</p>
+<p>:defrag<br>c:\dos\defrag<br>goto end</p>
+<p>:mem<br>mem<br>goto end</p>
+<p>:end<br>echo good bye</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">此批处理运行后，将显示`defrag,mem,end[D,M,E]?`，用户可选择d m e ，然后if语句根据用户的选择作出判断，d表示执行标号为defrag的程序段，m表示执行标号为mem的程序段，e表示执行标号为end的程序段，每个程序段最后都以goto end将程序跳到end标号处，然后程序将显示good bye，批处理运行结束。</span><br><span class="line"></span><br><span class="line">#### for循环</span><br><span class="line"></span><br><span class="line">for 循环命令，只要条件符合，它将多次执行同一命令。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>语法：对一组文件中的每一个文件执行某个特定命令。</p>
+<p>FOR %%variable IN (set) DO command [command-parameters]</p>
+<p>(set) 指定一个或一组文件。可以使用通配符。<br>command 指定对每个文件执行的命令。<br>command-parameters 为特定命令指定参数或命令行开关。</p>
+<p>例如一个批处理文件中有一行:<br>for %%c in (*.bat *.txt) do type %%c</p>
+<p>则该命令行会显示当前目录下所有以bat和txt为扩展名的文件的内容。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">需要指出的是, 当`()`中的字符串并非单个或多个文件名时, 它将单纯被当作字符串替换, 这个特性再加上()中可以嵌入多个字符串的特性, 很明显 for 可以被看作一种遍历型循环。</span><br><span class="line"></span><br><span class="line">当然, 在 nt/2000/xp/2003 系列的命令行环境中, for 被赋予了更多的特性, 使之可以分析命令输出或者文件中的字符串, 也有很多开关被用于扩展了文件替换功能。</span><br><span class="line"></span><br><span class="line">## 批处理示例</span><br><span class="line"></span><br><span class="line">### IF-EXIST</span><br><span class="line"></span><br><span class="line">- 首先用记事本在C:\建立一个test1.bat批处理文件，文件内容如下：</span><br></pre></td></tr></tbody></table></figure></div>
+<p>  @echo off<br>  IF EXIST \AUTOEXEC.BAT TYPE \AUTOEXEC.BAT<br>  IF NOT EXIST \AUTOEXEC.BAT ECHO \AUTOEXEC.BAT does not exist<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">然后运行它：`C:\>TEST1.BAT`</span><br><span class="line"></span><br><span class="line">如果C:\存在AUTOEXEC.BAT文件，那么它的内容就会被显示出来，如果不存在，批处理就会提示你该文件不存在。</span><br><span class="line"></span><br><span class="line">- 接着再建立一个test2.bat文件，内容如下：</span><br></pre></td></tr></tbody></table></figure></div><br>  @ECHO OFF<br>  IF EXIST %1 TYPE %1<br>  IF NOT EXIST %1 ECHO %1 does not exist<br>  <div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">执行:`C:\>TEST2 AUTOEXEC.BAT`，该命令运行结果同上。</span><br><span class="line"></span><br><span class="line">说明：</span><br><span class="line"></span><br><span class="line">(1) IF EXIST 是用来测试文件是否存在的，格式为`IF EXIST [路径+文件名] 命令`；</span><br><span class="line"></span><br><span class="line">(2) test2.bat文件中的%1是参数，DOS允许传递9个批参数信息给批处理文件，分别为%1~%9(%0表示test2命令本身) ，这有点象编程中的实参和形参的关系，%1是形参，AUTOEXEC.BAT是实参。</span><br><span class="line"></span><br><span class="line">DOS没有 "只允许传递9个批参数信息" 的限制, 参数的个数只会受到命令行长度和所调用命令处理能力的限制. 但是, 我们在批处理程序中, 在同一时刻只能同时引用10个参数, 因为 DOS只给出了 %0~%9这十个参数引用符。</span><br><span class="line"></span><br><span class="line">- 更进一步的，建立一个名为TEST3.BAT的文件，内容如下：</span><br></pre></td></tr></tbody></table></figure></div><br>  @echo off<br>  IF “%1” == “A” ECHO XIAO<br>  IF “%2” == “B” ECHO TIAN<br>  IF “%3” == “C” ECHO XIN<br>  <div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">如果运行：`C:\>TEST3 A B C`，屏幕上会显示:</span><br></pre></td></tr></tbody></table></figure></div><br>XIAO<br>TIAN<br>XIN<p></p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">如果运行：`C:\>TEST3 A B`，屏幕上会显示：</span><br></pre></td></tr></tbody></table></figure></div>
+<p>XIAO<br>TIAN</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">在这个命令执行过程中，DOS会将一个空字符串指定给参数%3。</span><br><span class="line"></span><br><span class="line">### IF-ERRORLEVEL</span><br><span class="line"></span><br><span class="line">建立TEST4.BAT，内容如下：</span><br></pre></td></tr></tbody></table></figure></div>
+<p>@ECHO OFF<br>XCOPY C:\AUTOEXEC.BAT D:<br>IF ERRORLEVEL 1 ECHO 文件拷贝失败<br>IF ERRORLEVEL 0 ECHO 成功拷贝文件</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">然后执行文件:`C:\>TEST4`</span><br><span class="line"></span><br><span class="line">如果文件拷贝成功，屏幕就会显示"成功拷贝文件"，否则就会显示"文件拷贝失败"。</span><br><span class="line"></span><br><span class="line">IF ERRORLEVEL 是用来测试它的上一个DOS命令的返回值的，注意只是上一个命令的返回值，而且返回值必须依照从大到小次序顺序判断。</span><br><span class="line"></span><br><span class="line">因此下面的批处理文件是错误的：</span><br></pre></td></tr></tbody></table></figure></div>
+<p>@ECHO OFF<br>XCOPY C:\AUTOEXEC.BAT D:<br>IF ERRORLEVEL 0 ECHO 成功拷贝文件<br>IF ERRORLEVEL 1 ECHO 未找到拷贝文件<br>IF ERRORLEVEL 2 ECHO 用户通过ctrl-c中止拷贝操作<br>IF ERRORLEVEL 3 ECHO 预置错误阻止文件拷贝操作<br>IF ERRORLEVEL 4 ECHO 拷贝过程中写盘错误 </p>
+<p>无论拷贝是否成功，后面的：</p>
+<p>未找到拷贝文件<br>用户通过ctrl-c中止拷贝操作<br>预置错误阻止文件拷贝操作<br>拷贝过程中写盘错误</p>
+<p>都将显示出来。 </p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 常用命令返回值</span><br></pre></td></tr></tbody></table></figure></div>
+<p>  以下就是几个常用命令的返回值及其代表的意义：</p>
+<p>  backup<br>  0 备份成功<br>  1 未找到备份文件<br>  2 文件共享冲突阻止备份完成<br>  3 用户用ctrl-c中止备份<br>  4 由于致命的错误使备份操作中止</p>
+<p>  diskcomp<br>  0 盘比较相同<br>  1 盘比较不同<br>  2 用户通过ctrl-c中止比较操作<br>  3 由于致命的错误使比较操作中止<br>  4 预置错误中止比较</p>
+<p>  diskcopy<br>  0 盘拷贝操作成功<br>  1 非致命盘读/写错<br>  2 用户通过ctrl-c结束拷贝操作<br>  3 因致命的处理错误使盘拷贝中止<br>  4 预置错误阻止拷贝操作</p>
+<p>  format<br>  0 格式化成功<br>  3 用户通过ctrl-c中止格式化处理<br>  4 因致命的处理错误使格式化中止<br>  5 在提示”proceed with format（y/n）?”下用户键入n结束</p>
+<p>  xcopy<br>  0 成功拷贝文件<br>  1 未找到拷贝文件<br>  2 用户通过ctrl-c中止拷贝操作<br>  4 预置错误阻止文件拷贝操作<br>  5 拷贝过程中写盘错误</p>
+<p>  chkdsk<br>  0 未找到错误<br>  255 找到一个或多个错误</p>
+<p>  choice<br>  0 用户按下ctrl+c/break<br>  1 用户按下第一个键<br>  255 检测到命令行中的错误条件<br>  其它 用户按下的有效字符在列表中的位置</p>
+<p>  defrag<br>  0 碎片压缩成功<br>  1 出现内部错误<br>  2 磁盘上没有空簇。要运行DEFRAG，至少要有一个空簇<br>  3 用户用Ctrl+C退出了DEFRAG<br>  4 出现一般性错误<br>  5 DEFRAG在读簇时遇到错误<br>  6 DEFRAG在写簇时遇到错误<br>  7 分配空间有错<br>  8 内存错<br>  9 没有足够空间来压缩磁盘碎片</p>
+<p>  deltree<br>  0 成功地删除一个目录</p>
+<p>  diskcomp<br>  0 两盘相同<br>  1 发现不同<br>  2 按CTRL+C 终止了比较<br>  3 出现严重错误<br>  4 出现初始化错误</p>
+<p>  find<br>  0 查找成功且至少找到了一个匹配的字符串<br>  1 查找成功但没找到匹配的字符串<br>  2 查找中出现了错误</p>
+<p>  keyb<br>  0 键盘定义文件装入成功<br>  1 使用了非法的键盘代码，字符集或语法<br>  2 键盘定义文件坏或未找到<br>  4 键盘、监视器通讯时出错<br>  5 要求的字符集未准备好</p>
+<p>  move<br>  0 成功地移动了指定的文件<br>  1 发生了错误</p>
+<p>  msav /N<br>  86 检查到了病毒</p>
+<p>  replace<br>  0 REPLACE成功地替换或加入了文件<br>  1 MS-DOS版本和REPLACE不兼容<br>  2 REPLACE找不到源文件<br>  3 REPLACE找不到源路径或目标路径<br>  5 不能存取要替换的文件<br>  8 内存不够无法执行REPLACE<br>  11 命令行句法错误</p>
+<p>  restore<br>  0 RESTORE成功地恢复了文件<br>  1 RESTORE找不到要恢复的文件<br>  3 用户按CTRL+C终止恢复过程<br>  4 RESTORE因错误而终止</p>
+<p>  scandisk<br>  0 ScanDisk在它检查的驱动器上未检测到任何错误<br>  1 由于命令行的语法不对，不能运行ScanDisk<br>  2 由于内存用尽或发生内部错误，ScanDisk意外终止<br>  3 用户让ScanDisk中途退出<br>  4 进行盘面扫描时，用户决定提前退出<br>  254 ScanDisk找到磁盘故障并已全部校正<br>  255 ScanDisk找到磁盘故障，但未能全部校正</p>
+<p>  setver<br>  0 SETVER成功地完成了任务<br>  1 用户指定了一个无效的命令开关<br>  2 用户指定了一个非法的文件名<br>  3 没有足够的系统内存来运行命令<br>  4 用户指定了一个非法的版本号格式<br>  5 SETVER在版本表中未找到指定的项<br>  6 SETVER未找到SETVER.EXE文件<br>  7 用户指定了一个非法的驱动器<br>  8 用户指定了太多的命令行参数<br>  9 SETVER检测到丢失了命令行参数<br>  10 在读SETVER.EXE文件时，SETVER检测到发生错误<br>  11 SETVER.EXE文件损坏<br>  12 指定的SETVER.EXE文件不支持版本表<br>  13 版本表中没有足够的空间存放新的项<br>  14 在写SETVER.EXE文件时SETVER检测到发生错误<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### IF STRING1 == STRING2</span><br><span class="line"></span><br><span class="line">建立TEST5.BAT，文件内容如下：</span><br></pre></td></tr></tbody></table></figure></div><br>@echo off<br>IF “%1” == “A” FORMAT A:<p></p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">执行：`C:\>TEST5 A`,屏幕上就出现是否将A:盘格式化的内容。</span><br><span class="line"></span><br><span class="line">**注意：为了防止参数为空的情况，一般会将字符串用双引号（或者其它符号，注意不能使用保留符号）括起来。**</span><br><span class="line"></span><br><span class="line">如：`if [%1]==[A] 或者 if %1*==A*`</span><br><span class="line"></span><br><span class="line">### GOTO</span><br><span class="line"></span><br><span class="line">建立TEST6.BAT，文件内容如下：</span><br></pre></td></tr></tbody></table></figure></div>
+<p>@ECHO OFF<br>IF EXIST C:\AUTOEXEC.BAT GOTO _COPY<br>GOTO _DONE<br>:_COPY<br>COPY C:\AUTOEXEC.BAT D:<br>:_DONE</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 注意：</span><br><span class="line">  1. 标号前是ASCII字符的冒号":"，冒号与标号之间不能有空格。</span><br><span class="line">  2. 标号的命名规则与文件名的命名规则相同(签不能以大多数的非字母数字字符开始, 而文件名中则可以使用很多)。</span><br><span class="line">  3. DOS支持最长八位字符的标号，当无法区别两个标签时, 将跳转至位置最靠前的标签。</span><br><span class="line"></span><br><span class="line">### FOR</span><br><span class="line"></span><br><span class="line">建立C:\TEST7.BAT，文件内容如下：</span><br></pre></td></tr></tbody></table></figure></div>
+<p>@ECHO OFF<br>FOR %%C IN (*.BAT *.TXT *.SYS) DO TYPE %%C</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">运行：`C:\>TEST7`</span><br><span class="line"></span><br><span class="line">执行以后，屏幕上会将C:盘根目录下所有以BAT、TXT、SYS为扩展名的文件内容显示出来（不包括隐藏文件）。</span><br><span class="line"></span><br><span class="line">建立test.cmd</span><br></pre></td></tr></tbody></table></figure></div>
+<p>@ECHO OFF<br>FOR %%C IN (%*) DO @ECHO %%C</p>
+<p>ECHO —————<br>FOR %%C IN (%*) DO (FOR /L %%I IN (1,1,2) DO echo %%C%%I)</p>
+<p>ECHO —————<br>FOR %%C IN (%*) DO (<br>   FOR /L %%I IN (3,1,4) DO echo %%C-%%I<br>      )</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">运行：`test.cmd a b`，输入内容如下：</span><br></pre></td></tr></tbody></table></figure></div>
+<p>a<br>b</p>
+<hr>
+<p>a1<br>a2<br>b1<br>b2</p>
+<hr>
+<p>a-3<br>a-4<br>b-3<br>b-4</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 命令列表</span><br><span class="line"></span><br><span class="line">- 版本：Microsoft Windows XP [版本 5.1.2600]</span><br><span class="line"></span><br><span class="line">- 有关某个命令的详细信息，请键入:`HELP 命令名`查看。</span><br><span class="line"></span><br><span class="line">- 命令列表</span><br></pre></td></tr></tbody></table></figure></div>
+<p>  ASSOC    显示或修改文件扩展名关联。<br>  AT       计划在计算机上运行的命令和程序。<br>  ATTRIB   显示或更改文件属性。<br>  BREAK    设置或清除扩展式 CTRL+C 检查。<br>  CACLS    显示或修改文件的访问控制列表(ACLs)。<br>  CALL     从另一个批处理程序调用这一个。<br>  CD       显示当前目录的名称或将其更改。<br>  CHCP     显示或设置活动代码页数。<br>  CHDIR    显示当前目录的名称或将其更改。<br>  CHKDSK   检查磁盘并显示状态报告。<br>  CHKNTFS  显示或修改启动时间磁盘检查。<br>  CLS      清除屏幕。<br>  CMD      打开另一个 Windows 命令解释程序窗口。<br>  COLOR    设置默认控制台前景和背景颜色。<br>  COMP     比较两个或两套文件的内容。<br>  COMPACT  显示或更改 NTFS 分区上文件的压缩。<br>  CONVERT  将 FAT 卷转换成 NTFS。您不能转换当前驱动器。<br>  COPY     将至少一个文件复制到另一个位置。<br>  DATE     显示或设置日期。<br>  DEL      删除至少一个文件。<br>  DIR      显示一个目录中的文件和子目录。<br>  DISKCOMP 比较两个软盘的内容。<br>  DISKCOPY 将一个软盘的内容复制到另一个软盘。<br>  DOSKEY   编辑命令行、调用 Windows 命令并创建宏。<br>  ECHO     显示消息，或将命令回显打开或关上。<br>  ENDLOCAL 结束批文件中环境更改的本地化。<br>  ERASE    删除至少一个文件。<br>  EXIT     退出 CMD.EXE 程序(命令解释程序)。<br>  FC       比较两个或两套文件，并显示不同处。<br>  FIND     在文件中搜索文字字符串。<br>  FINDSTR  在文件中搜索字符串。<br>  FOR      为一套文件中的每个文件运行一个指定的命令。<br>  FORMAT   格式化磁盘，以便跟 Windows 使用。<br>  FTYPE    显示或修改用于文件扩展名关联的文件类型。<br>  GOTO     将 Windows 命令解释程序指向批处理程序中某个标明的行。<br>  GRAFTABL 启用 Windows 来以图像模式显示扩展字符集。<br>  HELP     提供 Windows 命令的帮助信息。<br>  IF       执行批处理程序中的条件性处理。<br>  LABEL    创建、更改或删除磁盘的卷标。<br>  MD       创建目录。<br>  MKDIR    创建目录。<br>  MODE     配置系统设备。<br>  MORE     一次显示一个结果屏幕。<br>  MOVE     将文件从一个目录移到另一个目录。<br>  PATH     显示或设置可执行文件的搜索路径。<br>  PAUSE    暂停批文件的处理并显示消息。<br>  POPD     还原 PUSHD 保存的当前目录的上一个值。<br>  PRINT    打印文本文件。<br>  PROMPT   更改 Windows 命令提示符。<br>  PUSHD    保存当前目录，然后对其进行更改。<br>  RD       删除目录。<br>  RECOVER  从有问题的磁盘恢复可读信息。<br>  REM      记录批文件或 CONFIG.SYS 中的注释。<br>  REN      重命名文件。<br>  RENAME   重命名文件。<br>  REPLACE  替换文件。<br>  RMDIR    删除目录。<br>  SET      显示、设置或删除 Windows 环境变量。<br>  SETLOCAL 开始批文件中环境更改的本地化。<br>  SHIFT    更换批文件中可替换参数的位置。<br>  SORT     对输入进行分类。<br>  START    启动另一个窗口来运行指定的程序或命令。<br>  SUBST    将路径跟一个驱动器号关联。<br>  TIME     显示或设置系统时间。<br>  TITLE    设置 CMD.EXE 会话的窗口标题。<br>  TREE     以图形模式显示驱动器或路径的目录结构。<br>  TYPE     显示文本文件的内容。<br>  VER      显示 Windows 版本。<br>  VERIFY   告诉 Windows 是否验证文件是否已正确写入磁盘。<br>  VOL      显示磁盘卷标和序列号。<br>  XCOPY    复制文件和目录树。<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### CALL</span><br><span class="line"></span><br><span class="line">从批处理程序调用另一个批处理程序。</span><br><span class="line"></span><br><span class="line">如果不用call而直接调用别的批处理文件，那么执行完那个批处理文件后将无法返回当前文件并执行当前文件的后续命令。</span><br></pre></td></tr></tbody></table></figure></div><br>从批处理程序调用另一个批处理程序。<p></p>
+<p>CALL [drive:][path]filename [batch-parameters]</p>
+<p>  batch-parameters   指定批处理程序所需的命令行信息。</p>
+<p>如果命令扩展被启用，CALL 会如下改变:</p>
+<p>CALL 命令现在将卷标当作 CALL 的目标接受。语法是:</p>
+<pre><code>CALL:label arguments</code></pre><p>一个新的批文件上下文由指定的参数所创建，控制在卷标被指定<br>后传递到语句。您必须通过达到批脚本文件末两次来 “exit” 两次。<br>第一次读到文件末时，控制会回到 CALL 语句的紧后面。第二次<br>会退出批脚本。键入 GOTO /?，参看 GOTO :EOF 扩展的描述，<br>此描述允许您从一个批脚本返回。</p>
+<p>另外，批脚本文本参数参照(%0、%1、等等)已如下改变:</p>
+<pre><code> 批脚本里的 %* 指出所有的参数(如 %1 %2 %3 %4 %5 ...)
+
+ 批参数(%n)的替代已被增强。您可以使用以下语法:
+
+     %~1         - 删除引号(")，扩展 %1
+     %~f1        - 将 %1 扩展到一个完全合格的路径名
+     %~d1        - 仅将 %1 扩展到一个驱动器号
+     %~p1        - 仅将 %1 扩展到一个路径
+     %~n1        - 仅将 %1 扩展到一个文件名
+     %~x1        - 仅将 %1 扩展到一个文件扩展名
+     %~s1        - 扩展的路径只含有短名
+     %~a1        - 将 %1 扩展到文件属性
+     %~t1        - 将 %1 扩展到文件的日期/时间
+     %~z1        - 将 %1 扩展到文件的大小
+     %~$PATH:1   - 查找列在 PATH 环境变量的目录，并将 %1
+                   扩展到找到的第一个完全合格的名称。如果
+                   环境变量名未被定义，或者没有找到文件，
+                   此修改符会扩展到空字符串
+
+可以组合修改符来取得多重结果:
+
+    %~dp1       - 只将 %1 扩展到驱动器号和路径
+    %~nx1       - 只将 %1 扩展到文件名和扩展名
+    %~dp$PATH:1 - 在列在 PATH 环境变量中的目录里查找 %1，
+                  并扩展到找到的第一个文件的驱动器号和路径。
+    %~ftza1     - 将 %1 扩展到类似 DIR 的输出行。
+
+在上面的例子中，%1 和 PATH 可以被其他有效数值替换。
+%~ 语法被一个有效参数号码终止。%~ 修定符不能跟 %*使用</code></pre><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### CMD</span><br><span class="line"></span><br><span class="line">启动 Windows XP 命令解释程序一个新的实例</span><br></pre></td></tr></tbody></table></figure></div>
+<p>CMD [/A | /U] [/Q] [/D] [/E:ON | /E:OFF] [/F:ON | /F:OFF] [/V:ON | /V:OFF]<br>    [[/S] [/C | /K] string]</p>
+<p>/C      执行字符串指定的命令然后终断<br>/K      执行字符串指定的命令但保留<br>/S      在 /C 或 /K 后修改字符串处理(见下)<br>/Q      关闭回应<br>/D      从注册表中停用执行 AutoRun 命令(见下)<br>/A      使向内部管道或文件命令的输出成为 ANSI<br>/U      使向内部管道或文件命令的输出成为 Unicode<br>/T:fg   设置前景/背景颜色(详细信息，请见 COLOR /?)<br>/E:ON   启用命令扩展(见下)<br>/E:OFF  停用命令扩展(见下)<br>/F:ON   启用文件和目录名称完成字符 (见下)<br>/F:OFF  停用文件和目录名称完成字符(见下)<br>/V:ON   将 ! 作为定界符启动延缓环境变量扩展。如: /V:ON 会允许 !var! 在执行时允许 !var! 扩展变量 var。var 语法在输入时扩展变量，这与在一个 FOR 循环内不同。<br>/V:OFF  停用延缓的环境扩展。</p>
+<p>请注意，如果字符串有引号，可以接受用命令分隔符 ‘&&’ 隔开的多个命令。并且，由于兼容原因，/X 与 /E:ON 相同，/Y 与 /E:OFF 相同，并且 /R 与 /C 相同。忽略任何其他命令行开关。</p>
+<p>如果指定了 /C 或 /K，命令行开关后的命令行其余部分将作为命令行处理；在这种情况下，会使用下列逻辑处理引号字符(“):</p>
+<pre><code>1.   如果符合下列所有条件，那么在命令行上的引号字符将被保留:
+
+    - 不带 /S 命令行开关
+    - 整整两个引号字符
+    - 在两个引号字符之间没有特殊字符，特殊字符为下列中的一个: <>()@^|
+    - 在两个引号字符之间有至少一个空白字符
+    - 在两个引号字符之间有至少一个可执行文件的名称。
+
+2.  否则，老办法是，看第一个字符是否是一个引号字符，如果是，舍去开头的字符并删除命令行上 的最后一个引号字符，保留最后一个引号字符之后的文字。</code></pre><p>如果 /D 未在命令行上被指定，当 CMD.EXE 开始时，它会寻找以下 REG_SZ/REG_EXPAND_SZ 注册表变量。如果其中一个或两个都存在，这两个变量会先被执行。</p>
+<pre><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\AutoRun
+
+    和/或
+
+HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun</code></pre><p>命令扩展是按默认值启用的。您也可以使用 /E:OFF，为某一特定调用而停用扩展。您可以在机器上和/或用户登录会话上启用或停用 CMD.EXE 所有调用的扩展，这要通过设置使用 REGEDT32.EXE 的注册表中的一个或两个 REG_DWORD 值:</p>
+<pre><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\EnableExtensions
+
+    和/或
+
+HKEY_CURRENT_USER\Software\Microsoft\Command Processor\EnableExtensions</code></pre><p>到 0x1 或 0x0。用户特定设置比机器设置有优先权。命令行开关比注册表设置有优先权。</p>
+<p>命令行扩展包括对下列命令所做的更改和/或添加:</p>
+<pre><code>DEL 或 ERASE
+COLOR
+CD 或 CHDIR
+MD 或 MKDIR
+PROMPT
+PUSHD
+POPD
+SET
+SETLOCAL
+ENDLOCAL
+IF
+FOR
+CALL
+SHIFT
+GOTO
+START (同时包括对外部命令调用所做的更改)
+ASSOC
+FTYPE</code></pre><p>有关详细信息，请键入 HELP 命令名。</p>
+<p>延迟变量环境扩展不按默认值启用。您可以用/V:ON 或 /V:OFF 命令行开关，为 CMD.EXE 的某个调用而启用或停用延迟环境变量扩充。<br>您可以在机器上和/或用户登录会话上启用或停用 CMD.EXE 所有调用的完成，这要通过设置使用 REGEDT32.EXE 的注册表中的一个或两个 REG_DWORD 值:</p>
+<pre><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\DelayedExpansion
+
+    和/或
+
+HKEY_CURRENT_USER\Software\Microsoft\Command Processor\DelayedExpansion</code></pre><p>到 0x1 或 0x0。用户特定设置比机器设置有优先权。命令行开关比注册表设置有优先权。</p>
+<p>如果延迟环境变量扩充被启用，惊叹号字符可在执行时间，被用来代替一个环境变量的数值。</p>
+<p>文件和目录名完成不按默认值启用。您可以用 /F:ON 或 /F:OFF 命令行开关，为 CMD.EXE 的某个调用而启用或停用文件名完成。 您可以在机器上和/或用户登录会话上启用或停用 CMD.EXE 所有调用的完成，这要通过设置使用 REGEDT32.EXE 的注册表中的一个或两个 REG_DWORD 值:</p>
+<pre><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\CompletionChar
+HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\PathCompletionChar
+
+    和/或
+
+HKEY_CURRENT_USER\Software\Microsoft\Command Processor\CompletionChar
+HKEY_CURRENT_USER\Software\Microsoft\Command Processor\PathCompletionChar</code></pre><p>由一个控制字符的十六进制值作为一个特定参数(例如，0x4 是 Ctrl-D，0x6 是 Ctrl-F)。 用户特定设置优先于机器设置。命令行开关优先于注册表设置。</p>
+<p>如果完成是用 /F:ON 命令行开关启用的，两个要使用的控制符是: 目录名字完成用 Ctrl-D， 文件名完成用 Ctrl-F。 要停用注册表中的某个字符，请用空格(0x20)的数值，因为此字符不是控制字符。</p>
+<p>如果键入两个控制字符中的一个，完成会被调用。完成功能将路径字符串带到光标的左边，如果没有通配符，将通配符附加到左边，并建立相符的路径列表。然后，显示第一个相符的路径。如果没有相符的路径，则发出嘟嘟声，不影响显示。之后，重复按同一个控制字符会循环显示相符路径的列表。将 Shift 键跟控制字符同时按下，会倒着显示列表。如果对该行进行了任何编辑，并再次按下控制字符，保存的相符路径的列表会被丢弃，新的会被生成。如果在文件和目录名完成之间切换，会发生同样现象。两个控制字符之间的唯一区别是文件完成字符符合文件和目录名，而目录完成字符只符合目录名。如果文件完成被用于内置式目录命令(CD、MD 或 RD)，就会使用目录完成。</p>
+<p>将引号将相符路径括起来，完成代码可以正确处理含有空格或其他特殊字符的文件名。同时，如果备份，然后从行内调用文件完成，完成被调用是位于光标右方的文字会被丢弃。</p>
+<p>需要引号的特殊字符是:<br>     <space><br>     &()[]{}^=;!’+,`~</space></p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### EXIT</span><br><span class="line"></span><br><span class="line">退出 CMD.EXE 程序(命令翻译程序)或当前批处理脚本。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>EXIT [/B] [exitCode]</p>
+<p>  /B          指定要退出当前批处理脚本而不是 CMD.EXE。如果从一个批处理脚本外执行，则会退出 CMD.EXE<br>  exitCode    指定一个数字号码。如果指定了 /B，将 ERRORLEVEL设成那个数字。如果退出 CMD.EXE，则用那个数字设置过程退出代码。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### FOR</span><br><span class="line"></span><br><span class="line">对一组文件中的每一个文件执行某个特定命令。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>FOR %variable IN (set) DO command [command-parameters]</p>
+<p>  %variable  指定一个单一字母可替换的参数。<br>  (set)      指定一个或一组文件。可以使用通配符。<br>  command    指定对每个文件执行的命令。<br>  command-parameters<br>             为特定命令指定参数或命令行开关。</p>
+<p>在批处理文件中使用 FOR 命令时，指定变量请使用 %%variable 而不要用 %variable。变量名称是区分大小写的，所以 %i 不同于 %I.</p>
+<p>如果命令扩展名被启用，下列额外的 FOR 命令格式会受到支持:</p>
+<p>FOR /D %variable IN (set) DO command [command-parameters]</p>
+<pre><code>如果集中包含通配符，则指定与目录名匹配，而不与文件名匹配。</code></pre><p>FOR /R [[drive:]path] %variable IN (set) DO command [command-parameters]</p>
+<pre><code>检查以 [drive:]path 为根的目录树，指向每个目录中的 FOR 语句。如果在 /R 后没有指定目录，则使用当前目录。如果集仅为一个单点(.)字符，则枚举该目录树。</code></pre><p>FOR /L %variable IN (start,step,end) DO command [command-parameters]</p>
+<pre><code>该集表示以增量形式从开始到结束的一个数字序列。因此，(1,1,5) 将产生序列 1 2 3 4 5，(5,-1,1) 将产生序列 (5 4 3 2 1)。</code></pre><p>FOR /F [“options”] %variable IN (file-set) DO command [command-parameters]<br>FOR /F [“options”] %variable IN (“string”) DO command [command-parameters]<br>FOR /F [“options”] %variable IN (‘command’) DO command [command-parameters]</p>
+<pre><code>或者，如果有 usebackq 选项:</code></pre><p>FOR /F [“options”] %variable IN (file-set) DO command [command-parameters]<br>FOR /F [“options”] %variable IN (“string”) DO command [command-parameters]<br>FOR /F [“options”] %variable IN (‘command’) DO command [command-parameters]</p>
+<pre><code>filenameset 为一个或多个文件名。继续到 filenameset 中的下一个文件之前，每份文件都已被打开、读取并经过处理。处理包括读取文件，将其分成一行行的文字，然后将每行解析成零或更多的符号。然后用已找到的符号字符串变量值调用 For 循环。以默认方式，/F 通过每个文件的每一行中分开的第一个空白符号。跳过空白行。您可通过指定可选 "options"  参数替代默认解析操作。这个带引号的字符串包括一个或多个指定不同解析选项的关键字。这些关键字为:
+
+    eol=c           - 指一个行注释字符的结尾(就一个)
+    skip=n          - 指在文件开始时忽略的行数。
+    delims=xxx      - 指分隔符集。这个替换了空格和跳格键的默认分隔符集。
+    tokens=x,y,m-n  - 指每行的哪一个符号被传递到每个迭代的 for 本身。这会导致额外变量名称的分配。m-n 格式为一个范围。通过 nth 符号指定 mth。如果符号字符串中的最后一个字符星号，那么额外的变量将在最后一个符号解析之后分配并接受行的保留文本。
+    usebackq        - 指定新语法已在下类情况中使用: 在作为命令执行一个后引号的字符串并且一个单引号字符为文字字符串命令并允许在 filenameset 中使用双引号扩起文件名称。
+
+某些范例可能有助:</code></pre><p>FOR /F “eol=; tokens=2,3* delims=, “ %i in (myfile.txt) do @echo %i %j %k</p>
+<pre><code>会分析 myfile.txt 中的每一行，忽略以分号打头的那些行，将每行中的第二个和第三个符号传递给 for 程序体；用逗号和/或空格定界符号。请注意，这个 for 程序体的语句引用 %i 来取得第二个符号，引用 %j 来取得第三个符号，引用 %k 来取得第三个符号后的所有剩余符号。对于带有空格的文件名，您需要用双引号将文件名括起来。为了用这种方式来使用双引号，您还需要使用 usebackq 选项，否则，双引号会 被理解成是用作定义某个要分析的字符串的。
+
+%i 专门在 for 语句中得到说明，%j 和 %k 是通过 tokens= 选项专门得到说明的。您可以通过 tokens= 一行指定最多 26 个符号，只要不试图说明一个高于字母 'z' 或 'Z' 的变量。请记住，FOR 变量是单一字母、分大小写和全局的；而且，同时不能有 52 个以上都在使用中。
+
+您还可以在相邻字符串上使用 FOR /F 分析逻辑；方法是，用单引号将括号之间的 filenameset 括起来。这样，该字符串会被当作一个文件中的一个单一输入行。
+
+最后，您可以用 FOR /F 命令来分析命令的输出。方法是，将括号之间的 filenameset 变成一个反括字符串。该字符串会被当作命令行，传递到一个子 CMD.EXE，其输出会被抓进内存，并被当作文件分析。因此，以下例子:
+
+  FOR /F "usebackq delims==" %i IN (`set`) DO @echo %i
+
+会枚举当前环境中的环境变量名称。</code></pre><p>另外，FOR 变量参照的替换已被增强。您现在可以使用下列选项语法:</p>
+<pre><code>~I         - 删除任何引号(")，扩充 %I
+%~fI        - 将 %I 扩充到一个完全合格的路径名
+%~dI        - 仅将 %I 扩充到一个驱动器号
+%~pI        - 仅将 %I 扩充到一个路径
+%~nI        - 仅将 %I 扩充到一个文件名
+%~xI        - 仅将 %I 扩充到一个文件扩展名
+%~sI        - 扩充的路径只含有短名
+%~aI        - 将 %I 扩充到文件的文件属性
+%~tI        - 将 %I 扩充到文件的日期/时间
+%~zI        - 将 %I 扩充到文件的大小
+%~$PATH:I   - 查找列在路径环境变量的目录，并将 %I 扩充到找到的第一个完全合格的名称。如果环境变量名未被定义，或者没有找到文件，此组合键会扩充到空字符串</code></pre><p>可以组合修饰符来得到多重结果:</p>
+<pre><code>%~dpI       - 仅将 %I 扩充到一个驱动器号和路径
+%~nxI       - 仅将 %I 扩充到一个文件名和扩展名
+%~fsI       - 仅将 %I 扩充到一个带有短名的完整路径名
+%~dp$PATH:i - 查找列在路径环境变量的目录，并将 %I 扩充到找到的第一个驱动器号和路径。
+%~ftzaI     - 将 %I 扩充到类似输出线路的 DIR</code></pre><p>在以上例子中，%I 和 PATH 可用其他有效数值代替。%~ 语法用一个有效的 FOR 变量名终止。选取类似 %I 的大写变量名比较易读，而且避免与不分大小写的组合键混淆。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### GOTO</span><br><span class="line"></span><br><span class="line">将 cmd.exe 导向到批处理程序中带标签的行。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>GOTO label</p>
+<p>  label   指定批处理程序中用作标签的文字字符串。</p>
+<p>标签必须单独一行，并且以冒号打头。</p>
+<p>如果命令扩展名被启用，GOTO 会如下改变:</p>
+<p>GOTO 命令现在接受目标标签 :EOF，这个标签将控制转移到当前批脚本文件的结尾。不定义就退出批脚本文件，这是一个容易的办法。有关能使该功能有用的 CALL 命令的扩展名描述，请键入CALL /?。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### IF</span><br><span class="line"></span><br><span class="line">执行批处理程序中的条件处理。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>IF [NOT] ERRORLEVEL number command<br>IF [NOT] string1==string2 command<br>IF [NOT] EXIST filename command</p>
+<p>  NOT               指定只有条件为 false 的情况下， Windows XP 才应该执行该命令。</p>
+<p>  ERRORLEVEL number 如果最后运行的程序返回一个等于或大于指定数字的退出编码，指定条件为 true。</p>
+<p>  string1==string2  如果指定的文字字符串匹配，指定条件为 true。</p>
+<p>  EXIST filename    如果指定的文件名存在，指定条件为 true。</p>
+<p>  command           如果符合条件，指定要执行的命令。如果指定的条件为 FALSE，命令后可跟一个执行 ELSE 关键字后的命令的 ELSE 命令。</p>
+<p>ELSE 子句必须在 IF 之后出现在同一行上。例如:</p>
+<pre><code>IF EXIST filename. (
+    del filename.
+) ELSE (
+    echo filename. missing.
+)</code></pre><p>因为 del 命令需要用一个新行终止，以下子句不会有效:</p>
+<p>IF EXIST filename. del filename. ELSE echo filename. missing</p>
+<p>由于 ELSE 命令必须与 IF 命令的尾端在同一行上，以下子句也不会有效:</p>
+<pre><code>IF EXIST filename. del filename.
+ELSE echo filename. missing</code></pre><p>如果都放在同一行上，以下子句有效:</p>
+<pre><code>IF EXIST filename. (del filename.) ELSE echo filename. missing</code></pre><p>如果命令扩展名被启用，IF 会如下改变:</p>
+<pre><code>IF [/I] string1 compare-op string2 command
+IF CMDEXTVERSION number command
+IF DEFINED variable command</code></pre><p>其中，比较运算符可以是:</p>
+<pre><code>EQU - 等于
+NEQ - 不等于
+LSS - 小于
+LEQ - 小于或等于
+GTR - 大于
+GEQ - 大于或等于</code></pre><p>及 /I 开关；如果该开关被指定，则说明要进行的字符串比较不分大小写。/I 开关可以用于 IF 的 string1==string2 的形式上。这些比较都是通用的；原因是，如果 string1 和 string2 都是由数字组成的，字符串会被转换成数字，进行数字比较。</p>
+<p>CMDEXTVERSION 条件的作用跟 ERRORLEVEL 的一样，除了它是在跟与命令扩展名有关联的内部版本号比较。第一个版本是 1。每次对命令扩展名有相当大的增强时，版本号会增加一个。<br>命令扩展名被停用时，CMDEXTVERSION 条件不是真的。</p>
+<p>如果已定义环境变量，DEFINED 条件的作用跟 EXISTS 的一样，除了它取得一个环境变量，返回的结果是 true。</p>
+<p>如果没有名为 ERRORLEVEL 的环境变量，%ERRORLEVEL% 会扩充为 ERROLEVEL 当前数值的字符串表达式；否则，您会得到其数值。运行程序后，以下语句说明 ERRORLEVEL 的用法:</p>
+<pre><code>goto answer%ERRORLEVEL%
+:answer0
+echo Program had return code 0
+:answer1
+echo Program had return code 1</code></pre><p>您也可以使用以上的数字比较:</p>
+<pre><code>IF %ERRORLEVEL% LEQ 1 goto okay</code></pre><p>如果没有名为 CMDCMDLINE 的环境变量，%CMDCMDLINE% 将在 CMD.EXE 进行任何处理前扩充为传递给 CMD.EXE 的原始命令行；否则，您会得到其数值。</p>
+<p>如果没有名为 CMDEXTVERSION 的环境变量，%CMDEXTVERSION% 会扩充为 CMDEXTVERSION 当前数值的字串符表达式；否则，您会得到其数值。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### SET</span><br><span class="line"></span><br><span class="line">显示、设置或删除 cmd.exe 环境变量。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>SET [variable=[string]]</p>
+<p>  variable  指定环境变量名。<br>  string    指定要指派给变量的一系列字符串。</p>
+<p>要显示当前环境变量，键入不带参数的 SET。</p>
+<p>如果命令扩展名被启用，SET 会如下改变:</p>
+<p>可仅用一个变量激活 SET 命令，等号或值不显示所有前缀匹配 SET 命令已使用的名称的所有变量的值。例如:</p>
+<pre><code>SET P</code></pre><p>会显示所有以字母 P 打头的变量</p>
+<p>如果在当前环境中找不到该变量名称，SET 命令将把 ERRORLEVEL 设置成 1。</p>
+<p>SET 命令不允许变量名含有等号。</p>
+<p>在 SET 命令中添加了两个新命令行开关:</p>
+<pre><code>SET /A expression
+SET /P variable=[promptString]</code></pre><p>/A 命令行开关指定等号右边的字符串为被评估的数字表达式。该表达式评估器很简单并以递减的优先权顺序支持下列操作:</p>
+<pre><code>()                  - 分组
+! ~ -               - 一元运算符
+* / %               - 算数运算符
++ -                 - 算数运算符
+<< >>               - 逻辑移位
+                   - 按位“与”
+^                   - 按位“异”
+|                   - 按位“或”
+= *= /= %= += -=    - 赋值
+  &= ^= |= <<= >>=
+,                   - 表达式分隔符</code></pre><p>如果您使用任何逻辑或取余操作符，您需要将表达式字符串用引号扩起来。在表达式中的任何非数字字符串键作为环境变量名称，这些环境变量名称的值已在使用前转换成数字。如果指定了一个环境变量名称，但未在当前环境中定义，那么值将被定为零。这使您可以使用环境变量值做计算而不用键入那些 % 符号来得到它们的值。如果 SET /A 在命令脚本外的命令行执行的，那么它显示该表达式的最后值。该分配的操作符在分配的操作符左边需要一个环境变量名称。除十六进制有 0x 前缀， 八进制有 0 前缀的，数字值为十进位数字。因此， 0x12 与 18 和 022 相同。请注意八进制公式可能很容易搞混: 08 和 09 是无效的数字，因为 8 和 9 不是有效的八进制位数。</p>
+<p>/P 命令行开关允许将变量数值设成用户输入的一行输入。读取输入行之前，显示指定的 promptString。promptString 可以是空的。</p>
+<p>环境变量替换已如下增强:</p>
+<pre><code>%PATH:str1=str2%</code></pre><p>会扩展 PATH 环境变量，用 “str2” 代替扩展结果中的每个 “str1”。要有效地从扩展结果中删除所有的 “str1”，”str2” 可以是空的。”str1” 可以以星号打头；在这种情况下，”str1” 会从扩展结果的开始到 str1 剩余部分第一次出现的地方，都一直保持相配。</p>
+<p>也可以为扩展名指定子字符串。</p>
+<pre><code>%PATH:~10,5%</code></pre><p>会扩展 PATH 环境变量，然后只使用在扩展结果中从第 11 个(偏移量 10)字符开始的五个字符。如果没有指定长度，则采用默认值，即变量数值的余数。如果两个数字(偏移量和长度)都是负数，使用的数字则是环境变量数值长度加上指定的偏移量或长度。</p>
+<pre><code>%PATH:~-10%</code></pre><p>会提取 PATH 变量的最后十个字符。</p>
+<pre><code>%PATH:~0,-2%</code></pre><p>会提取 PATH 变量的所有字符，除了最后两个。</p>
+<p>终于添加了延迟环境变量扩充的支持。该支持总是按默认值被停用，但也可以通过 CMD.EXE 的 /V 命令行开关而被启用/停用。<br>请参阅 CMD /?</p>
+<p>考虑到读取一行文本时所遇到的目前扩充的限制时，延迟环境变量扩充是很有用的，而不是执行的时候。以下例子说明直接变量扩充的问题:</p>
+<pre><code>set VAR=before
+if "%VAR%" == "before" (
+    set VAR=after
+    if "%VAR%" == "after" @echo If you see this, it worked
+)</code></pre><p>不会显示消息，因为在读到第一个 IF 语句时，BOTH IF 语句中的 %VAR% 会被代替；原因是: 它包含 IF 的文体，IF 是一个复合语句。所以，复合语句中的 IF 实际上是在比较 “before” 和”after”，这两者永远不会相等。同样，以下这个例子也不会达到预期效果:</p>
+<pre><code>set LIST=
+for %i in (*) do set LIST=%LIST% %i
+echo %LIST%</code></pre><p>原因是，它不会在目前的目录中建立一个文件列表，而只是将LIST 变量设成找到的最后一个文件。这也是因为 %LIST% 在FOR 语句被读取时，只被扩充了一次；而且，那时的 LIST 变量是空的。因此，我们真正执行的 FOR 循环是:</p>
+<pre><code>for %i in (*) do set LIST= %i</code></pre><p>这个循环继续将 LIST 设成找到的最后一个文件。</p>
+<p>延迟环境变量扩充允许您使用一个不同的字符(惊叹号)在执行时间扩充环境变量。如果延迟的变量扩充被启用，可以将上面例子写成以下所示，以达到预期效果:</p>
+<pre><code>set VAR=before
+if "%VAR%" == "before" (
+    set VAR=after
+    if "!VAR!" == "after" @echo If you see this, it worked
+)
+
+set LIST=
+for %i in (*) do set LIST=!LIST! %i
+echo %LIST%</code></pre><p>如果命令扩展名被启用，有几个动态环境变量可以被扩展，但不会出现在 SET 显示的变量列表中。每次变量数值被扩展时，这些变量数值都会被动态计算。如果用户用这些名称中任何一个定义变量，那个定义会替代下面描述的动态定义:</p>
+<p>%CD% - 扩展到当前目录字符串。<br>%DATE% - 用跟 DATE 命令同样的格式扩展到当前日期。<br>%TIME% - 用跟 TIME 命令同样的格式扩展到当前时间。<br>%RANDOM% - 扩展到 0 和 32767 之间的任意十进制数字。<br>%ERRORLEVEL% - 扩展到当前 ERRORLEVEL 数值。<br>%CMDEXTVERSION% - 扩展到当前命令处理器扩展名版本号。<br>%CMDCMDLINE% - 扩展到调用命令处理器的原始命令行。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### SHIFT</span><br><span class="line"></span><br><span class="line">更改批处理文件中可替换参数的位置。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>SHIFT [/n]</p>
+<p>如果命令扩展名被启用，SHIFT 命令支持/n 命令行开关；该命令行开关告诉命令从第 n 个参数开始移位；n 介于零和八之间。例如:<br>    SHIFT /2<br>会将 %3 移位到 %2，将 %4 移位到 %3，等等；并且不影响 %0 和 %1。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 其它</span><br><span class="line"></span><br><span class="line">- BREAK</span><br><span class="line"></span><br><span class="line">设置或清除 DOS 系统的扩展 CTRL+C 检测</span><br><span class="line"></span><br><span class="line">这个命令是为了与 DOS 系统的兼容而保留的，在 Windows XP 里不起作用。</span><br><span class="line"></span><br><span class="line">如果命令扩展名被启用，并且操作平台是 Windows XP，BREAK 命令会在被调试程序调试时输入一个硬代码中断点。</span><br><span class="line"></span><br><span class="line">- CACLS</span><br><span class="line"></span><br><span class="line">显示或者修改文件的访问控制表(ACL)</span><br></pre></td></tr></tbody></table></figure></div>
+<p>注意: 不推荐使用 Cacls，请使用 Icacls。</p>
+<p>显示或者修改文件的访问控制列表(ACL)</p>
+<p> CACLS filename [/T] [/M] [/L] [/S[:SDDL]] [/E] [/C] [/G user:perm]<br>        [/R user […]] [/P user:perm […]] [/D user […]]<br>    filename      显示 ACL。<br>    /T            更改当前目录及其所有子目录中<br>                  指定文件的 ACL。<br>    /L            对照目标处理符号链接本身<br>    /M            更改装载到目录的卷的 ACL<br>    /S            显示 DACL 的 SDDL 字符串。<br>    /S:SDDL       使用在 SDDL 字符串中指定的 ACL 替换 ACL。<br>                  (/E、/G、/R、/P 或 /D 无效)。<br>    /E            编辑 ACL 而不替换。<br>    /C            在出现拒绝访问错误时继续。<br>    /G user:perm  赋予指定用户访问权限。<br>                  Perm 可以是: R  读取<br>                               W  写入<br>                               C  更改(写入)<br>                               F  完全控制<br>    /R user       撤销指定用户的访问权限(仅在与 /E 一起使用时合法)。<br>    /P user:perm  替换指定用户的访问权限。<br>                  Perm 可以是: N  无<br>                               R  读取<br>                               W  写入<br>                               C  更改(写入)<br>                               F  完全控制<br>    /D user       拒绝指定用户的访问。<br> 在命令中可以使用通配符指定多个文件。<br> 也可以在命令中指定多个用户。</p>
+<p>缩写:<br>    CI - 容器继承。<br>         ACE 会由目录继承。<br>    OI - 对象继承。<br>         ACE 会由文件继承。<br>    IO - 只继承。<br>         ACE 不适用于当前文件/目录。<br>    ID - 已继承。<br>         ACE 从父目录的 ACL 继承。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ASSOC</span><br><span class="line"></span><br><span class="line">显示或修改文件扩展名关联</span><br></pre></td></tr></tbody></table></figure></div>
+<p>ASSOC [.ext[=[fileType]]]</p>
+<p>  .ext      指定跟文件类型关联的文件扩展名<br>  fileType  指定跟文件扩展名关联的文件类型</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">键入 ASSOC 而不带参数，显示当前文件关联。如果只用文件扩展名调用 ASSOC，则显示那个文件扩展名的当前文件关联。如果不为文件类型指定任何参数，命令会删除文件扩展名的关联。</span><br><span class="line"></span><br><span class="line">- AT</span><br><span class="line"></span><br><span class="line">命令安排在特定日期和时间运行命令和程序。 要使用 AT 命令，计划服务必须已在运行中。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>AT [\computername] [ [id] [/DELETE] | /DELETE [/YES]]<br>AT [\computername] time [/INTERACTIVE] [ /EVERY:date[,…] | /NEXT:date[,…]] “command”</p>
+<p>\computername       指定远程计算机。 如果省略这个参数，会计划在本地计算机上运行命令。<br>id                   指定给已计划命令的识别号。<br>/delete              删除某个已计划的命令。如果省略 id，计算机上所有已计划的命令都会被删除。<br>/yes                 不需要进一步确认时，跟删除所有作业的命令一起使用。<br>time                 指定运行命令的时间。<br>/interactive         允许作业在运行时，与当时登录的用户桌面进行交互。<br>/every:date[,…]    每个月或每个星期在指定的日期运行命令。如果省略日期，则默认为在每月的本日运行。<br>/next:date[,…]     指定在下一个指定日期(如，下周四)运行命令。如果省略日期，则默认为在每月的本日运行。<br>“command”            准备运行的 Windows NT 命令或批处理程序。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ATTRIB</span><br><span class="line"></span><br><span class="line">显示或更改文件属性。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>ATTRIB [+R | -R] [+A | -A ] [+S | -S] [+H | -H] [[drive:] [path] filename] [/S [/D]]</p>
+<ul>
+<li>设置属性。</li>
+</ul>
+<ul>
+<li><p>清除属性。<br>R   只读文件属性。<br>A   存档文件属性。<br>S   系统文件属性。<br>H   隐藏文件属性。<br>[drive:][path][filename]<br>指定要处理的文件属性。<br>/S  处理当前文件夹及其子文件夹中的匹配文件。<br>/D  也处理文件夹。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- CD/CHDIR</span><br><span class="line"></span><br><span class="line">显示当前目录名或改变当前目录。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>CHDIR [/D] [drive:][path]<br>CHDIR [..]<br>CD [/D] [drive:][path]<br>CD [..]<br>..   指定要改成父目录。<br>键入 CD 驱动器: 显示指定驱动器中的当前目录。<br>不带参数只键入 CD，则显示当前驱动器和目录。<br>使用 /D 命令行开关，除了改变驱动器的当前目录之外，还可改变当前驱动器。<br>如果扩展命令名被启用，CHDIR 会如下改变:<br>当前的目录字符串会被转换成使用磁盘名上的大小写。所以，如果磁盘上的大小写如此，CD  C : \TEMP 会将当前目录设为 C:\Temp。<br>CHDIR 命令不把空格当作分隔符，因此有可能将目录名改为一个带有空格但不带有引号的子目录名。例如:<br>cd \winnt\profiles\username\programs\start menu<br>与下列相同:<br>cd “\winnt\profiles\username\programs\start menu”<br>在扩展功能停用的情况下，您必须键入以上命令。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- CHKDSK</span><br><span class="line"></span><br><span class="line">检查磁盘并显示状态报告。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>CHKDSK [volume[[path]filename]]] [/F] [/V] [/R] [/X] [/I] [/C] [/L[:size]]</p>
+<p>volume          指定驱动器(后面跟一个冒号)、装入点或卷名。<br>filename        仅用于 FAT/FAT32: 指定要检查是否有碎片的文件。<br>/F              修复磁盘上的错误。<br>/V              在 FAT/FAT32 上: 显示磁盘上每个文件的完整路径和名称。在 NTFS 上: 如果有清除消息，将其显示。<br>/R              查找不正确的扇区并恢复可读信息(隐含 /F)。<br>/L:size       仅用于 NTFS:  将日志文件大小改成指定的 KB 数。如果没有指定大小，则显示当前的大小。<br>/X              如果必要，强制卷先卸下。卷的所有打开的句柄就会无效(隐含 /F)。<br>/I              仅用于 NTFS: 对索引项进行强度较小的检查。<br>/C              仅用于 NTFS: 跳过文件夹结构的循环检查。</p>
+</li>
+</ul>
+<p>/I 和 /C 命令行开关跳过卷的某些检查，减少运行 Chkdsk 所需的时间。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- CHKNTFS</span><br><span class="line"></span><br><span class="line">在启动时显示或修改磁盘检查。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>CHKNTFS volume […]<br>CHKNTFS /D<br>CHKNTFS /T[:time]\r\nCHKNTFS /X volume […]<br>CHKNTFS /C volume […]</p>
+<p>  volume:        指定驱动器(后面跟一个冒号)、装入点或卷名。<br>  /D             将计算机恢复成默认状态， 启动时检查所有驱动器，并对有问题的驱动器执行 chkdsk 命令。<br>  /T:time        将 AUTOCHK 初始递减计数时间改成指定的时间量，单位为秒数。如果没有指定时间，则显示当前设置。<br>  /X             排除启动时不作检查的驱动器。上次执行此命令排除的驱动器此时无效。<br>  /C             安排启动时检查驱动器，如果驱动器有问题，运行 chkdsk。</p>
+<p>如果没有指定命令行开关，CHKNTFS 会显示每一驱动器有问题的位的状态。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- COMPACT</span><br><span class="line"></span><br><span class="line">显示或改变 NTFS 分区上文件的压缩。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>COMPACT [/C | /U] [/S[:dir]] [/A] [/I] [/F] [/Q] [filename […]]</p>
+<p>  /C        压缩指定的文件。会给目录作标记，这样以后添加的文件会得到压缩。<br>  /U        解压缩指定的文件。会给目录作标记，这样以后添加的文件不会得到压缩。<br>  /S        在指定的目录和所有子目录中的文件上执行指定操作。默认 “dir”是当前目录。<br>  /A        显示具有隐藏或系统属性的文件。在默认情况下，这些文件都是被忽略的。<br>  /I        即使在错误发生后，依然继续执行指定的操作。在默认情况下，COMPACT 在遇到错误时会停止。<br>  /F        在所有指定文件上强制压缩操作，包括已被压缩的文件。在默认情况下，已经压缩的文件被忽略。<br>  /Q        只报告最重要的信息。<br>  filename  指定类型、文件和目录。</p>
+<p>  不跟参数一起使用时，COMPACT 显示当前目录及其所含文件的压缩状态。您可以使用多个文件名和通配符。在多个参数之间必须加空格。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- CONVERT</span><br><span class="line"></span><br><span class="line">将 FAT 卷转换成 NTFS。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>CONVERT volume /FS:NTFS [/V] [/CvtArea:filename] [/NoSecurity] [/X]</p>
+<p>  volume      指定驱动器号(后面跟一个冒号)、装载点或卷名。<br>  /FS:NTFS    指定要被转换成 NTFS 的卷。<br>  /V          指定 Convert 应该用详述模式运行。<br>  /CvtArea:filename<br>              将根目录中的一个接续文件指定为 NTFS 系统文件的占位符。<br>  /NoSecurity 指定每个人都可以访问转换的文件和目录的安全设置。<br>  /X          如果必要，先强行卸载卷。该卷的所有打开的句柄则无效。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- FORMAT</span><br><span class="line"></span><br><span class="line">格式化磁盘以供 Windows XP 使用。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>FORMAT volume [/FS:file-system] [/V:label] [/Q] [/A:size] [/C] [/X]<br>FORMAT volume [/V:label] [/Q] [/F:size]<br>FORMAT volume [/V:label] [/Q] [/T:tracks /N:sectors]<br>FORMAT volume [/V:label] [/Q]<br>FORMAT volume [/Q]</p>
+<p>  volume           指定驱动器(后面跟一个冒号)、装入点或卷名。<br>  /FS:filesystem  指定文件系统类型(FAT、FAT32 或 NTFS)。<br>  /V:label        指定卷标。<br>  /Q              执行快速格式化。<br>  /C              仅适于 NTFS: 默认情况下，将压缩在该新建卷上创建的文件。<br>   /X              如果必要，先强制卸下卷。那时，该卷所有已打开的句柄不再有效。<br>  /A:size         替代默认配置单位大小。极力建议您在一般状况下使用默认设置。<br>                  NTFS 支持 512、1024、2048、4096、8192、16K、32K、64K。<br>                  FAT 支持 512、1024、2048、4096、8192、16K、32K、64k，(128k、256k 用于大于 512 字节的扇区) 。<br>                  FAT32 支持 512、1024、2048、4096、8192、16k、32k、64k，(128k 、256k 用于大于 512 字节的扇区)。</p>
+<pre><code>注意 FAT 及 FAT32 文件系统对卷上的群集数量有以下限制:
+
+FAT: 群集数量 <= 65526
+FAT32: 65526 < 群集数量 < 4177918
+
+如果判定使用指定的群集大小无法满足以上需求，格式化将立即停止。
+
+NTFS 压缩不支持大于 4096 的分配单元。</code></pre><p>  /F:size         指定要格式化的软盘大小(1.44)<br>  /T:tracks       为磁盘指定每面磁道数。<br>  /N:sectors      指定每条磁道的扇区数。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- MODE</span><br><span class="line"></span><br><span class="line">配置系统设备。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>串行口:　　　   MODE COMm[:] [BAUD=b] [PARITY=p] [DATA=d] [STOP=s] [to=on|off] [xon=on|off] [odsr=on|off] [octs=on|off] [dtr=on|off|hs] [rts=on|off|hs|tg] [idsr=on|off]<br>设备状态:       MODE [device] [/STATUS]<br>打印重定向:　　 MODE LPTn[:]=COMm[:]<br>选定代码页:　　 MODE CON[:] CP SELECT=yyy<br>代码页状态:　　 MODE CON[:] CP [/STATUS]<br>显示模式:　　   MODE CON[:] [COLS=c] [LINES=n]<br>击键率:　       MODE CON[:] [RATE=r DELAY=d]</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- MORE</span><br><span class="line"></span><br><span class="line">逐屏显示输出。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>MORE [/E [/C] [/P] [/S] [/Tn] [+n]] < [drive:][path]filename<br>command-name | MORE [/E [/C] [/P] [/S] [/Tn] [+n]]<br>MORE /E [/C] [/P] [/S] [/Tn] [+n] [files]</p>
+<pre><code>[drive:][path]filename  指定要逐屏显示的文件。
+
+command-name            指定要显示其输出的命令 。
+
+/E      启用扩展功能
+/C      显示页面前先清除屏幕
+/P      扩展 FormFeed 字符
+/S      将多个空白行缩成一行
+/Tn     将跳格键扩展成 n 个空格(默认值为命令行开关可以出现在 MORE 环境变量中。
+
++n      从第 n 行开始显示第一个文件
+
+files    要显示的文件列表。 用空格分开列表中的文件。
+
+如果扩展的功能已经启用，在 -- More -- 提示处会接受下列命令:
+
+P n     显示下 n 行
+S n     略过下 n 行
+F       显示下个文件
+Q       退出
+=       显示行号
+?       显示帮助行
+<space> 显示下一页
+<ret>   显示下一行</ret></space></code></pre><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- RECOVER</span><br><span class="line"></span><br><span class="line">从有问题的磁盘恢复可读信息。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>RECOVER [drive:][path]filename<br>在使用 RECOVER 命令以前，先查阅 Windows XP 帮助内的联机命令参考。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- RENAME</span><br><span class="line"></span><br><span class="line">重命名文件。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>RENAME [drive:][path]filename1 filename2.<br>REN [drive:][path]filename1 filename2.</p>
+<p>请注意，您不能为目标文件指定新的驱动器或路径。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- REPLACE</span><br><span class="line"></span><br><span class="line">替换文件。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>REPLACE [drive1:][path1]filename [drive2:][path2] [/A] [/P] [/R] [/W]<br>REPLACE [drive1:][path1]filename [drive2:][path2] [/P] [/R] [/S] [/W] [/U]</p>
+<p>  [drive1:][path1]filename 指定源文件。<br>  [drive2:][path2]         指定要替换文件的目录。<br>  /A                       把新文件加入目标目录。不能和 /S 或 /U 命令行开关搭配使用。<br>  /P                       替换文件或加入源文件之前会先提示您进行确认。<br>  /R                       替换只读文件以及未受保护的文件。<br>  /S                       替换目标目录中所有子目录的文件。不能与 /A 命令选项搭配使用。<br>  /W                       等您插入磁盘以后再运行。<br>  /U                       只会替换或更新比源文件日期早的文件。<br>                           不能与 /A 命令行开关搭配使用。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- MKDIR:创建目录。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>  MKDIR [drive:]path<br>  MD [drive:]path</p>
+<p>  如果命令扩展名被启用，MKDIR 会如下改变:<br>  如果需要，MKDIR 会在路径中创建中级目录。例如: 假设 \a 不存在，那么:<br>      mkdir \a\b\c\d<br>  与:<br>      mkdir \a<br>      chdir \a<br>      mkdir b<br>      chdir b<br>      mkdir c<br>      chdir c<br>      mkdir d<br>  相同。如果扩展名被停用，则需要键入 mkdir \a\b\c\d。<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- RMDIR:删除一个目录。</span><br></pre></td></tr></tbody></table></figure></div><br>  RMDIR [/S] [/Q] [drive:]path<br>  RD [/S] [/Q] [drive:]path<br>      /S      除目录本身外，还将删除指定目录下的所有子目录和文件。用于删除目录树。<br>      /Q      安静模式，带 /S 删除目录树时不要求确认从损坏的磁盘中恢复可读取的信息。<br>  <div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- FTYPE:显示或修改用在文件扩展名关联中的文件类型</span><br></pre></td></tr></tbody></table></figure></div><br>  FTYPE [fileType[=[openCommandString]]]<p></p>
+<pre><code>fileType  指定要检查或改变的文件类型
+openCommandString 指定调用这类文件时要使用的开放式命令。</code></pre><p>  键入 FTYPE 而不带参数来显示当前有定义的开放式命令字符串的文件类型。 FTYPE 仅用一个文件类型启用时，它显示那个文件类型目前的开放式命令字符串。如果不为开放式命令字符串指定，FTYPE 命令将删除那个文件类型的开放式命令字符串。在一个开放式命令字符串之内，命令字符串 %0 或 %1 被通过关联调用的文件名所代替。%* 得到所有的参数，%2 得到第一个参数，%3 得到第二个，等等。%~n 得到其余所有以 nth 参数打头的参数；n 可以是从 2 到 9 的数字。例如:</p>
+<pre><code>ASSOC .pl=PerlScript
+FTYPE PerlScript=perl.exe %1 %*</code></pre><p>  允许您启用以下 Perl 脚本:</p>
+<pre><code>script.pl 1 2 3</code></pre><p>  如果不想键入扩展名，则键入以下字符串:</p>
+<pre><code>set PATHEXT=.pl;%PATHEXT%</code></pre><p>  被启动的脚本如下:</p>
+<pre><code>script 1 2 3</code></pre>  <div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- DOSKEY</span><br><span class="line"></span><br><span class="line">编辑命令行，重调用 Windows XP 命令，并创建宏。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>DOSKEY [/REINSTALL] [/LISTSIZE=size] [/MACROS[:ALL | :exename]] [/HISTORY] [/INSERT | /OVERSTRIKE] [/EXENAME=exename] [/MACROFILE=filename] [macroname=[text]]</p>
+<p>  /REINSTALL          安装一组新的 Doskey。<br>  /LISTSIZE=size      设置命令历史记录的缓冲区大小。<br>  /MACROS             显示所有 Doskey 宏。<br>  /MACROS:ALL         为具有 Doskey 宏的执行文件，显示所有的 Doskey 宏。<br>  /MACROS:exename     显示指定执行文件的所有 Doskey 宏。<br>  /HISTORY            显示保存在内存中的所有命令。<br>  /INSERT             指定用键入的新文字插入旧文字中。<br>  /OVERSTRIKE         指定新文字改写旧文字。<br>  /EXENAME=exename    指定执行文件。<br>  /MACROFILE=filename 指定安装的宏文件。<br>  macroname           指定所创建宏的名称。<br>  text                指定要登记的命令。</p>
+<p>使用上下箭头键选择命令；ESC 清除命令行；F7 显示命令历史记录；ALT+F7 清除命令历史记录；F8 搜索命令历史记录；F9 按编号选择命令；ALT+F10 清除宏定义。</p>
+<p>以下是 Doskey 宏定义的特殊码:<br>$T     命令分隔符号。允许一个宏可以含多个命令。<br>$1-$9  批处理参数。与批处理程序中的 %1-%9 相同。<br>$*     以命令行中命令名称后面的任何内容替换的符号。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- COPY/MOVE</span><br><span class="line"></span><br><span class="line">- COPY:将一份或多份文件复制到另一个位置。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>  COPY [/D] [/V] [/N] [/Y | /-Y] [/Z] [/A | /B ] source [/A | /B] [+ source [/A | /B] [+ …]] [destination [/A | /B]]</p>
+<pre><code>source       指定要复制的文件。
+/A           表示一个 ASCII 文本文件。
+/B           表示一个二进位文件。
+/D           允许解密要创建的目标文件
+destination  为新文件指定目录和/或文件名。
+/V           验证新文件写入是否正确。
+/N           复制带有非 8dot3 名称的文件时，尽可能使用短文件名。
+/Y           不使用确认是否要改写现有目标文件的提示。
+/-Y          使用确认是否要改写现有目标文件的提示。
+/Z           用可重新启动模式复制已联网的文件。</code></pre><p>  命令行开关 /Y 可以在 COPYCMD 环境变量中预先设定。<br>  这可能会被命令行上的 /-Y 替代。除非 COPY 命令是在一个批文件脚本中执行的，默认值应为在改写时进行提示。</p>
+<p>  要附加文件，请为目标指定一个文件，为源指定数个文件(用通配符或 file1+file2+file3 格式)。<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- MOVE:移动文件并重命名文件和目录。</span><br></pre></td></tr></tbody></table></figure></div><br>  要移动至少一个文件:<br>  MOVE [/Y | /-Y] [drive:][path]filename1[,…] destination<p></p>
+<p>  要重命名一个目录:<br>  MOVE [/Y | /-Y] [drive:][path]dirname1 dirname2</p>
+<pre><code>[drive:][path]filename1 指定您想移动的文件位置和名称。
+destination             指定文件的新位置。目标可包含一个驱动器号和冒号、一个目录名或组合。如果只移动一个文件并在移动时将其重命名，您还可以包括文件名。
+[drive:][path]dirname1  指定要重命名的目录。
+dirname2                指定目录的新名称。
+
+/Y                      取消确认改写一个现有目标文件的提示。
+/-Y                     对确认改写一个现有目标文件发出提示。</code></pre><p>  命令行开关 /Y 可以出现在 COPYCMD 环境变量中。这可以用命令行上的 /-Y 替代。默认值是，除非 MOVE 命令是从一个批脚本内执行的，改写时都发出提示。<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- DATE:显示或设置日期。</span><br></pre></td></tr></tbody></table></figure></div><br>  DATE  [/T | date]<p></p>
+<p>  显示当前日期设置和输入新日期的提示，请键入不带参数的 DATE。要保留现有日期，请按 ENTER。<br>  如果命令扩展名被启用，DATE 命令会支持 /T 开关；该开关指示命令只输出当前日期，但不提示输出新日期。<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- TIME:显示或设置系统时间。</span><br></pre></td></tr></tbody></table></figure></div><br>  TIME [/T | time]<p></p>
+<p>  显示当前时间设置和输入新时间的提示，请键入不带参数的 TIME。要保留现有时间，请按 Enter。<br>  如果命令扩展被启用，TIME 命令会支持 /T 命令行开关；该命令行开关告诉命令只输出当前时间，但不提示输入新时间。<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- DEL/ERASE:删除一个或数个文件。</span><br></pre></td></tr></tbody></table></figure></div><br>  DEL [/P] [/F] [/S] [/Q] [/A[[:]attributes]] names<br>  ERASE [/P] [/F] [/S] [/Q] [/A[[:]attributes]] names<p></p>
+<pre><code>names         指定一个或数个文件或目录列表。通配符可被用来删除多个文件。如果指定了一个目录，目录中的所有文件都会被删除。
+
+/P            删除每一个文件之前提示确认。
+/F            强制删除只读文件。
+/S            从所有子目录删除指定文件。
+/Q            安静模式。删除全局通配符时，不要求确认。
+/A            根据属性选择要删除的文件。
+attributes      R  只读文件                     S  系统文件
+                H  隐藏文件                     A  存档文件
+                -  表示“否”的前缀</code></pre><p>  如果命令扩展名被启用，DEL 和 ERASE 会如下改变:</p>
+<p>  /S 开关的显示句法会颠倒，即只显示已经删除的文件，而不显示找不到的文件。<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- DIR:显示目录中的文件和子目录列表。</span><br></pre></td></tr></tbody></table></figure></div><br>  DIR [drive:][path][filename] [/A[[:]attributes]] [/B] [/C] [/D] [/L] [/N] [/O[[:]sortorder]] [/P] [/Q] [/S] [/T[[:]timefield]] [/W] [/X] [/4]<p></p>
+<pre><code>[drive:][path][filename]
+            指定要列出的驱动器、目录和/或文件。
+
+/A          显示具有指定属性的文件。
+attributes   D  目录                R  只读文件
+             H  隐藏文件            A  准备存档的文件
+             S  系统文件            -  表示“否”的前缀
+/B          使用空格式(没有标题信息或摘要)。
+/C          在文件大小中显示千位数分隔符。这是默认值。用 /-C 来停用分隔符显示。
+/D          跟宽式相同，但文件是按栏分类列出的。
+/L          用小写。
+/N          新的长列表格式，其中文件名在最右边。
+/O          用分类顺序列出文件。
+sortorder    N  按名称(字母顺序)     S  按大小(从小到大)
+             E  按扩展名(字母顺序)   D  按日期/时间(从先到后)
+             G  组目录优先           -  颠倒顺序的前缀
+/P          在每个信息屏幕后暂停。
+/Q          显示文件所有者。
+/S          显示指定目录和所有子目录中的文件。
+/T          控制显示或用来分类的时间字符域。
+timefield   C  创建时间
+            A  上次访问时间
+            W  上次写入的时间
+/W          用宽列表格式。
+/X          显示为非 8dot3 文件名产生的短名称。格式是 /N 的格式，短名称插在长名称前面。如果没有短名称，在其位置则显示空白。
+/4          用四位数字显示年</code></pre><p>  可以在 DIRCMD 环境变量中预先设定开关。通过添加前缀 - (破折号)来替代预先设定的开关。例如，/-W。<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- SORT:对输入进行分类。</span><br></pre></td></tr></tbody></table></figure></div><br>  SORT [/R] [/+n] [/M kilobytes] [/L locale] [/REC recordbytes] [[drive1:][path1]filename1] [/T [drive2:][path2]] [/O [drive3:][path3]filename3]<br>    /+n                         指定开始每个比较的字符号码 n。/+3 说明每个比较应从每行的第三个字符开始。少于 n 个<p></p>
+<p>  SORT [/R] [/+n] [/M kilobytes] [/L locale] [/REC recordbytes]<br>    [[drive1:][path1]filename1] [/T [drive2:][path2]]<br>    [/O [drive3:][path3]filename3]<br>    /+n                         指定开始每个比较的字符号码 n。/+3 说明每个<br>                                比较应从每行的第三个字符开始。少于 n 个字符<br>                                的行排在其他行之前。按默认值，从每行的第一<br>                                个字符开始比较。<br>    /L[OCALE] locale            用指定的区域设置替代系统默认区域设置。<br>                                “”C”” 区域设置产生最快的排序顺序并且是当前<br>                                的唯一其他选择。排序总是不分大小写的。<br>    /M[EMORY] kilobytes         指定用于排序的主内存量，单位为 KB。<br>                                最小内存量总是 160 KB。如果指定内存大小，<br>                                无论主内存的可用量是多少，指定的内存量会<br>                                全部用于排序。</p>
+<pre><code>                            要取得最佳性能，通常不指定内存大小。按默认
+                            值，如果达到默认最大内存值，排序会一次完成
+                            (非临时文件)；否则，排序会分两次完成(没有
+                            完全排序的数据存储在临时文件中)；用于排序
+                            和合并的内存量相等。如果输入和输出都是文
+                            件，默认最大内存量为可用主内存的 90%;
+                            否则，为主内存的 45%。
+/REC[ORD_MAXIMUM] characters 指定记录中的最大字符数量
+                            (默认值为 4096，最大值为 65535)。
+/R[EVERSE]                  颠倒排序顺序，即，从 Z 到 A，再从 9 到 0。
+[drive1:][path1]filename1   指定要排序的文件。如果没有指定，则排序标准
+                            输入。指定输入文件比将同一个文件重定向为标
+                            准输入快。
+/T[EMPORARY]
+  [drive2:][path2]          指定保留排序工作存储的目录路径，以防主内
+                            存无法容纳数据。默认值是使用系统临时目录。
+/O[UTPUT]
+  [drive3:][path3]filename3 指定在哪个文件中储存经过排序的输入。
+                            如果没有指定，数据会被写入标准输出。指定
+                            输出文件比将标准输出重定向到同一个文件快。</code></pre>  <div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- COLOR</span><br><span class="line"></span><br><span class="line">设置默认的控制台前景和背景颜色。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>COLOR [attr]</p>
+<pre><code>attr        指定控制台输出的颜色属性</code></pre><p>颜色属性由两个十六进制数字指定 – 第一个为背景，第二个则为前景。每个数字可以为以下任何值之一:</p>
+<pre><code>0 = 黑色       8 = 灰色
+1 = 蓝色       9 = 淡蓝色
+2 = 绿色       A = 淡绿色
+3 = 湖蓝色     B = 淡浅绿色
+4 = 红色       C = 淡红色
+5 = 紫色       D = 淡紫色
+6 = 黄色       E = 淡黄色
+7 = 白色       F = 亮白色</code></pre><p>如果没有给定任何参数，该命令会将颜色还原到 CMD.EXE 启动时的颜色。这个值来自当前控制台窗口、/T 开关或 DefaultColor 注册表值。</p>
+<p>如果用相同的前景和背景颜色来执行 COLOR 命令，COLOR 命令会将 ERRORLEVEL 设置为 1。</p>
+<p>例如: “COLOR fc” 在亮白色上产生亮红色比较两个文件或两个文件集的内容。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- COMP:比较两个或两套文件的内容。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>  COMP [data1] [data2] [/D] [/A] [/L] [/N=number] [/C] [/OFF[LINE]]</p>
+<pre><code>data1      指定要比较的第一个文件的位置和名称。
+data2      指定要比较的第二个文件的位置和名称。
+/D         用十进制格式显示不同处。
+/A         用 ASCII 字符显示不同处。
+/L         显示不同的行数。
+/N=number  只比较每个文件中第一个指定的行数。
+/C         比较文件时不分 ASCII 字母的大小写。
+/OFF[LINE] 不要跳过带有脱机属性集的文件。</code></pre><p>  要比较文件集，在 data1 和 data2 参数中使用通配符。<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- FC:比较两个文件或两个文件集并显示它们之间的不同</span><br></pre></td></tr></tbody></table></figure></div><br>  FC [/A] [/C] [/L] [/LBn] [/N] [/OFF[LINE]] [/T] [/U] [/W] [/nnnn] [drive1:][path1]filename1 [drive2:][path2]filename2<br>  FC /B [drive1:][path1]filename1 [drive2:][path2]filename2<p></p>
+<pre><code>/A         只显示每个不同处的第一行和最后一行。
+/B         执行二进制比较。
+/C         不分大小写。
+/L         将文件作为 ASCII 文字比较。
+/LBn       将连续不匹配的最大值设为指定的行数。
+/N         在 ASCII 比较上显示行数。
+/OFF[LINE] 不要跳过带有脱机属性集的文件。
+/T         不要将 tab 扩充到空格。
+/U         将文件作为 UNICODE 文字文件比较。
+/W         为了比较而压缩空白(tab 和空格)。
+/nnnn      指定不匹配处后必须连续匹配的行数。
+[drive1:][path1]filename1
+           指定要比较的第一个文件或第一个文件集。
+[drive2:][path2]filename2
+           指定要比较的第二个文件或第二个文件集。</code></pre>  <div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ECHO:显示信息，或将命令回显打开或关上。</span><br></pre></td></tr></tbody></table></figure></div>
+<pre><code>ECHO [ON | OFF]
+ECHO [message]</code></pre><p>  要显示当前回显设置，键入不带参数的 ECHO。</p>
+<p>  @echo off　不显示后续命令行及当前命令行。<br>  @与echo off相象，但它是加在每个命令行的最前面，表示运行时不显示这一行的命令行（只能影响当前行）。<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- PRINT:打印文本文件。</span><br></pre></td></tr></tbody></table></figure></div><br>  PRINT [/D:device] [[drive:][path]filename[…]]<br>     /D:device   指定打印机设备。<br>  <div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- SETLOCAL: 开始批处理文件中环境改动的本地化操作。</span><br></pre></td></tr></tbody></table></figure></div><br>  在执行 SETLOCAL 之后所做的环境改动只限于批处理文件。要还原原先的设置，必须执行 ENDLOCAL。达到批处理文件结尾时，对于该批处理文件的每个尚未执行的 SETLOCAL 命令，都会有一个隐含的 ENDLOCAL 被执行。<p></p>
+<p>  SETLOCAL</p>
+<p>  如果命令扩展名被启用，SETLOCAL 会如下改变:</p>
+<p>  SETLOCAL 批命令现在可以接受可选参数:<br>          ENABLEEXTENSIONS / DISABLEEXTENSIONS 启动或停用命令处理器扩展名。详细信息，请参阅 CMD /?。<br>          ENABLEDELAYEDEXPANSION / DISABLEDELAYEDEXPANSION 启动或停用延缓环境变量扩展名。详细信息，请参阅 SET /? 。<br>  无论在 SETLOCAL 命令之前它们的设置是什么，这些修改会一直保留到匹配的 ENDLOCAL 命令。</p>
+<p>  如果有一个参数，SETLOCAL 命令将设置 ERRORLEVEL 的值。如果有两个有效参数中的一个，该值则为零。用下列技巧，您可以在批脚本中使用这个来决定扩展名是否可用:</p>
+<pre><code>VERIFY OTHER 2>nul
+SETLOCAL ENABLEEXTENSIONS
+IF ERRORLEVEL 1 echo Unable to enable extensions</code></pre><p>  这个方法之所以有效，是因为在 CMD.EXE 的旧版本上，SETLOCAL 不设置 ERRORLEVEL 值。具有不正确参数的 VERIFY 命令将 ERRORLEVEL 值初始化成非零值。<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ENDLOCAL:结束批处理文件中环境改动的本地化操作。</span><br></pre></td></tr></tbody></table></figure></div><br>  在执行ENDLOCAL 之后所做的环境改动不再仅限于批处理文件。批处理文件结束后，原先的设置无法还原。<p></p>
+<p>  ENDLOCAL</p>
+<p>  如果命令扩展名被启用，ENDLOCAL 会如下改变:</p>
+<p>  如果相应的 SETLOCAL 用新的 ENABLEEXTENSIONS 或DISABLEEXTENSIONS 选项启用或停用了命令扩展名，那么，在 ENDLOCAL 之后，命令扩展名的启用/停用状态会还原到执行相应的 SETLOCAL 命令前的状态。<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- FIND:在文件中搜索字符串。</span><br></pre></td></tr></tbody></table></figure></div><br>  FIND [/V] [/C] [/N] [/I] [/OFF[LINE]] “string” [[drive:][path]filename[ …]]<p></p>
+<pre><code>/V        显示所有未包含指定字符串的行。
+/C        仅显示包含字符串的行数。
+/N        显示行号。
+/I        搜索字符串时忽略大小写。
+/OFF[LINE] 不要跳过具有脱机属性集的文件。
+"string"  指定要搜索的文字串，
+[drive:][path]filename
+          指定要搜索的文件。</code></pre><p>  如果没有指定路径，FIND 将搜索键入的或者由另一命令产生的文字。<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- FINDSTR:在文件中寻找字符串。</span><br></pre></td></tr></tbody></table></figure></div><br>  FINDSTR [/B] [/E] [/L] [/R] [/S] [/I] [/X] [/V] [/N] [/M] [/O] [/F:file]<br>          [/C:string] [/G:file] [/D:dir list] [/A:color attributes] [/OFF[LINE]]<br>          strings [[drive:][path]filename[ …]]<p></p>
+<pre><code>/B        在一行的开始配对模式。
+/E        在一行的结尾配对模式。
+/L        按字使用搜索字符串。
+/R        将搜索字符串作为一般表达式使用。
+/S        在当前目录和所有子目录中搜索匹配文件。
+/I        指定搜索不分大小写。
+/X        打印完全匹配的行。
+/V        只打印不包含匹配的行。
+/N        在匹配的每行前打印行数。
+/M        如果文件含有匹配项，只打印其文件名。
+/O        在每个匹配行前打印字符偏移量。
+/P        忽略有不可打印字符的文件。 
+/OFF[LINE] 不跳过带有脱机属性集的文件。
+/A:attr   指定有十六进位数字的颜色属性。请见 "color /?"
+/F:file   从指定文件读文件列表 (/ 代表控制台)。
+/C:string 使用指定字符串作为文字搜索字符串。
+/G:file   从指定的文件获得搜索字符串。 (/ 代表控制台)。
+/D:dir    查找以分号为分隔符的目录列表
+strings   要查找的文字。
+[drive:][path]filename
+          指定要查找的文件。</code></pre><p>  除非参数有 /C 前缀，请使用空格隔开搜索字符串。<br>  例如: ‘FINDSTR “hello there” x.y’ 在文件 x.y 中寻找 “hello” 或 “there” 。 ‘FINDSTR /C:”hello there” x.y’ 文件 x.y  寻找 “hello there”。</p>
+<p>  一般表达式的快速参考:<br>    .        通配符: 任何字符<br>    *        重复: 以前字符或类别出现零或零以上次数<br>    ^        行位置: 行的开始<br>    $        行位置: 行的终点<br>    [class]  字符类别: 任何在字符集中的字符<br>    [^class] 补字符类别: 任何不在字符集中的字符<br>    [x-y]    范围: 在指定范围内的任何字符<br>    \x       Escape: 元字符 x 的文字用法<br>    <xyz 字位置: 字的开始<br>    xyz>    字位置: 字的结束</xyz></p>
+<p>  有关 FINDSTR 常见表达法的详细情况，请见联机命令参考。<br>  </p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- PATH</span><br><span class="line"></span><br><span class="line">为可执行文件显示或设置一个搜索路径。</span><br></pre></td></tr></tbody></table></figure></div><br>PATH [[drive:]path[;…][;%PATH%]<br>PATH ;<p></p>
+<p>键入 PATH ; 清除所有搜索路径设置并指示 cmd.exe 只在当前目录中搜索。<br>键入 PATH 但不加参数，显示当前路径。<br>将 %PATH% 包括在新的路径设置中会将旧路径附加到新设置。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- PROMPT</span><br><span class="line"></span><br><span class="line">更改 cmd.exe 命令提示符。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>PROMPT [text]</p>
+<p>  text    指定新的命令提示符。</p>
+<p>提示符可以由普通字符及下列特定代码组成:</p>
+<p>  $A   & (短 and 符号)<br>  $B   | (管道)<br>  $C   ( (左括弧)<br>  $D   当前日期<br>  $E   Escape code (ASCII 码 27)<br>  $F   ) (右括弧)<br>  $G   > (大于符号)<br>  $H   Backspace (擦除前一个字符)<br>  $L   < (小于符号)<br>  $N   当前驱动器<br>  $P   当前驱动器及路径<br>  $Q    = (等号)<br>  $S     (空格)<br>  $T   当前时间<br>  $V   Windows XP 版本号<br>  $_   换行<br>  $$   $ (货币符号)</p>
+<p>如果命令扩展名被启用，PROMPT 命令会支持下列格式化字符:</p>
+<p>  $+   根据 PUSHD 目录堆栈的深度，零个或零个以上加号(+)字符；每个被推的层有一个字符。<br>  $M   如果当前驱动器不是网络驱动器，显示跟当前驱动器号或空字符串有关联的远程名。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- PUSHD/POPD</span><br><span class="line"></span><br><span class="line">PUSHD保存当前目录以供 POPD 命令使用，然后改到指定的目录。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>PUSHD [path | ..]</p>
+<p>  path   指定要成为当前目录的目录。</p>
+<p>如果命令扩展名被启用，除了一般驱动器号和路径，PUSHD 命令还接受网络路径。如果指定了网络路径，PUSHD 将创建一个指向指定网络资源的临时驱动器号，然后再用刚定义的驱动器号改变当前的驱动器和目录。可以从 Z: 往下分配临时驱动器号，使用找到的第一个没有用过的驱动器号。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">POPD更改到 PUSHD 命令存储的目录。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>如果命令扩展被启用，从推目录堆栈 POPD 驱动器时，POPD命令会删除 PUSHD 创建的临时驱动器号。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- REM</span><br><span class="line"></span><br><span class="line">在批处理文件或 CONFIG.SYS 里加上注解或说明。</span><br></pre></td></tr></tbody></table></figure></div>
+<p>REM [comment]<br>:: [comment]</p>
+<pre><code></code></pre></body></html></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">蕾米亚</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://omimo.ga/2020/8adef9b7.html">http://omimo.ga/2020/8adef9b7.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://omimo.ga" target="_blank">彭彭和丁满</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Windows/">Windows</a></div><div class="post_share"></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付寶"/><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2020/c72e2148.html"><img class="prev_cover lazyload" data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover6.gif" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">20200501新冠新闻</div></div></a></div><div class="next-post pull_right"><a href="/2020/df2206fe.html"><img class="next_cover lazyload" data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover1.gif" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">20200430新冠新闻</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020/dbf13a83.html" title="绝赞Windows应用"><img class="relatedPosts_cover lazyload"data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover4.gif"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-05-01</div><div class="relatedPosts_title">绝赞Windows应用</div></div></a></div><div class="relatedPosts_item"><a href="/2020/19b8343a.html" title="everything的使用"><img class="relatedPosts_cover lazyload"data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover.gif"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-04-08</div><div class="relatedPosts_title">everything的使用</div></div></a></div><div class="relatedPosts_item"><a href="/2017/d374efec.html" title="notepad++ 一直报错there are still some pending actions"><img class="relatedPosts_cover lazyload"data-src="https://s2.ax1x.com/2020/02/29/3rTOBj.th.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2017-07-16</div><div class="relatedPosts_title">notepad++ 一直报错there are still some pending actions</div></div></a></div><div class="relatedPosts_item"><a href="/2014/243ddd38.html" title="纪念那些自己喜爱的windows软件"><img class="relatedPosts_cover lazyload"data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover1.gif"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2014-02-09</div><div class="relatedPosts_title">纪念那些自己喜爱的windows软件</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var requestSetting = function (from,set) {
+  var from = from
+  var setting = set.split(',').filter(function(item){
+  return from.indexOf(item) > -1
+  });
+  setting = setting.length == 0 ? from :setting;
+  return setting
+}
+
+var guestInfo = requestSetting(['nick','mail','link'],'nick,mail,link')
+var requiredFields = requestSetting(['nick','mail','link'],'nick,mail')
+
+window.valine = new Valine({
+  el:'#vcomment',
+  appId: 'x8zJ7Nuyh3yChQgtKcdg4zwC-MdYXbMMI',
+  appKey: 'pWRle3EfOO23aYlB3O1SyOQs',
+  notify: false,
+  verify: false,
+  placeholder: 'Please leave your footprints',
+  avatar: 'monsterid',
+  meta: guestInfo,
+  pageSize: '10',
+  lang: 'zh-cn',
+  recordIP: false,
+  serverURLs: '',
+  emojiCDN: '',
+  emojiMaps: "",
+  enableQQ: false,
+  requiredFields: requiredFields
+});</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2014 - 2020 By 蕾米亚</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text"><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script id="ribbon_piao" mobile="true" src="/js/third-party/piao.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="/js/third-party/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/search/local-search.js"></script><script>var endLoading = function () {
+  document.body.style.overflow = 'auto';
+  document.getElementById('loading-box').classList.add("loaded")
+}
+window.addEventListener('load',endLoading)</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body></html>
