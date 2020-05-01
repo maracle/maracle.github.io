@@ -1,4 +1,4 @@
-<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script></head><body>/*
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>/*
  * Live2D Widget
  * https://github.com/stevenjoezhang/live2d-widget
  */
@@ -283,4 +283,3 @@ function initWidget(config, apiPath = "/") {
 		loadWidget(config);
 	}
 }
-</body></html>

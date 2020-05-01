@@ -1,24 +1,23 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>我的电影 | 彭彭和丁满</title><meta name="description" content="我的电影"><meta name="author" content="蕾米亚"><meta name="copyright" content="蕾米亚"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://hm.baidu.com"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="我的电影"><meta name="twitter:description" content="我的电影"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/img/longmao.gif"><meta property="og:type" content="website"><meta property="og:title" content="我的电影"><meta property="og:url" content="http://omimo.ga/movies/"><meta property="og:site_name" content="彭彭和丁满"><meta property="og:description" content="我的电影"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/img/longmao.gif"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
-var t = Cookies.get("theme");
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>我的电影 | 彭彭和丁满</title><meta name="description" content="我甚至连他的一张照片都没有，他只活在我的记忆里。         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {     background"><meta name="author" content="蕾米亚"><meta name="copyright" content="蕾米亚"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://hm.baidu.com"/><link rel="dns-prefetch" href="https://hm.baidu.com"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="我的电影"><meta name="twitter:description" content="我甚至连他的一张照片都没有，他只活在我的记忆里。         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {     background"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/img/longmao.gif"><meta property="og:type" content="website"><meta property="og:title" content="我的电影"><meta property="og:url" content="http://omimo.ga/movies/"><meta property="og:site_name" content="彭彭和丁满"><meta property="og:description" content="我甚至连他的一张照片都没有，他只活在我的记忆里。         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {     background"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/img/longmao.gif"><meta property="article:published_time" content="2020-05-01T16:58:43.230Z"><meta property="article:modified_time" content="2020-05-01T16:58:43.230Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
 if (autoChangeMode == '1'){
-const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
-const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
-const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
-const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
 
-if (t === undefined){
-  if (isLightMode) activateLightMode()
-  else if (isDarkMode) activateDarkMode()
-  else if (isNotSpecified || hasNoSupport){
-    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
-    now = new Date();
-    hour = now.getHours();
-    isNight = hour < 6 || hour >= 18
-    isNight ? activateDarkMode() : activateLightMode()
-}
-} else if (t == 'light') activateLightMode()
-else activateDarkMode()
-
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
 
 } else if (autoChangeMode == '2'){
   now = new Date();
@@ -50,18 +49,17 @@ function activateLightMode(){
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script><link rel="preload" href="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/movie.jpg" as="image"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
-  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"http://www.omimo.ga","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"http://www.omimo.ga","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
   copy: {
     success: '复制成功',
     error: '复制错误',
     noSupport: '浏览器不支持'
   },
   bookmark: {
-    title: 'Snackbar.bookmark.title',
     message_prev: '按',
     message_next: '键将本页加入书签'
   },
@@ -71,12 +69,26 @@ function activateLightMode(){
   ClickShowText: undefined,
   medium_zoom: false,
   fancybox: true,
-  Snackbar: {"bookmark":{"title":"Snackbar.bookmark.title","message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  Snackbar: {"bookmark":{"message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
   baiduPush: false,
-  isHome: false,
-  isPost: false
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
   
-}</script><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">彭彭和丁满</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 列表</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-folder-open"></i><span> 书籍</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/front/"><i class="fa-fw fa fa-link"></i><span> 导航</span></a></li><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/img/longmao.gif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">72</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">47</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">21</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 列表</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-folder-open"></i><span> 书籍</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/front/"><i class="fa-fw fa fa-link"></i><span> 导航</span></a></li><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><nav class="not_index_bg" id="nav" style="background-image: url(https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/movie.jpg)"><div id="page_site-info"><div id="site-title"><span class="blogtitle">我的电影</span></div></div></nav><main id="content-outer"><div class="layout_page" id="content-inner"><article id="page"><h1>我的电影</h1><div class="article-container"><blockquote>
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: false,
+  isSidebar: false  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/img/longmao.gif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">127</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">51</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">23</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 列表</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-folder-open"></i><span> 书籍</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/front/"><i class="fa-fw fa fa-link"></i><span> 导航</span></a></li><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><div class="not-index-bg" id="nav" style="background-image: url(https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/wallhaven-g8v2le.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">彭彭和丁满</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 列表</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-folder-open"></i><span> 书籍</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/front/"><i class="fa-fw fa fa-link"></i><span> 导航</span></a></li><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="page_site-info"><h1 id="site_title">我的电影</h1></div></div><main class="layout_page" id="content-inner"><div id="page"><div id="article-container"><blockquote>
     <p>我甚至连他的一张照片都没有，他只活在我的记忆里。</p>
 </blockquote>
 
@@ -165,11 +177,11 @@ function activateLightMode(){
     <a class="hexo-douban-tab" id="hexo-douban-tab2" href="javascript:;"
        rel="external">
         想看
-        (107)</a>
+        (106)</a>
     <a class="hexo-douban-tab" id="hexo-douban-tab3" href="javascript:;"
        rel="external">
         已看
-        (208)</a>
+        (241)</a>
 </div>
 <div>
     <div id="hexo-douban-item1">
@@ -204,7 +216,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/26743567/">狼殿下</a>
         </div>
-        <div class="hexo-douban-meta">王大陆 / 李沁 / 辛芷蕾 / 肖战 / 郭书瑶 / 臧洪娜 / 林佑威 / 马东辰 / 张鑫 / 丁勇岱 / 赵崔玮 / 颜世魁 / 宫正楠 / 付磊 / 石凉 / 白希 / 黄杨钿甜 / 邵老五 / 曹骏 / 雪村 / 林澄 / 李龙 / 鲁轲轲 / 冯大路 / 严梓豪 / 孙安琪 / 中国大陆 / 孟凡 / 45分钟 / 古装 / 陈玉珊 Yu Shan Chen / 汉语普通话</div>
+        <div class="hexo-douban-meta">2020-05(中国大陆) / 王大陆 / 李沁 / 辛芷蕾 / 肖战 / 郭书瑶 / 臧洪娜 / 林佑威 / 马东辰 / 张鑫 / 丁勇岱 / 赵崔玮 / 颜世魁 / 宫正楠 / 付磊 / 石凉 / 白希 / 黄杨钿甜 / 邵老五 / 曹骏 / 雪村 / 林澄 / 李龙 / 鲁轲轲 / 冯大路 / 严梓豪 / 孙安琪 / 中国大陆 / 孟凡 / 45分钟 / 古装 / 陈玉珊 Yu Shan Chen / 汉语普通话</div>
     </div>
 </div>
 
@@ -216,7 +228,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1830528/">三国演义</a>
         </div>
-        <div class="hexo-douban-meta">1994-10-23(中国大陆) / 唐国强 / 孙彦军 / 鲍国安 / 李靖飞 / 陆树铭 / 洪宇宙 / 吴晓东 / 吴刚 / 李云娟 / 崔岱 / 陈友旺 / 樊志起 / 陈红 / 毕彦君 / 张光北 / 潘粤明 / 石小满 / 李洪涛 / 谭宗尧 / 韩青 / 安亚平 / 刘桦 / 丁志城 / 吕中 / 王鹰 / 许娣 / 李克乃 / 马子俊 / 陈之辉 / 王光辉 / 何晴 / 尼格木图 / 董九如 / 宋戈 / 陈惠良 / 袁志光 / 林默予 / 肖鲁 / 张浩 / 王洪光 / 曲敬国 / 何冰 / 乔琛 / 邢国洲 / 张洪杰 / 魏宗万 / 闫怀礼 / 濮存昕 / 徐少华 / 高兰村 / 赵丕玉 / 郭寿阳 / 修宗迪 / 刘立伟 / 洪宗义 / 郑榕 / 林中华 / 杨兆权 / 段炼 / 王洪涛 / 王卫国 / 王忠信 / 姬晨牧 / 杨凡 / 严燕生 / 顾岚 / 王涛 / 李凤英 / 郑天玮 / 尹力 / 李建义 / 韩善续 / 张山 / 苏可 / 魏慧丽 / 莫岐 / 蒋恺 / 曹力 / 周舟 / 翟万臣 / 张甲田 / 杨俊勇 / 王璐瑶 / 赵越 / 胡战利 / 刘威 / 鲍大志 / 张炬 / 祝士彬 / 李雨泽 / 宋邦贵 / 齐杰 / 吴俊全 / 田二喜 / 党同义 / 刘纯燕 / 尹申 / 杨立新 / 张亚坤 / 赵树仁 / 中国大陆 / 王扶林 / 张绍林 / 蔡晓晴 / 孙光明 / 张中一 / 沈好放 / 张纪中 / 45分钟 / 剧情 / 历史 / 战争 / 罗贯中 Luo Guanzhong / 杜家福 Jia-fu Du / 朱晓平 Xiaoping Zhu / 刘树生 Shu-sheng Liu / 叶式生 Shi-sheng Ye / 周锴 Kai Zhou / 李一波 Yi-bo Li / 汉语普通话</div>
+        <div class="hexo-douban-meta">1994-10-23(中国大陆) / 唐国强 / 孙彦军 / 鲍国安 / 李靖飞 / 陆树铭 / 洪宇宙 / 吴晓东 / 于伟杰 / 陈兵 / 高扬 / 赵树仁 / 董骥 / 宋邦贵 / 刘纯燕 / 齐杰 / 党同义 / 吴俊全 / 李明 / 田二喜 / 刘龙 / 王鹰 / 宋戈 / 陈惠良 / 袁志光 / 张浩 / 王洪光 / 曲敬国 / 杨兆权 / 芮丽蓉 / 王洪武 / 董九如 / 尼格木图 / 齐克建 / 段炼 / 肖鲁 / 赵丕玉 / 刘立伟 / 洪宗义 / 林中华 / 邢国洲 / 乔琛 / 秦昭 / 邰祖辉 / 李绪良 / 刘桦 / 许娣 / 马子俊 / 陈之辉 / 李洪涛 / 石小满 / 李云娟 / 樊志起 / 安亚平 / 韩青 / 谭宗尧 / 杨立新 / 张亚坤 / 陈友旺 / 崔岱 / 李克乃 / 吕中 / 丁志城 / 王光辉 / 陈红 / 郭寿阳 / 濮存昕 / 徐少华 / 高兰村 / 修宗迪 / 郑榕 / 何冰 / 林默予 / 闫怀礼 / 魏宗万 / 张洪杰 / 张光北 / 潘粤明 / 吴刚 / 毕彦君 / 何晴 / 刘大刚 / 尹力 / 郑天玮 / 李凤英 / 王涛 / 顾岚 / 严燕生 / 杨凡 / 姬晨牧 / 李建义 / 韩善续 / 张炬 / 王长立 / 毕力格 / 王捷 / 郭家庆 / 朱秉谦 / 吴桂苓 / 李雨泽 / 祝士彬 / 王忠信 / 王卫国 / 苏可 / 莫岐 / 魏慧丽 / 王洪涛 / 张甲田 / 鲍大志 / 张山 / 里坡 / 蒋恺 / 曹力 / 周舟 / 张瞳 / 尹申 / 刘威 / 胡战利 / 赵越 / 王璐瑶 / 杨俊勇 / 翟万臣 / 赵小川 / 中国大陆 / 王扶林 / 张绍林 / 蔡晓晴 / 孙光明 / 张中一 / 沈好放 / 张纪中 / 45分钟 / 剧情 / 历史 / 战争 / 罗贯中 Luo Guanzhong / 杜家福 Jia-fu Du / 朱晓平 Xiaoping Zhu / 刘树生 Shu-sheng Liu / 叶式生 Shi-sheng Ye / 周锴 Kai Zhou / 李一波 Yi-bo Li / 汉语普通话</div>
     </div>
 </div>
 
@@ -228,7 +240,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/2338055/">西部世界 第一季 / Westworld Season 1</a>
         </div>
-        <div class="hexo-douban-meta">2016-10-02(美国) / 埃文·蕾切尔·伍德 / 安东尼·霍普金斯 / 艾德·哈里斯 / 坦迪·牛顿 / 杰弗里·怀特 / 吉米·辛普森 / 詹姆斯·麦斯登 / 本·巴恩斯 / 英格丽德·波尔索·贝达尔 / 卢克·海姆斯沃斯 / 西瑟·巴比特·科努德森 / 安吉拉·萨拉弗安 / 珊农·沃德华德 / 西蒙·夸特曼 / 小克利夫顿·克林斯 / 罗德里戈·桑托罗 / 奥利弗·贝尔 / 莱昂纳多·吴 / 詹姆斯·兰德里·赫伯特 / 路易斯·赫特哈姆 / 杰弗里·丹尼尔·菲利普斯 / 泰莎·汤普森 / 米兰达·奥图 / 库里·格拉汉姆 / 凯尔·柏海莫 / 凯姬·迈克拉瑞 / 奥利维亚·梅 / 杰姬·摩尔 / 妲露拉·莱莉 / 史蒂文·奥格 / 罗比·史密斯 / 乔什·克拉克 / 梅森·麦卡利 / 布兰登·范弗利特 / 莉娜·乔格斯 / 吉米·索瑞茜莉 / 卡尔·L·桑德斯 / 布拉德福德·塔图姆 / 妮娅·金斯利 / 丽丽·博尔丹 / 迪兰·科宁 / 安德鲁·康斯坦丁尼 / 韦德·威廉姆斯 / 达瑞尔·切尔尼 / 迈克尔·凯斯 / 博亚娜·诺瓦科维奇 / 莉莉·西蒙斯 / 米奇·西罗亚 / 美国 / www.hbo.com/westworld / 乔纳森·诺兰 / 强尼·坎贝尔 / 理查德·J·刘易斯 / 米歇尔·麦克拉伦 / 尼尔·马歇尔 / 文森佐·纳塔利 / 弗雷德·托耶 / 斯蒂芬·威廉姆斯 / 西部世界 / 60分钟 / 西部世界 / 科幻 / 西部 / 乔纳森·诺兰 Jonathan Nolan / 丽莎·乔·诺兰 Lisa Joy Nolan / 迈克尔·克莱顿 Michael Crichton / 爱德·布鲁贝克 Ed Brubaker / 多米尼克·米切尔 Dominic Mitchell / Halley Wegryn Gross / Charles Yu / Dan Dietz / Kath Lingenfelter / Daniel T. Thomsen / 英语</div>
+        <div class="hexo-douban-meta">2016-10-02(美国) / 埃文·蕾切尔·伍德 / 安东尼·霍普金斯 / 艾德·哈里斯 / 坦迪·牛顿 / 杰弗里·怀特 / 吉米·辛普森 / 詹姆斯·麦斯登 / 本·巴恩斯 / 英格丽德·波尔索·贝达尔 / 卢克·海姆斯沃斯 / 西瑟·巴比特·科努德森 / 安吉拉·萨拉弗安 / 珊农·沃德华德 / 西蒙·夸特曼 / 小克利夫顿·克林斯 / 罗德里戈·桑托罗 / 奥利弗·贝尔 / 莱昂纳多·吴 / 詹姆斯·兰德里·赫伯特 / 路易斯·赫特哈姆 / 杰弗里·丹尼尔·菲利普斯 / 泰莎·汤普森 / 米兰达·奥图 / 库里·格拉汉姆 / 凯尔·柏海莫 / 凯姬·迈克拉瑞 / 奥利维亚·梅 / 杰姬·摩尔 / 妲露拉·莱莉 / 史蒂文·奥格 / 罗比·史密斯 / 乔什·克拉克 / 梅森·麦卡利 / 布兰登·范弗利特 / 莉娜·乔格斯 / 吉米·索瑞茜莉 / 布拉德福德·塔图姆 / 妮娅·金斯利 / 韦德·威廉姆斯 / 安德鲁·康斯坦丁尼 / 达瑞尔·切尔尼 / 迈克尔·凯斯 / 卡尔·L·桑德斯 / 迪兰·科宁 / 丽丽·博尔丹 / 博亚娜·诺瓦科维奇 / 莉莉·西蒙斯 / 米奇·西罗亚 / 美国 / www.hbo.com/westworld / 乔纳森·诺兰 / 强尼·坎贝尔 / 理查德·J·刘易斯 / 米歇尔·麦克拉伦 / 尼尔·马歇尔 / 文森佐·纳塔利 / 弗雷德·托耶 / 斯蒂芬·威廉姆斯 / 西部世界 / 60分钟 / 西部世界 / 科幻 / 西部 / 乔纳森·诺兰 Jonathan Nolan / 丽莎·乔·诺兰 Lisa Joy Nolan / 迈克尔·克莱顿 Michael Crichton / 爱德·布鲁贝克 Ed Brubaker / 多米尼克·米切尔 Dominic Mitchell / Halley Wegryn Gross / Charles Yu / Dan Dietz / Kath Lingenfelter / Daniel T. Thomsen / 英语</div>
     </div>
 </div>
 
@@ -240,7 +252,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/26761935/">孤单又灿烂的神：鬼怪 / 쓸쓸하고 찬란하神 - 도깨비</a>
         </div>
-        <div class="hexo-douban-meta">2016-12-02(韩国) / 孔侑 / 金高银 / 李栋旭 / 刘仁娜 / 陆星材 / 金所泫 / 金珉载 / 赵宇镇 / 李艾 / 崔雄 / 丁海寅 / 南多凛 / 李奎炯 / 李成俊 / 朴喜本 / 高甫洁 / 崔莉 / 朴世婉 / 金炳哲 / 韩叙真 / 朴镇宇 / 廉惠兰 / 黄锡晶 / 郑志薰 / 金惠允 / 李文秀 /  金素拉 / 尹多英 / 柳泰浩 / 金贤彬 / 宋秀贤 / 安芝玄 / 孙荣顺 / 朴庆惠 / 丹尼尔·乔伊·奥尔布赖特 / 崔娜舞 / 郑煐禥 / 郑智勋 / 吴雅琳 / 李韩书 / 金兰熙 / 崔范浩 / 尹柱万 / 金基楠 / 黄相庆 / 金成谦 / 安斗浩 / 李彩京 / 尹多景 / 金珠黄 / 金道贤 / 杨祖儿 / 卞周贤 / 金基斗 / 函勝敏 / 高秀贞 / 韩国 / program.tving.com/tvn/dokebi / 李应福 / 70分钟 / 孤单又灿烂的神：鬼怪 / 剧情 / 金恩淑 Eun-sook Kim / 韩语</div>
+        <div class="hexo-douban-meta">2016-12-02(韩国) / 孔侑 / 金高银 / 李栋旭 / 刘仁娜 / 陆星材 / 金所泫 / 金旻载 / 赵宇镇 / 李艾 / 崔雄 / 丁海寅 / 南多凛 / 李奎炯 / 李成俊 / 朴喜本 / 高甫洁 / 崔莉 / 朴世婉 / 金炳哲 / 韩叙真 / 朴镇宇 / 廉惠兰 / 黄锡晶 / 郑志薰 / 金惠允 / 李文秀 /  金素拉 / 尹多英 / 柳泰浩 / 金贤彬 / 宋秀贤 / 安芝玄 / 孙荣顺 / 朴庆惠 / 丹尼尔·乔伊·奥尔布赖特 / 崔娜舞 / 郑煐禥 / 郑智勋 / 吴雅琳 / 李韩书 / 金兰熙 / 崔范浩 / 尹柱万 / 金基楠 / 黄相庆 / 金成谦 / 安斗浩 / 李彩京 / 尹多景 / 金珠黄 / 金道贤 / 杨祖儿 / 卞周贤 / 金基斗 / 函勝敏 / 高秀贞 / 韩国 / program.tving.com/tvn/dokebi / 李应福 / 70分钟 / 孤单又灿烂的神：鬼怪 / 剧情 / 金恩淑 Eun-sook Kim / 韩语</div>
     </div>
 </div>
 
@@ -252,7 +264,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/26298935/">鬼吹灯之精绝古城</a>
         </div>
-        <div class="hexo-douban-meta">2016-12-19(中国大陆) / 靳东 / 陈乔恩 / 赵达 / 岳旸 / 王永泉 / 杨新鸣 / 冯晖 / 金泽灏 / 付枚 / 匡牧野 / 张晓谦 / 张艺上 / 吴昊宸 / 邵伟桐 / 王宏 / 魏伟 / 王双宝 / 邢宇飞 / 铁政 / 孙明明 / 朱梦瑶 / 孔笙 / 中国大陆 / 孔笙 / 周游 / 孙墨龙 / 35分钟 / 剧情 / 悬疑 / 惊悚 / 白一骢 Yicong Bai / 天下霸唱 Muye Zhang / 汉语普通话</div>
+        <div class="hexo-douban-meta">2016-12-19(中国大陆) / 靳东 / 陈乔恩 / 赵达 / 岳旸 / 王永泉 / 杨新鸣 / 冯晖 / 金泽灏 / 付美 / 匡牧野 / 张晓谦 / 张艺上 / 吴昊宸 / 邵伟桐 / 王宏 / 魏伟 / 王双宝 / 邢宇飞 / 铁政 / 孙明明 / 朱梦瑶 / 张磊 / 涂小鸦 / 孔笙 / 白雪岑 / 中国大陆 / 孔笙 / 周游 / 孙墨龙 / 35分钟 / 剧情 / 悬疑 / 惊悚 / 白一骢 Yicong Bai / 天下霸唱 Muye Zhang / 汉语普通话</div>
     </div>
 </div>
 
@@ -269,12 +281,24 @@ function activateLightMode(){
     <div id="hexo-douban-item2">
         
         <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2593664928.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/30488569/">龙岭迷窟</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-01(中国大陆) / 潘粤明 / 张雨绮 / 姜超 / 高伟光 / 佟磊 / 周晓鸥 / 胡明 / 王奎荣 / 钱波 / 舒耀瑄 / 高雄 / 左右 / 陈友旺 / 李咨墨 / 张继南 / 纪海星 / 李宗霖 / 王铁山 / 杜子蓝 / 潘双宾 / 杨二宝 / 温瑞虎 / 艾宝良 / 杨旭 / 张景然 / 苏伊可 / 李一情 / 王文涛 / 惠王军 / 王建国 / 焦鹏 / 秦子涵 / 郭玉英 / 曹宝林 / 曹麦顺 / 韩龙瑄 / 周大庆 / 刘欣刚 / 许敏 / 吴永杰 / 巫蛊悠悠 / 中国大陆 / 费振翔 / 35分钟 / 剧情 / 动作 / 冒险 / 杨哲 Zhe Yang / 鲁辰 Chen Lu / 黄诗洋 Shiyang Huang / 张家诵 Jiasong Zhang / 汉语普通话</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
     <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2188465923.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1292965/">不羁夜 / Boogie Nights</a>
         </div>
-        <div class="hexo-douban-meta">1997-09-11(多伦多电影节) / 1997-10-10(美国) / 马克·沃尔伯格 / 伯特·雷诺兹 / 朱丽安·摩尔 / 海瑟·格拉汉姆 / 约翰·C·赖利 / 唐·钱德尔 / 威廉姆·H·梅西 / 菲利普·塞默·霍夫曼 / 菲利普·贝克·霍尔 / 阿尔弗雷德·莫里纳 / 托马斯·简 / 劳蕾尔·霍勒曼 / 罗伯特·唐尼 / 尼娜·哈特利 / 梅洛拉·沃尔特斯 / Jamielyn Kane / 罗伯特·雷吉利 / 格雷格·劳伦 / 杰克·华莱士 / Jason Andrews / Eddie Garcia / 阿兰·格拉夫 / 瑞奇·杰 / 美国 / 保罗·托马斯·安德森 / 155分钟 / 不羁夜 / 剧情 / 情色 / 保罗·托马斯·安德森 Paul Thomas Anderson / 英语</div>
+        <div class="hexo-douban-meta">1997-09-11(多伦多电影节) / 1997-10-10(美国) / 马克·沃尔伯格 / 伯特·雷诺兹 / 朱丽安·摩尔 / 海瑟·格拉汉姆 / 约翰·C·赖利 / 唐·钱德尔 / 威廉姆·H·梅西 / 菲利普·塞默·霍夫曼 / 菲利普·贝克·霍尔 / 阿尔弗雷德·莫里纳 / 托马斯·简 / 劳蕾尔·霍勒曼 / 罗伯特·唐尼 / 尼娜·哈特利 / 梅洛拉·沃尔特斯 / 杰米琳·利普曼 / 罗伯特·雷吉利 / 格雷格·劳伦 / 杰克·华莱士 / Jason Andrews / Eddie Garcia / 阿兰·格拉夫 / 瑞奇·杰 / 美国 / 保罗·托马斯·安德森 / 155分钟 / 不羁夜 / 剧情 / 情色 / 保罗·托马斯·安德森 Paul Thomas Anderson / 英语</div>
     </div>
 </div>
 
@@ -286,7 +310,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/5912992/">熔炉 / 도가니</a>
         </div>
-        <div class="hexo-douban-meta">2011-09-22(韩国) / 孔侑 / 郑有美 / 金贤秀 / 郑仁絮 / 白承焕 / 张光 / 金民尚 / 林贤成 / 金周灵 / 严孝燮 / 全国焕 / 崔镇浩 / 金志映 / 严智星 / 许在浩 / 张素妍 / 林贤成 / 金智怜 / 李相熹 / 郑亨锡 / 洪锡然 / 韩国 / 黄东赫 / 125分钟 / 熔炉 / 剧情 / 黄东赫 Dong-hyuk Hwang / 孔枝泳 Ji-young Gong / 韩语</div>
+        <div class="hexo-douban-meta">2011-09-22(韩国) / 孔侑 / 郑有美 / 金贤秀 / 郑仁絮 / 白承焕 / 张光 / 金民尚 / 林贤成 / 金周灵 / 严孝燮 / 全国焕 / 崔镇浩 / 金志映 / 严智星 / 许在浩 / 张素妍 / 金智怜 / Joo-ryeong Kim / 李相熹 / 林贤成 / 郑亨锡 / 洪锡然 / 韩国 / 黄东赫 / 125分钟 / 熔炉 / 剧情 / 黄东赫 Dong-hyuk Hwang / 孔枝泳 Ji-young Gong / 韩语</div>
     </div>
 </div>
 
@@ -454,7 +478,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/2357708/">死神来了4 / The Final Destination</a>
         </div>
-        <div class="hexo-douban-meta">2009-08-28 / 鲍比·坎波 / 珊特尔·范圣滕 / 尼克·扎诺 / 海雷·韦伯 / 麦凯尔泰·威廉逊 / 拉腊·格赖斯 / 杰里米·帕尔科 / Chaz Smith / Alan Wyn Hughes / 克里斯·弗赖伊 / 珍娜·克莱格 / 科琳·特拉斯勒 / 斯蒂芬妮·奥诺雷 / 蒂娜·帕克 / 加布丽埃勒·沙潘 / 约书亚·戴维斯 / 罗德尼·赫伯特 / Logan Douglas Smith / Joanna Doherty / 特里·李·史密斯 / 克里丝塔·艾伦 / Kyrt Gates / 劳丽·李 / Corey Stewart / 安德鲁·费斯切拉 / Preston Strother / Louis St. Romain / Lauren Denham / Andy Ussach / 克鲁瓦·普罗旺斯 / 美国 / 大卫·R·艾里斯 / 82 分钟 / 死神来了4 / 惊悚 / 恐怖 / Eric Bress / 英语</div>
+        <div class="hexo-douban-meta">2009-08-28 / 鲍比·坎波 / 珊特尔·范圣滕 / 尼克·扎诺 / 海雷·韦伯 / 麦凯尔泰·威廉逊 / 克鲁瓦·普罗旺斯 / 加布丽埃勒·沙潘 / 蒂娜·帕克 / 斯蒂芬妮·奥诺雷 / 科琳·特拉斯勒 / 约书亚·戴维斯 / Preston Strother / 克里丝塔·艾伦 / Louis St. Romain / Andy Ussach / 罗德尼·赫伯特 / Chaz Smith / 杰里米·帕尔科 / 拉腊·格赖斯 / Corey Stewart / 劳丽·李 / 安德鲁·费斯切拉 / Joanna Doherty / 克里斯·弗赖伊 / 特里·李·史密斯 / Logan Douglas Smith / Lauren Denham / Alan Wyn Hughes / Kyrt Gates / 珍娜·克莱格 / 美国 / 大卫·R·艾里斯 / 82 分钟 / 死神来了4 / 惊悚 / 恐怖 / Eric Bress / 英语</div>
     </div>
 </div>
 
@@ -466,7 +490,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1297909/">A计划 / A計劃</a>
         </div>
-        <div class="hexo-douban-meta">1983-12-22(中国香港) / 成龙 / 洪金宝 / 元彪 / 黄曼凝 / 狄威 / 太保 / 午马 / 钱嘉乐 / 火星 / 李海生 / 关海山 / 王伟 / 罗浩楷 / 刘克宣 / 韩义生 / 劳拉·福纳 / 冯敬文 / 李健生 / 吴勉勤 / 杜少明 / 萧玉 / 刘晃世  / 尹尚林 / 林富伟 / 刘俊辉 / 户田惠子 / 张济平 / 刘允 / 张作舟 / 梁尚云 / 麦飞鸿 / 陈志辉 / 何云 / 沙鷗 / 林源 / 谈泉庆 / 孙志伟 / 冯雪瑞 / 张午郎 / 约翰·德米塔 / Tom Konkle / E·E·贝尔 / 丹尼·特雷霍 / 黎强权 / 中国香港 / 成龙 / 105分钟 / 97分钟(美国) / A计划 / 动作 / 喜剧 / 邓景生 Edward Tang / 成龙 Jackie Chan / 粤语</div>
+        <div class="hexo-douban-meta">1983-12-22(中国香港) / 成龙 / 洪金宝 / 元彪 / 黄曼凝 / 狄威 / 太保 / 午马 / 钱嘉乐 / 火星 / 李海生 / 关海山 / 王伟 / 罗浩楷 / 刘克宣 / 韩义生 / 劳拉·福纳 / 冯敬文 / 李健生 / 吴勉勤 / 杜少明 / 刘允 / 萧玉 / 刘晃世  / 尹尚林 / 刘俊辉 / 姚文基 / 户田惠子 / 林富伟 / 陈志辉 / 麦飞鸿 / 张作舟 / 梁尚云 / 何云 / 沙鸥 / 林源 / 孙志伟 / 谈泉庆 / 张济平 / 冯雪瑞 / 张午郎 / Tom Konkle / 约翰·德米塔 / E·E·贝尔 / 丹尼·特雷霍 / 黎强权 / 中国香港 / 成龙 / 105分钟 / 97分钟(美国) / A计划 / 动作 / 喜剧 / 邓景生 Edward Tang / 成龙 Jackie Chan / 粤语</div>
     </div>
 </div>
 
@@ -478,7 +502,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1307319/">醉拳2 / 醉拳Ⅱ</a>
         </div>
-        <div class="hexo-douban-meta">1994-02-03(中国香港) / 成龙 / 梅艳芳 / 狄龙 / 黄日华 / 刘家良 / 卢惠光 / 钱嘉乐 / 翁虹 / 鲍方 / 曹颖 / 刘德华 / 司马华龙 / 尼尔·迪克森 / 段伟伦 / 陈国权 / 何柏光 / 户田惠子 / 夏春秋 / 黄一山 / 何松柏 / 关秀媚 / 火星 / 黄明升 / 太保 / 陈国坤 / 刘兆铭 / 罗家英 / 董骠 / 陈慧仪 / 蒋志光 / 白茵 / 中国香港 / 刘家良 / 102分钟 / 99分钟(美国) / 醉拳2 / 动作 / 喜剧 / 邓景生 Edward Tang / 阮继志 Kai-Chi Yun / 唐敏明 / 粤语</div>
+        <div class="hexo-douban-meta">1994-02-03(中国香港) / 成龙 / 梅艳芳 / 狄龙 / 黄日华 / 刘家良 / 卢惠光 / 钱嘉乐 / 翁虹 / 鲍方 / 曹颖 / 刘德华 / 户田惠子 / 关秀媚 / 刘兆铭 / 火星 / 段伟伦 / 司马华龙 / 尼尔·迪克森 / 陈国权 / 黄明升 / 白茵 / 蒋志光 / 陈慧仪 / 董骠 / 罗家英 / 陈国坤 / 黄一山 / 夏春秋 / 太保 / 何松柏 / 何柏光 / 中国香港 / 刘家良 / 102分钟 / 99分钟(美国) / 醉拳2 / 动作 / 喜剧 / 邓景生 Edward Tang / 阮继志 Kai-Chi Yun / 唐敏明 / 粤语</div>
     </div>
 </div>
 
@@ -502,7 +526,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1295106/">鼠胆龙威 / 鼠膽龍威</a>
         </div>
-        <div class="hexo-douban-meta">1995-07-01(中国香港) / 李连杰 / 张学友 / 邱淑贞 / 曹查理 / 周比利 / 杨采妮 / 周嘉玲 / 午马 / 李力持 / 王霄 / 关秀媚 / 段伟伦 / 卢雄 / 魏伯勤 / 蔡业信 / 元德 / 林国斌 / 中国香港 / 王晶 / 101分钟 / 鼠胆龙威 / 动作 / 喜剧 / 犯罪 / 王晶 Jing Wong / 粤语 / 汉语普通话 / 英语</div>
+        <div class="hexo-douban-meta">1995-07-01(中国香港) / 李连杰 / 张学友 / 邱淑贞 / 曹查理 / 周比利 / 杨采妮 / 周嘉玲 / 午马 / 李力持 / 王霄 / 关秀媚 / 蔡业信 / 段伟伦 / 卢雄 / 魏伯勤 / 元德 / 林国斌 / 罗伟佳 / 中国香港 / 王晶 / 101分钟 / 鼠胆龙威 / 动作 / 喜剧 / 犯罪 / 王晶 Jing Wong / 粤语 / 汉语普通话 / 英语</div>
     </div>
 </div>
 
@@ -538,7 +562,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1400665/">济公 / 濟公</a>
         </div>
-        <div class="hexo-douban-meta">1993-07-29(中国香港) / 周星驰 / 张曼玉 / 吴孟达 / 黄秋生 / 梅艳芳 / 苑琼丹 / 卢海鹏 / 黄一飞 / 黄新 / 刘天赐 / 陈欣健 / 龙天生 / 胡立成 / 周树基 / 许思敏 / 雷达 / 潘恒生 / 黄志强 / 郑家生 / 鲍起静 / 黄一山 / 司马燕 / 陈惠敏 / 曾近荣 / 钱似莺 / 刘江 / 中国香港 / 程小东 / 杜琪峰 / 89分钟 / 济公 / 喜剧 / 邵丽琼 Sandy Shaw / 粤语</div>
+        <div class="hexo-douban-meta">1993-07-29(中国香港) / 周星驰 / 张曼玉 / 吴孟达 / 黄秋生 / 梅艳芳 / 苑琼丹 / 卢海鹏 / 黄一飞 / 黄新 / 刘天赐 / 陈欣健 / 龙天生 / 胡立成 / 周树基 / 许思敏 / 雷达 / 潘恒生 / 黄志强 / 郑家生 / 鲍起静 / 黄一山 / 司马燕 / 陈惠敏 / 曾近荣 / 钱似莺 / 刘江 / 中国香港 / 程小东 / 杜琪峰 / 89分钟 / 济公 / 喜剧 / 奇幻 / 邵丽琼 Sandy Shaw / 粤语</div>
     </div>
 </div>
 
@@ -550,7 +574,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1297068/">中南海保镖 / 中南海保镳</a>
         </div>
-        <div class="hexo-douban-meta">1994-07-28(中国香港) / 李连杰 / 钟丽缇 / 郑则仕 / 邹兆龙 / 梁荣忠 / 黄锦江 / 元奎 / 伍卫国 / Tom Konkle / 约翰·德米塔 / Arianna Ratner / Dean Scofield / 迈克尔·索里奇 / 基思·弗格森 / 江苗定 / 中国香港 / 元奎 / 89分钟 / 中南海保镖 / 剧情 / 动作 / 陈嘉上 Gordon Chan / 陈健忠 John Chan Kin-Chung / 粤语</div>
+        <div class="hexo-douban-meta">1994-07-28(中国香港) / 李连杰 / 钟丽缇 / 郑则仕 / 邹兆龙 / 梁荣忠 / 黄锦江 / 元奎 / 伍卫国 / Tom Konkle / 约翰·德米塔 / Arianna Ratner / Dean Scofield / 迈克尔·索里奇 / 基思·弗格森 / 江苗定 / 中国香港 / 元奎 / 93分钟 / 中南海保镖 / 剧情 / 动作 / 陈嘉上 Gordon Chan / 陈健忠 John Chan Kin-Chung / 粤语</div>
     </div>
 </div>
 
@@ -562,7 +586,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1400668/">无敌幸运星 / 無敵幸運星</a>
         </div>
-        <div class="hexo-douban-meta">1990-09-27(中国香港) / 周星驰 / 吴君如 / 陈友 / 黄秋生 / 梅小惠 / 成奎安 / 林蛟 / 周比利 / 翁世杰 / 程守一 / 米奇 / 许英秀 / 甘露 / 雷达 / 西瓜刨 / 侯焕玲 / 潘健君 / 简达华 / 陈文好 / 中国香港 / 陈友 / 90分钟 / 无敌幸运星 / 喜剧 / 动作 / 杜国威 Raymond To / 粤语</div>
+        <div class="hexo-douban-meta">1990-09-27(中国香港) / 周星驰 / 吴君如 / 陈友 / 黄秋生 / 梅小惠 / 成奎安 / 林蛟 / 周比利 / 翁世杰 / 程守一 / 米奇 / 许英秀 / 甘露 / 雷达 / 西瓜刨 / 侯焕玲 / 潘健君 / 简达华 / 陈文好 / 林富伟 / 中国香港 / 陈友 / 90分钟 / 无敌幸运星 / 喜剧 / 动作 / 杜国威 Raymond To / 粤语</div>
     </div>
 </div>
 
@@ -574,7 +598,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/4724373/">死神来了5 / Final Destination 5</a>
         </div>
-        <div class="hexo-douban-meta">2011-08-12 / 麦尔斯·费舍 / 尼克·达歌斯托 / 大卫·科恩查内 / 艾玛·贝尔 / 梅甘·欧瑞 / 杰奎琳·玛克林尼丝·伍德 / 托尼·托德 / 约翰尼·扬·博施 / 考特尼·万斯 / 查斯蒂·巴勒斯特罗斯 / 乔迪·巴尔弗 / 斯蒂芬妮·奥诺雷 / 艾伦·沃洛 / 戴安娜·帕夫洛夫斯卡 / 道恩·楚拜 / 琼·B·王尔德 / 亚伦·艾斯卡本塔 / P·J·伯恩 / 唐纳尔·罗格 / 赖安·帕特里克 / 坦娅·哈伯德 / 美国 / 加拿大 / 新加坡 / 中国香港 / finaldestinationmovie.warnerbros.com / 史蒂文·奎里  / 92分钟 / 死神来了5 / 惊悚 / 恐怖 / Eric Heisserer / Jeffrey Reddick / 英语</div>
+        <div class="hexo-douban-meta">2011-08-12 / 麦尔斯·费舍 / 尼克·达歌斯托 / 大卫·科恩查内 / 艾玛·贝尔 / 梅甘·欧瑞 / 杰奎琳·玛克林尼丝·伍德 / 托尼·托德 / 查斯蒂·巴勒斯特罗斯 / 乔迪·巴尔弗 / 斯蒂芬妮·奥诺雷 / 艾伦·沃洛 / 戴安娜·帕夫洛夫斯卡 / 道恩·楚拜 / 琼·B·王尔德 / 坦娅·哈伯德 / 考特尼·万斯 / 亚伦·艾斯卡本塔 / P·J·伯恩 / 唐纳尔·罗格 / 赖安·帕特里克 / 约翰尼·扬·博施 / 美国 / 加拿大 / 新加坡 / 中国香港 / finaldestinationmovie.warnerbros.com / 史蒂文·奎里  / 92分钟 / 死神来了5 / 惊悚 / 恐怖 / Eric Heisserer / Jeffrey Reddick / 英语</div>
     </div>
 </div>
 
@@ -605,7 +629,7 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2575446090.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2357210098.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1295485/">方世玉续集</a>
@@ -713,12 +737,12 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2577437186.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2577578115.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/26885074/">叶问4：完结篇 / 葉問4</a>
         </div>
-        <div class="hexo-douban-meta">2019-12-20(中国大陆) / 甄子丹 / 吴樾 / 吴建豪 / 斯科特·阿金斯 / 李宛妲 / 郑则仕 / 陈国坤 / 敖嘉年 / 高战 / 叶禾 / 熊黛林 / 吴千语 / 罗莽 / 刘敬宇 / 史蒂文·达兹 / 周小飞 / 达伦·格罗夫纳 / 大卫·约翰逊·伍德 / 内森·海德 / 梁峰 / 格雷斯·恩格勒 / 中国香港 / 叶伟信 / 107分钟 / 叶问4：完结篇 / 剧情 / 动作 / 黄子桓 Edmond Wong / 深泽寛 / 陈大利 Tai-lee Chan / 梁礼彦 Jill Leung Lai-yin / 粤语 / 英语</div>
+        <div class="hexo-douban-meta">2019-12-20(中国大陆) / 甄子丹 / 吴樾 / 吴建豪 / 斯科特·阿金斯 / 李宛妲 / 郑则仕 / 陈国坤 / 敖嘉年 / 高战 / 叶禾 / 熊黛林 / 罗莽 / 刘敬宇 / 史蒂文·达兹 / 周小飞 / 达伦·格罗夫纳 / 大卫·约翰逊·伍德 / 内森·海德 / 梁峰 / 格雷斯·恩格勒 / 中国香港 / 叶伟信 / 107分钟 / 叶问4：完结篇 / 剧情 / 动作 / 黄子桓 Edmond Wong / 深泽寛 / 陈大利 Tai-lee Chan / 梁礼彦 Jill Leung Lai-yin / 粤语 / 英语</div>
     </div>
 </div>
 
@@ -826,7 +850,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/3025375/">奇异博士 / Doctor Strange</a>
         </div>
-        <div class="hexo-douban-meta">2016-10-25(英国) / 2016-11-04(中国大陆) / 2016-11-04(美国) / 本尼迪克特·康伯巴奇 / 蒂尔达·斯文顿 / 麦斯·米科尔森 / 切瓦特·埃加福 / 瑞秋·麦克亚当斯 / 迈克尔·斯图巴 / 本尼迪克特·王 / 本杰明·布拉特 / 斯科特·阿金斯 / 莎拉·费希恩 / 阿拉·萨菲 / 斯坦·李 / 李楠 / 梅拉·沙尔 / 艾米·兰德克 / 寇布勒·霍尔德布鲁克-史密斯 / 克里斯·海姆斯沃斯 / 卡特莉娜德登 / 安蒂·哈卡拉 / 美国 / 斯科特·德瑞克森 / 115分钟 / 奇异博士 / 动作 / 奇幻 / 冒险 / 史蒂夫·迪特寇 Steve Ditko / 托马斯·迪恩·唐纳利 Thomas Dean Donnelly / 斯坦·李 Stan Lee / 乔·斯派茨 Jon Spaihts / Joshua Oppenheimer / 英语</div>
+        <div class="hexo-douban-meta">2016-10-25(英国) / 2016-11-04(中国大陆) / 2016-11-04(美国) / 本尼迪克特·康伯巴奇 / 蒂尔达·斯文顿 / 麦斯·米科尔森 / 切瓦特·埃加福 / 瑞秋·麦克亚当斯 / 迈克尔·斯图巴 / 本尼迪克特·王 / 本杰明·布拉特 / 斯科特·阿金斯 / 莎拉·费希恩 / 阿拉·萨菲 / 斯坦·李 / 安蒂·哈卡拉 / 寇布勒·霍尔德布鲁克-史密斯 / Nan Li / 克里斯·海姆斯沃斯 / 卡特莉娜德登 / 梅拉·沙尔 / 艾米·兰德克 / 李楠 / 美国 / 斯科特·德瑞克森 / 115分钟 / 奇异博士 / 动作 / 奇幻 / 冒险 / 史蒂夫·迪特寇 Steve Ditko / 托马斯·迪恩·唐纳利 Thomas Dean Donnelly / 斯坦·李 Stan Lee / 乔·斯派茨 Jon Spaihts / Joshua Oppenheimer / 英语</div>
     </div>
 </div>
 
@@ -869,7 +893,7 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p1524359776.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1469137689.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1866479/">复仇者联盟 / The Avengers</a>
@@ -982,7 +1006,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1291580/">杀死比尔 / Kill Bill: Vol. 1</a>
         </div>
-        <div class="hexo-douban-meta">2003-09-29(好莱坞首映) / 2003-10-10(美国) / 乌玛·瑟曼 / 刘玉玲 / 薇薇卡·福克斯 / 达丽尔·汉纳 / 大卫·卡拉丁 / 迈克尔·马德森 / 朱莉·德赖弗斯 / 栗山千明 / 千叶真一 / 刘家辉 / 迈克尔·帕克斯 / 迈克尔·鲍文 / 国村隼 / 大叶健二 / 风祭由纪 / Ambrosia Kelley / 田中要次 / 张伸 / 佐藤佐吉 / 北村一辉 / 森下能幸 / 高桥一生 / 美国 / 昆汀·塔伦蒂诺 / 111分钟 / 杀死比尔 / 动作 / 犯罪 / 惊悚 / 昆汀·塔伦蒂诺 Quentin Tarantino / 乌玛·瑟曼 Uma Thurman / 英语 / 日语 / 法语</div>
+        <div class="hexo-douban-meta">2003-09-29(好莱坞首映) / 2003-10-10(美国) / 乌玛·瑟曼 / 刘玉玲 / 薇薇卡·福克斯 / 达丽尔·汉纳 / 大卫·卡拉丁 / 迈克尔·马德森 / 朱莉·德赖弗斯 / 栗山千明 / 千叶真一 / 刘家辉 / 迈克尔·帕克斯 / 迈克尔·鲍文 / 国村隼 / 大叶健二 / 风祭由纪 / 张伸 / 田中要次 / 佐藤佐吉 / 北村一辉 / 森下能幸 / 高桥一生 / Ambrosia Kelley / 美国 / 昆汀·塔伦蒂诺 / 111分钟 / 杀死比尔 / 动作 / 犯罪 / 惊悚 / 昆汀·塔伦蒂诺 Quentin Tarantino / 乌玛·瑟曼 Uma Thurman / 英语 / 日语 / 法语</div>
     </div>
 </div>
 
@@ -1006,7 +1030,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1304102/">谍影重重 / The Bourne Identity</a>
         </div>
-        <div class="hexo-douban-meta">2002-06-14(美国) / 2002-11-21(中国大陆) / 马特·达蒙 / 弗朗卡·波滕特 / 克里斯·库珀 / 克里夫·欧文 / 朱丽娅·斯蒂尔斯 / 布莱恩·考克斯 / 阿德沃尔·阿吉纽依-艾格拜吉 / 加布里埃尔·曼 / 沃尔顿·戈金斯 / 约什·汉密尔顿 / 奥尔索·马利亚·奎利尼 / 戴维·鲍姆伯 / 维森特·富兰克林 / 迪米特里·格里特萨斯 / 安东尼·格林 / 卢多维克·布尔努瓦 / 丹尼尔·科比·埃尔斯基尼 / 吉米·让-刘易斯 / 休伯特·圣-麦卡里 / 埃里克·莫罗 / 美国 / 德国 / 捷克 / www.thebourneidentity.com / 道格·里曼 / 119分钟 / 谍影重重 / 动作 / 悬疑 / 惊悚 / 托尼·吉尔罗伊 Tony Gilroy / 罗伯特·鲁德鲁姆 Robert Ludlum / W. Blake Herron / 英语 / 法语 / 德语 / 荷兰语 / 意大利语</div>
+        <div class="hexo-douban-meta">2002-06-14(美国) / 2002-11-21(中国大陆) / 马特·达蒙 / 弗朗卡·波滕特 / 克里斯·库珀 / 克莱夫·欧文 / 朱丽娅·斯蒂尔斯 / 布莱恩·考克斯 / 阿德沃尔·阿吉纽依-艾格拜吉 / 加布里埃尔·曼 / 沃尔顿·戈金斯 / 约什·汉密尔顿 / 奥尔索·马利亚·奎利尼 / 戴维·鲍姆伯 / 维森特·富兰克林 / 迪米特里·格里特萨斯 / 安东尼·格林 / 卢多维克·布尔努瓦 / 丹尼尔·科比·埃尔斯基尼 / 吉米·让-刘易斯 / 休伯特·圣-麦卡里 / 埃里克·莫罗 / 美国 / 德国 / 捷克 / www.thebourneidentity.com / 道格·里曼 / 119分钟 / 谍影重重 / 动作 / 悬疑 / 惊悚 / 托尼·吉尔罗伊 Tony Gilroy / 罗伯特·鲁德鲁姆 Robert Ludlum / W. Blake Herron / 英语 / 法语 / 德语 / 荷兰语 / 意大利语</div>
     </div>
 </div>
 
@@ -1150,14 +1174,14 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1307694/">无间道3：终极无间 / 無間道III 終極無間</a>
         </div>
-        <div class="hexo-douban-meta">2003-12-12(中国大陆) / 2003-12-12(中国香港) / 2003-12-12(中国台湾) / 梁朝伟 / 刘德华 / 黎明 / 陈道明 / 陈慧琳 / 黄秋生 / 曾志伟 / 郑秀文 / 刘嘉玲 / 林家栋 / 陈冠希 / 余文乐 / 尹扬明 / 李雨阳 / 叶运强 / 尹志强 / 李天翔 / 黎伟明 / 冯康宁 / 吴廷烨 / 高皓正 / 利沙华 / 李子雄 / 黄志忠 / 何家驹 / 中国大陆 / 中国香港 / 刘伟强 / 麦兆辉 / 107分钟(公映版) / 118分钟 / 无间道3：终极无间 / 动作 / 犯罪 / 剧情 / 惊悚 / 麦兆辉 Alan Mak / 庄文强 Felix Chong / 汉语普通话 / 粤语</div>
+        <div class="hexo-douban-meta">2003-12-12(中国大陆) / 2003-12-12(中国香港) / 2003-12-12(中国台湾) / 梁朝伟 / 刘德华 / 黎明 / 陈道明 / 陈慧琳 / 黄秋生 / 曾志伟 / 郑秀文 / 刘嘉玲 / 林家栋 / 陈冠希 / 余文乐 / 尹扬明 / 尹志强 / 叶运强 / 冯康宁 / 黎伟明 / 李天翔 / 李雨阳 / 姚文基 / 吴廷烨 / 高皓正 / 利沙华 / 李子雄 / 黄志忠 / 何家驹 / 中国大陆 / 中国香港 / 刘伟强 / 麦兆辉 / 107分钟(公映版) / 118分钟 / 无间道3：终极无间 / 动作 / 犯罪 / 剧情 / 惊悚 / 麦兆辉 Alan Mak / 庄文强 Felix Chong / 汉语普通话 / 粤语</div>
     </div>
 </div>
 
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2024262361.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2024262739.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1394324/">东方不败风云再起 / 東方不敗之風雲再起</a>
@@ -1186,7 +1210,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1297763/">方世玉</a>
         </div>
-        <div class="hexo-douban-meta">1993-03-04(中国香港) / 李连杰 / 萧芳芳 / 陈松勇 / 李嘉欣 / 胡慧中 / 赵文卓 / 朱江 / 郑少秋 / 郭涛 / 高西安 / 刘金山 / 俞立文 / 刘红梅 / 杨青 / 潘粤明 / 孙晨曦 / 陈龙 / 中国香港 / 元奎 / 100分钟 / 喜剧 / 动作 / 武侠 / 古装 / 刘镇伟 Jeffrey Lau / 陈建忠 John Chan Kin-Chung / 蔡康永 Kevin Tsai / 粤语</div>
+        <div class="hexo-douban-meta">1993-03-04(中国香港) / 李连杰 / 萧芳芳 / 陈松勇 / 李嘉欣 / 胡慧中 / 赵文卓 / 朱江 / 郑少秋 / 郭涛 / 高西安 / 刘金山 / 俞立文 / 刘红梅 / 杨青 / 潘粤明 / 孙晨曦 / 陈龙 / 中国香港 / 元奎 / 106分钟 / 喜剧 / 动作 / 武侠 / 古装 / 刘镇伟 Jeffrey Lau / 陈建忠 John Chan Kin-Chung / 蔡康永 Kevin Tsai / 粤语</div>
     </div>
 </div>
 
@@ -1205,12 +1229,12 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2382744627.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2585646640.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1293475/">黄飞鸿之二：男儿当自强 / 黃飛鴻之二男兒當自強</a>
         </div>
-        <div class="hexo-douban-meta">1992-04-16 / 李连杰 / 关之琳 / 甄子丹 / 莫少聪 / 姜大卫 / 熊欣欣 / 张铁林 / 任世官 / 林迪安 / 周树基 / 麦克·里德 / 朱继生 / 何家驹 / 邓泰和 / 中国香港 / 徐克 / 113 分钟 / 黄飞鸿之二：男儿当自强 / 剧情 / 动作 / 爱情 / 武侠 / 古装 / 徐克 / 张炭 / 陈天璇 / 粤语 / 汉语普通话</div>
+        <div class="hexo-douban-meta">1992-04-16 / 李连杰 / 关之琳 / 甄子丹 / 莫少聪 / 姜大卫 / 熊欣欣 / 张铁林 / 任世官 / 周树基 / 林迪安 / 邓泰和 / 麦克·里德 / 朱继生 / 何家驹 / 江全 / 中国香港 / 徐克 / 113 分钟 / 黄飞鸿之二：男儿当自强 / 剧情 / 动作 / 爱情 / 武侠 / 古装 / 徐克 / 张炭 / 陈天璇 / 粤语 / 汉语普通话</div>
     </div>
 </div>
 
@@ -1234,7 +1258,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1298443/">黄飞鸿 / 黃飛鴻</a>
         </div>
-        <div class="hexo-douban-meta">1991-08-15 / 李连杰 / 元彪 / 关之琳 / 张学友 / 郑则仕 / 邱建国 / 任世官 / 熊欣欣 / 余袁稳 / 许思敏 / 冯雪瑞 / 岑潜波 / 麦克·里德 / 任达华 / 黄子扬 / 午马 / 石坚 / 刘洵 / 袁祥仁 / 袁信义 / 中国香港 / 徐克 / 134分钟 / 95分钟(德国) / 99分钟(美国) / 黄飞鸿 / 剧情 / 动作 / 武侠 / 古装 / 徐克 Hark Tsui / 阮继志 Kai-Chi Yun / 梁耀明 / 邓碧燕 Elsa Tang / 粤语 / 英语 / 汉语普通话</div>
+        <div class="hexo-douban-meta">1991-08-15 / 李连杰 / 元彪 / 关之琳 / 张学友 / 郑则仕 / 邱建国 / 任世官 / 熊欣欣 / 任达华 / 江全 / 林富伟 / 余袁稳 / 冯雪瑞 / 麦克·里德 / 岑潜波 / 许思敏 / 黄子扬 / 午马 / 石坚 / 刘洵 / 袁祥仁 / 袁信义 / 中国香港 / 徐克 / 134分钟 / 95分钟(德国) / 99分钟(美国) / 黄飞鸿 / 剧情 / 动作 / 武侠 / 古装 / 徐克 Hark Tsui / 阮继志 Kai-Chi Yun / 梁耀明 / 邓碧燕 Elsa Tang / 粤语 / 英语 / 汉语普通话</div>
     </div>
 </div>
 
@@ -1246,7 +1270,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1301168/">卧虎藏龙 / 臥虎藏龍</a>
         </div>
-        <div class="hexo-douban-meta">2000-05-16(戛纳电影节) / 2000-07-07(中国台湾) / 2000-10-13(中国大陆) / 周润发 / 杨紫琼 / 章子怡 / 张震 / 郎雄 / 郑佩佩 / 李法曾 / 高西安 / 海燕 / 王德明 / 李黎 / 黄素影 / 张金庭 / 杨蕊 / 李凯 / 冯建华 / 杜振西 / 徐成林 / 林峰 / 王文升 / 宋东 / 马中轩 / 李保成 / 杨永德 / 张少军 / 马宁 / 褚建民 / 董长生 / 徐怡 / 陈兵 / 张少成 / 魏晶琦 / Bin Chen / 黄伟辉 / 中国台湾 / 中国香港 / 美国 / 中国大陆 / 李安 / 120分钟 / 卧虎藏龙 / 剧情 / 爱情 / 武侠 / 王蕙玲 Hui-Ling Wang / 詹姆士·沙姆斯 James Schamus / 蔡国荣 Kuo Jung Tsai / 汉语普通话</div>
+        <div class="hexo-douban-meta">2000-05-16(戛纳电影节) / 2000-07-07(中国台湾) / 2000-10-13(中国大陆) / 周润发 / 杨紫琼 / 章子怡 / 张震 / 郎雄 / 郑佩佩 / 李法曾 / 高西安 / 海燕 / 王德明 / 李黎 / 黄素影 / 张金庭 / 杨蕊 / 李凯 / 冯建华 / 杜振西 / 徐成林 / 林峰 / 王文升 / 宋东 / 马中轩 / 李保成 / 杨永德 / 张少军 / 马宁 / 褚建民 / 董长生 / 徐怡 / 陈兵 / 张少成 / 魏晶琦 / 林志泰 / Bin Chen / 黄伟辉 / 中国台湾 / 中国香港 / 美国 / 中国大陆 / 李安 / 120分钟 / 卧虎藏龙 / 剧情 / 爱情 / 武侠 / 王蕙玲 Hui-Ling Wang / 詹姆士·沙姆斯 James Schamus / 蔡国荣 Kuo Jung Tsai / 汉语普通话</div>
     </div>
 </div>
 
@@ -1259,18 +1283,6 @@ function activateLightMode(){
             <a target="_blank" href="https://movie.douban.com/subject/25919910/">师父</a>
         </div>
         <div class="hexo-douban-meta">2015-11-11(台北金马影展) / 2015-12-10(中国大陆) / 廖凡 / 宋佳 / 蒋雯丽 / 金士杰 / 宋洋 / 黄觉 / 麦迪娜 / 张傲月 / 马君 / 陈观泰 / 熊欣欣 / 戴立忍 / 裘继戎 / 李博 / 邹家豪 / 卡丽娜 / 赵贵祥 / 李春遂 / 张蒙生 / 彭志 / 刘洪林 / 王宝山 / 刘子威 / 陈韦然 / 赵峥 / 李桂生 / 薄冰 / 谢勇 / 尚言生 / 杨晓波 / 刘妙 / 艾琳 / 刘新义 / 安东·夏波瓦洛 / 李一明 / 李光复 / 闫长海 / 杜月 / 高肖雅 / 鲁冠廷 / 柳青伶 / 崔陆萌 / 王星凯 / 冯启龙 / 任思扬 / 秦伯坤 / 赵英龙 / 徐悦 / 陈大成 / 达伦·格罗夫纳 / 乔鸣麟  / 中国大陆 / 徐浩峰 / 109分钟 / 剧情 / 动作 / 武侠 / 徐浩峰 Haofeng Xu / 汉语普通话</div>
-    </div>
-</div>
-
-
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p838966341.jpg" referrerPolicy="no-referrer" /></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title">
-            <a target="_blank" href="https://movie.douban.com/subject/1294417/">笑傲江湖2：东方不败 / 笑傲江湖II東方不敗</a>
-        </div>
-        <div class="hexo-douban-meta">1992-06-26(中国香港) / 李连杰 / 林青霞 / 关之琳 / 李嘉欣 / 李子雄 / 余安安 / 袁洁莹 / 刘洵 / 任世官 / 钱嘉乐 / 黄子扬 / 廖静妮 / 张国梁 / 中国香港 / 程小东 / 107分钟 / 笑傲江湖2：东方不败 / 剧情 / 爱情 / 武侠 / 古装 / 徐克 / 邓碧燕 Elsa Tang / 陈天璇 Tin-suen Chan / 粤语</div>
     </div>
 </div>
 
@@ -1306,7 +1318,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/3821067/">一代宗师 / 一代宗師</a>
         </div>
-        <div class="hexo-douban-meta">2013-01-08(中国大陆) / 2013-01-10(中国香港) / 2013-08-23(美国) / 2015-01-08(中国大陆 3D) / 梁朝伟 / 章子怡 / 张震 / 宋慧乔 / 赵本山 / 小沈阳 / 王庆祥 / 张晋 / 卢海鹏 / 冯克安 / 刘家勇 / 张智霖 / 金士杰 / 徐锦江 / 刘洵 / 尚铁龙 / 罗莽 / 吴廷烨 / 张国立 / 袁和平 / 梁小龙 / 袁祥仁 / 黎烈弓 / 袁信义 / 戚冠军 / 王玨 / 吴云飞 / 任欣羽 / 江道海 / 魏小欢 / 吴艺璇 / 周小飞 / 江健 / 吉飞龙 / 赵芳华 / 贺勋 / 中国大陆 / 中国香港 / 王家卫 / 111分钟(3D重映) / 130分钟(中国大陆) / 108分钟(美国) / 123分钟(国际版) / 一代宗师 / 剧情 / 传记 / 动作 / 爱情 / 邹静之 Jingzhi Zou / 徐浩峰 Haofeng Xu / 王家卫 Kar Wai Wong / 汉语普通话 / 粤语 / 日语</div>
+        <div class="hexo-douban-meta">2013-01-08(中国大陆) / 2013-01-10(中国香港) / 2013-08-23(美国) / 2015-01-08(中国大陆 3D) / 梁朝伟 / 章子怡 / 张震 / 宋慧乔 / 赵本山 / 小沈阳 / 王庆祥 / 张晋 / 卢海鹏 / 冯克安 / 刘家勇 / 张智霖 / 金士杰 / 徐锦江 / 刘洵 / 尚铁龙 / 罗莽 / 吴廷烨 / 张国立 / 袁和平 / 梁小龙 / 袁祥仁 / 黎烈弓 / 袁信义 / 戚冠军 / 王玨 / 吴云飞 / 任欣羽 / 江道海 / 魏小欢 / 吴艺璇 / 周小飞 / 江健 / 吉飞龙 / 赵芳华 / 贺勋 / 陈伟 / 中国大陆 / 中国香港 / 王家卫 / 111分钟(3D重映) / 130分钟(中国大陆) / 108分钟(美国) / 123分钟(国际版) / 一代宗师 / 剧情 / 传记 / 动作 / 爱情 / 邹静之 Jingzhi Zou / 徐浩峰 Haofeng Xu / 王家卫 Kar Wai Wong / 汉语普通话 / 粤语 / 日语</div>
     </div>
 </div>
 
@@ -1390,7 +1402,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1307323/">天下无双</a>
         </div>
-        <div class="hexo-douban-meta">2002-02-06(中国香港) / 梁朝伟 / 王菲 / 赵薇 / 张震 / 朱茵 / 潘迪华 / 宁静 / 葛民辉 / 张耀扬 / 刘镇伟 / 黄永明 / 陈龙 / 钟汉豪 / 中国大陆 / 中国香港 / 刘镇伟 / 97分钟 / 喜剧 / 爱情 / 古装 / 歌舞 / 刘镇伟 Jeffrey Lau / 粤语</div>
+        <div class="hexo-douban-meta">2002-02-06(中国香港) / 梁朝伟 / 王菲 / 赵薇 / 张震 / 朱茵 / 潘迪华 / 宁静 / 葛民辉 / 张耀扬 / 刘镇伟 / 黄永明 / 陈龙 / 钟汉豪 / 陈龙 / 中国大陆 / 中国香港 / 刘镇伟 / 97分钟 / 喜剧 / 爱情 / 古装 / 歌舞 / 刘镇伟 Jeffrey Lau / 粤语</div>
     </div>
 </div>
 
@@ -1402,7 +1414,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1416728/">花田喜事 / 花田囍事</a>
         </div>
-        <div class="hexo-douban-meta">1993-01-20(中国香港) / 张国荣 / 关之琳 / 许冠杰 / 毛舜筠 / 许冠英 / 吴君如 / 黄百鸣 / 吴孟达 / 黄霑 / 卢敏仪 / 阮兆祥 / 许莹英 / 潘雁英 / 袁文杰 / 黄光亮 / 中国香港 / 高志森 / 85 分钟 / 花田喜事 / 喜剧 / 爱情 / 古装 / 黄百鸣 Bak-Ming Wong / 马伟豪 Joe Ma / 谷德昭 Vincent Kok / 高志森 Clifton Ko / 粤语</div>
+        <div class="hexo-douban-meta">1993-01-20(中国香港) / 张国荣 / 关之琳 / 许冠杰 / 毛舜筠 / 许冠英 / 吴君如 / 黄百鸣 / 吴孟达 / 黄霑 / 卢敏仪 / 阮兆祥 / 许莹英 / 潘雁英 / 袁文杰 / 黄光亮 / 邓泰和 / 中国香港 / 高志森 / 85 分钟 / 花田喜事 / 喜剧 / 爱情 / 古装 / 黄百鸣 Bak-Ming Wong / 马伟豪 Joe Ma / 谷德昭 Vincent Kok / 高志森 Clifton Ko / 粤语</div>
     </div>
 </div>
 
@@ -1457,24 +1469,12 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2272146906.jpg" referrerPolicy="no-referrer" /></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title">
-            <a target="_blank" href="https://movie.douban.com/subject/1295409/">纵横四海 / 緃横四海</a>
-        </div>
-        <div class="hexo-douban-meta">1991-02-02(中国香港) / 周润发 / 张国荣 / 钟楚红 / 朱江 / 曾江 / 胡枫 / 唐宁 / 邓一君 / 冯雪瑞 / 韩俊 / 胡大为 / 中国香港 / 吴宇森 / 108分钟 / 纵横四海 / 剧情 / 喜剧 / 动作 / 犯罪 / 吴宇森 John Woo / 高志森 Clifton Ko / 秦小珍  Janet Chun / 粤语 / 汉语普通话 / 客家话 / 英语 / 法语</div>
-    </div>
-</div>
-
-
-        
-        <div class="hexo-douban-item">
     <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2191978526.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1309115/">帝国的毁灭 / Der Untergang</a>
         </div>
-        <div class="hexo-douban-meta">2004-09-08(德国) / 布鲁诺·甘茨 / 亚历山德拉·玛丽亚·拉娜 / 科琳娜·哈弗奇 / 乌尔里希·马特斯 / 茱莉安·柯勒 / 海诺·费尔希 / 克里斯蒂安·贝克尔 / 马蒂亚斯·哈比希 / 托马斯·克莱舒曼 / 米歇尔·门德尔 / 安德烈·赫尼克 / 乌尔里希·诺登 / 比吉特·米尼希迈尔 / 罗夫·凯尼斯 / 尤斯图斯·冯·多赫纳尼 / 迪特尔·曼 / 克里斯蒂安·雷德尔 / 戈兹·奥托 / 托马斯·林平泽尔 / 托马斯·蒂梅 / 杰拉德·亚历山大·海德 / Bettina Redlich / Heinrich Schmieder / 安娜·塔巴赫 / Dietrich Hollinderbäumer / Ulrike Krumbiegel / Karl Kranzkowski / Jürgen Tonkel / 大卫·史崔梭德 / 法比安·布施 / Aleksandr Slastin / Aline Sokar / Gregory Borlein / Laura Borlein / 丽扎· 波亚尔斯卡娅 / 迈克尔·布兰德纳 / 马丁·布兹克 / 马蒂亚斯·格内丁格尔 / Norbert Heckner / Enno Hesse / 尤莉亚·延奇 / 迈克尔·肯德 / Elisabeth von Koch / 斯特凡·梅伦 / 卡特琳娜·珀罗简 / Christian Schmidt / August Schmölzer / Klaus-Jürgen Steinmann / Oliver Stritzel / Klaus B. Wolf / Traudl Junge / Martin Kessler / 亨宁·佩克 / 迪特·鲁普 / Tatjana Zhuravleva / Oleg Popov / 德国 / 奥地利 / 意大利 / 奥利弗·希施比格尔 / 156分钟 / 178分钟(加长版) / 帝国的毁灭 / 剧情 / 传记 / 历史 / 战争 / 贝尔恩德·艾辛格 Bernd Eichinger / 约阿希姆·费斯特 Joachim Fest / Traudl Junge / Melissa Müller / 德语 / 俄语</div>
+        <div class="hexo-douban-meta">2004-09-08(德国) / 布鲁诺·甘茨 / 亚历山德拉·玛丽亚·拉娜 / 科琳娜·哈弗奇 / 乌尔里希·马特斯 / 茱莉安·柯勒 / 海诺·费尔希 / 克里斯蒂安·贝克尔 / 马蒂亚斯·哈比希 / 托马斯·克莱舒曼 / 米歇尔·门德尔 / 安德烈·赫尼克 / 乌尔里希·诺登 / 比吉特·米尼希迈尔 / 罗夫·凯尼斯 / 尤斯图斯·冯·多赫纳尼 / 迪特尔·曼 / 克里斯蒂安·雷德尔 / 戈兹·奥托 / 托马斯·林平泽尔 / 托马斯·蒂梅 / 杰拉德·亚历山大·海德 / Bettina Redlich / Heinrich Schmieder / 安娜·塔巴赫 / Dietrich Hollinderbäumer / Ulrike Krumbiegel / Karl Kranzkowski / Jürgen Tonkel / 大卫·史崔梭德 / 法比安·布施 / Aleksandr Slastin / 阿丽娜·索卡 / Gregory Borlein / Laura Borlein / 丽扎· 波亚尔斯卡娅 / 迈克尔·布兰德纳 / 马丁·布兹克 / 马蒂亚斯·格内丁格尔 / Norbert Heckner / Enno Hesse / 尤莉亚·延奇 / 迈克尔·肯德 / Elisabeth von Koch / 斯特凡·梅伦 / 卡特琳娜·珀罗简 / Christian Schmidt / August Schmölzer / Klaus-Jürgen Steinmann / Oliver Stritzel / Klaus B. Wolf / Traudl Junge / Martin Kessler / 亨宁·佩克 / 迪特·鲁普 / Tatjana Zhuravleva / Oleg Popov / 德国 / 奥地利 / 意大利 / 奥利弗·希施比格尔 / 156分钟 / 178分钟(加长版) / 帝国的毁灭 / 剧情 / 传记 / 历史 / 战争 / 贝尔恩德·艾辛格 Bernd Eichinger / 约阿希姆·费斯特 Joachim Fest / Traudl Junge / Melissa Müller / 德语 / 俄语</div>
     </div>
 </div>
 
@@ -1561,6 +1561,435 @@ function activateLightMode(){
 </div>
     </div>
     <div id="hexo-douban-item3">
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p815559561.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/4822848/">武林外传</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-25 /  武林外传 2011 姚晨 国产 搞笑 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> 永远的武林外传，那些逝去的青春不再回来！珍惜眼前人。</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2350760600.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1299085/">一刀倾城 / 一刀傾城</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-21 /  / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> 杨丽菁的，不错不错。</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p838966341.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1294417/">笑傲江湖2：东方不败 / 笑傲江湖II東方不敗</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-20 /  香港电影 经典 林青霞 程小东 武侠 关之琳 李连杰 李嘉欣 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> 经典之作啊，非常喜欢这样的武侠，可以现在已经拍不出来这样的武侠片了。</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2456783203.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/2084622/">神雕侠侣 / 神鵰俠侶</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-19 /  1982 郭追 邵氏 香港电影 傅声 江生 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2266404895.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1305608/">冷血十三鹰 / 冷血十三鷹</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-19 /  香港电影 邵氏 狄龙 武侠 傅声 1978 谷峰 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2285562180.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1297979/">独臂刀 / 獨臂刀</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-15 /  香港电影 王羽 邵氏 潘迎紫 1967 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2526673269.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1302128/">新独臂刀 / 新獨臂刀</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-15 /  张彻 姜大卫 武侠 1971 香港电影 姜大卫＋狄龙 邵氏 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1645229293.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/11501396/">边境风云</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-08 /  王珞丹 犯罪 孙红雷 2012 边境地区 贩毒 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> 孙红雷，演的人狠话不多。</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2564685215.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1291875/">阳光灿烂的日子</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-05 /  经典 大陆 成长 阳光灿烂的日子 夏雨 中国 中 陶虹 宁静国电影 姜文 文革 斯琴高娃 王学圻 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2169599280.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/3536264/">爱的饥渴 / 愛の渇き</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-04 /  三島由紀夫 日本电影 1966 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p619021003.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1299292/">八美图 / 8 femmes</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-04 /  法国电影 2000s Francois_Ozon 弗朗索瓦·欧容 / ★★★★☆ 推荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1895384942.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/3329958/">窍哥</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-03 /  国产电视剧 找回《窍哥》 童年回忆 1993 经典 大陆 爱情 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> 只记得有个破竹筒被踩坏了，里面有青蛙，后来才搜到叫窍哥。</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2553104888.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1291858/">鬼子来了</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-03 /  战争 鬼子来了 黑色幽默 人性 中国电影 抗日 姜文 大陆 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2081177319.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1408315/">霸王花</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-02 /  香港电影 吴君如 警匪 香港 1988 胡慧中 喜剧 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2042949665.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1930829/">五福星撞鬼</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-01 /  1991 香港电影 洪金宝 香港 五福星撞鬼 曾志伟 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2359387001.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1308201/">绝种铁金刚 / 絕種鉄金剛</a>
+        </div>
+        <div class="hexo-douban-meta">2020-04-01 /  陈小春 钟欣桐 陈冠希 梁家辉 王晶 香港 香港电影 2003 喜剧 / ★★★☆☆ 还行 </div>
+        <div class="hexo-douban-comments"> 居然有田朴珺</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2043751408.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1302110/">福星闯江湖 / 福星闖江湖</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-30 /  五福星 香港电影 苗侨伟 吴耀汉 喜剧 1989 刘嘉玲 冯淬帆 曾志伟 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1610195777.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1300508/">富贵列车 / 富貴列車</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-30 /  动作 洪金宝 喜剧 香港 钟镇涛 关之琳 元彪 1986 香港电影 童年 搞笑 钱小豪 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2557653230.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/33434927/">矿民、马夫、尘肺病</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-30 /  2019 中国当代纪录片 纪录片，中国贫困人口，当代中国社会 社会的另一面 蒋能杰 独立电影 尘肺 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2081177063.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1293732/">福星高照</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-28 /  洪金宝 香港电影 动作 1985 元彪 喜剧 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1921688843.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/11577177/">实习大叔 / The Internship</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-28 /  IT Google 2013 美国 / ★★☆☆☆ 较差 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1606347997.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1448758/">半斤八两 / 半斤八兩</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-28 /  1976 香港 许冠杰 许冠文 赵雅芝 半斤八两 喜剧 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2304896584.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/3158686/">师姐也疯狂 / 師姐也瘋狂</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-28 /  1990s 喜剧 香港电影 杨丽菁 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2246195000.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1297981/">最佳福星</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-27 /  香港电影 1986 洪金宝 谭咏麟 麦嘉 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2349321361.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1298155/">富贵兵团 / 富貴兵團</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-26 /  谭咏麟 洪金宝 1990 香港电影 喜剧 梅艳芳 1989 / ★★★★☆ 推荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2366020965.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/3151703/">大四喜</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-26 /  2008 喜剧 大四喜 / ★★★☆☆ 还行 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1122557089.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1306133/">呖咕呖咕新年财 / 嚦咕嚦咕新年財</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-26 /  香港电影 2002 电影 搞笑 应采儿 刘德华 古天乐 梁咏琪 刘青云 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2436823425.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1303173/">甲方乙方</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-25 /  搞笑 1997 经典 / ★★★★☆ 推荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2272146906.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1295409/">纵横四海 / 緃横四海</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-25 /  喜剧 犯罪 1991 搞笑 警匪 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2507555692.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/3211018/">超级无敌追女仔II之狗仔雄心 / 超級無敵追女仔2之狗仔雄心</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-24 /  1997 香港电影 陈百祥 杨恭如 追女仔 关秀媚 喜剧 / ★★★★☆ 推荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2509727270.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1308315/">超级无敌追女仔 / 超級無敵追女仔</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-24 /  1997 香港 陈百祥 1990s 搞笑 超级无敌追女仔 / ★★★★☆ 推荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p1213203384.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/4301043/">传染病 / Contagion</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-24 /  美国 2011 灾难 / ★★★★☆ 推荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2029391129.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/10432911/">流感 / 감기</a>
+        </div>
+        <div class="hexo-douban-meta">2020-03-24 /  韩国电影 2013 灾难 惊悚 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
         
         <div class="hexo-douban-item">
     <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p453461145.jpg" referrerPolicy="no-referrer" /></div>
@@ -1836,7 +2265,7 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2182085556.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2197176454.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1293167/">生死时速 / Speed</a>
@@ -2018,7 +2447,7 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2457784081.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2457842663.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1301198/">少林寺</a>
@@ -2720,7 +3149,7 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2591591494.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p804947166.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1295038/">哈利·波特与魔法石 / Harry Potter and the Sorcerer&#39;s Stone</a>
@@ -2811,7 +3240,7 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1130634293.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p453512941.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1301445/">黑衣人 / Men in Black</a>
@@ -3123,7 +3552,7 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p636665128.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2173113013.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/3813779/">剑雨</a>
@@ -3240,7 +3669,7 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2210711072.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2167116851.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1299765/">回魂夜</a>
@@ -3474,7 +3903,7 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2363140172.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2220722175.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/1291575/">玩具总动员 / Toy Story</a>
@@ -3568,7 +3997,7 @@ function activateLightMode(){
     <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2575362797.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
-            <a target="_blank" href="https://movie.douban.com/subject/25853071/">庆余年</a>
+            <a target="_blank" href="https://movie.douban.com/subject/25853071/">庆余年 第一季</a>
         </div>
         <div class="hexo-douban-meta">2020-03-02 /  权谋 搞笑 古装 穿越 / ★★★★★ 力荐 </div>
         <div class="hexo-douban-comments"> 全局的败笔就是肖战，没演技，啥也没有，拦人肖战！</div>
@@ -3648,7 +4077,7 @@ function activateLightMode(){
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/26752088/">我不是药神</a>
         </div>
-        <div class="hexo-douban-meta">2018-09-20 /  /  </div>
+        <div class="hexo-douban-meta">2018-09-20 /  / ★★★★★ 力荐 </div>
         <div class="hexo-douban-comments"> </div>
     </div>
 </div>
@@ -3838,7 +4267,7 @@ function activateLightMode(){
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2217958083.jpg" referrerPolicy="no-referrer" /></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2570978606.jpg" referrerPolicy="no-referrer" /></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/6984046/">武媚娘传奇</a>
@@ -4390,28 +4819,43 @@ for (var i = 0; i < firstpages.length; i++) {
 
 </script>
 
-</div><nav id="pagination"><div class="pagination"></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = false == true ? true : false;
-var verify = false == true ? true : false;
-var GUEST_INFO = ['nick','mail','link'];
-var guest_info = 'nick,mail,link'.split(',').filter(function(item){
-  return GUEST_INFO.indexOf(item) > -1
-});
-guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+</div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var requestSetting = function (from,set) {
+  var from = from
+  var setting = set.split(',').filter(function(item){
+  return from.indexOf(item) > -1
+  });
+  setting = setting.length == 0 ? from :setting;
+  return setting
+}
+
+var guestInfo = requestSetting(['nick','mail','link'],'nick,mail,link')
+var requiredFields = requestSetting(['nick','mail','link'],'nick,mail')
 
 window.valine = new Valine({
   el:'#vcomment',
-  notify:notify,
-  verify:verify,
-  appId:'x8zJ7Nuyh3yChQgtKcdg4zwC-MdYXbMMI',
-  appKey:'pWRle3EfOO23aYlB3O1SyOQs',
-  placeholder:'Please leave your footprints',
-  avatar:'monsterid',
-  guest_info:guest_info,
-  pageSize:'10',
-  lang:'zh-cn',
-  recordIP: true
-});</script></div></article><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/img/longmao.gif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"><div class="author-info__name">蕾米亚</div><div class="author-info__description">愿我如星君如月，夜夜流光相皎洁。</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length_num">72</div></a></div><div class="card-info-data-item is-center">      <a href="/tags/"><div class="headline">标签</div><div class="length_num">47</div></a></div><div class="card-info-data-item is-center">     <a href="/categories/"><div class="headline">分类</div><div class="length_num">21</div></a></div></div><div class="card-info-bookmark is-center"><a class="bookmark button--primary button--animated" id="bookmark-it" href="javascript:;" title="加入书签" target="_self"><i class="fa fa-bookmark" aria-hidden="true"></i><span>加入书签</span></a></div><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a><a class="social-icon" href="mailto:example@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a><a class="social-icon" href="/atom.xml" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fa fa-bullhorn card-announcement-animation" aria-hidden="true"></i><span>公告</span></div><div class="announcement_content">感谢访问本站，若喜欢请加友链 ^_^</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fa fa-history" aria-hidden="true"></i><span>最新文章</span></div><div class="aside-recent-item"> <div class="aside-recent-post"><a href="/2020/b23cbeff.html"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover3.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" title="python知识复习" alt="python知识复习"></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/b23cbeff.html" title="python知识复习">python知识复习</div><time class="aside-post_meta post-meta__date">2020-03-24</time></div></a></div><div class="aside-recent-post"><a href="/2020/d5346afd.html"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="缩略图" onerror="this.onerror=null;this.src='/img/404.jpg'" title="20200324疫情信息" alt="20200324疫情信息"></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/d5346afd.html" title="20200324疫情信息">20200324疫情信息</div><time class="aside-post_meta post-meta__date">2020-03-24</time></div></a></div><div class="aside-recent-post"><a href="/2020/cc310aa4.html"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover7.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" title="20200323新冠疫情" alt="20200323新冠疫情"></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/cc310aa4.html" title="20200323新冠疫情">20200323新冠疫情</div><time class="aside-post_meta post-meta__date">2020-03-23</time></div></a></div><div class="aside-recent-post"><a href="/2020/286ac9b5.html"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover8.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" title="20200322新冠疫情记录" alt="20200322新冠疫情记录"></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/286ac9b5.html" title="20200322新冠疫情记录">20200322新冠疫情记录</div><time class="aside-post_meta post-meta__date">2020-03-22</time></div></a></div><div class="aside-recent-post"><a href="/2020/bd458949.html"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover13.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" title="20200321疫情记录" alt="20200321疫情记录"></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/bd458949.html" title="20200321疫情记录">20200321疫情记录</div><time class="aside-post_meta post-meta__date">2020-03-21</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fa fa-folder-open" aria-hidden="true"></i><span>分类</span></div><ul class="aside-category-item">       <li class="aside-category-list"><a class="aside-category-list_link" href="/categories/Blog/"><span class="aside-category-list_name">Blog</span><span class="aside-category-list_length">1</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/Hexo/"><span class="aside-category-list_name">Hexo</span><span class="aside-category-list_length">1</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/Linux/"><span class="aside-category-list_name">Linux</span><span class="aside-category-list_length">9</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/Python/"><span class="aside-category-list_name">Python</span><span class="aside-category-list_length">1</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/Windows/"><span class="aside-category-list_name">Windows</span><span class="aside-category-list_length">2</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/hexo/"><span class="aside-category-list_name">hexo</span><span class="aside-category-list_length">3</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/kindle/"><span class="aside-category-list_name">kindle</span><span class="aside-category-list_length">1</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/python/"><span class="aside-category-list_name">python</span><span class="aside-category-list_length">4</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/theme/"><span class="aside-category-list_name">theme</span><span class="aside-category-list_length">1</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/windows/"><span class="aside-category-list_name">windows</span><span class="aside-category-list_length">1</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"><span class="aside-category-list_name">博客主题</span><span class="aside-category-list_length">3</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E6%96%B0%E5%86%A0/"><span class="aside-category-list_name">新冠</span><span class="aside-category-list_length">8</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E6%9D%82%E6%96%87/"><span class="aside-category-list_name">杂文</span><span class="aside-category-list_length">4</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E6%9D%82%E8%AE%B0/"><span class="aside-category-list_name">杂记</span><span class="aside-category-list_length">2</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/"><span class="aside-category-list_name">树莓派</span><span class="aside-category-list_length">1</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E7%AE%97%E6%B3%95/"><span class="aside-category-list_name">算法</span><span class="aside-category-list_length">2</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E8%8B%B1%E8%AF%AD/"><span class="aside-category-list_name">英语</span><span class="aside-category-list_length">1</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E8%AF%97%E8%AF%8D/"><span class="aside-category-list_name">诗词</span><span class="aside-category-list_length">1</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E8%BD%AF%E4%BB%B6/"><span class="aside-category-list_name">软件</span><span class="aside-category-list_length">2</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E8%BF%90%E7%BB%B4/"><span class="aside-category-list_name">运维</span><span class="aside-category-list_length">14</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E9%BA%BB%E5%B0%86/"><span class="aside-category-list_name">麻将</span><span class="aside-category-list_length">1</span></a></li></ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fa fa-tags" aria-hidden="true"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Believe/" style="font-size: 16px; color: #999">Believe</a> <a href="/tags/Blog/" style="font-size: 16px; color: #999">Blog</a> <a href="/tags/DNS/" style="font-size: 16px; color: #999">DNS</a> <a href="/tags/DR/" style="font-size: 16px; color: #999">DR</a> <a href="/tags/Hexo/" style="font-size: 20px; color: #99a1ac">Hexo</a> <a href="/tags/Keepalived/" style="font-size: 16px; color: #999">Keepalived</a> <a href="/tags/LVS/" style="font-size: 21.33px; color: #99a4b2">LVS</a> <a href="/tags/Linux/" style="font-size: 24px; color: #99a9bf">Linux</a> <a href="/tags/Nagios/" style="font-size: 16px; color: #999">Nagios</a> <a href="/tags/PHP/" style="font-size: 16px; color: #999">PHP</a> <a href="/tags/Python/" style="font-size: 16px; color: #999">Python</a> <a href="/tags/RS/" style="font-size: 16px; color: #999">RS</a> <a href="/tags/Vim/" style="font-size: 18.67px; color: #999ea6">Vim</a> <a href="/tags/Windows/" style="font-size: 17.33px; color: #999c9f">Windows</a> <a href="/tags/WordPress/" style="font-size: 16px; color: #999">WordPress</a> <a href="/tags/android/" style="font-size: 16px; color: #999">android</a> <a href="/tags/cmd/" style="font-size: 16px; color: #999">cmd</a> <a href="/tags/docker/" style="font-size: 17.33px; color: #999c9f">docker</a> <a href="/tags/hexo/" style="font-size: 18.67px; color: #999ea6">hexo</a> <a href="/tags/ios/" style="font-size: 16px; color: #999">ios</a> <a href="/tags/kindle/" style="font-size: 16px; color: #999">kindle</a> <a href="/tags/python/" style="font-size: 20px; color: #99a1ac">python</a> <a href="/tags/squid/" style="font-size: 16px; color: #999">squid</a> <a href="/tags/tunnel/" style="font-size: 16px; color: #999">tunnel</a> <a href="/tags/virtualenv/" style="font-size: 16px; color: #999">virtualenv</a> <a href="/tags/windows/" style="font-size: 17.33px; color: #999c9f">windows</a> <a href="/tags/%E4%B8%83%E5%B1%82/" style="font-size: 16px; color: #999">七层</a> <a href="/tags/%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87/" style="font-size: 17.33px; color: #999c9f">双机热备</a> <a href="/tags/%E5%9B%9B%E5%B1%82/" style="font-size: 16px; color: #999">四层</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 16px; color: #999">备份</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 16px; color: #999">工具</a> <a href="/tags/%E5%BF%83%E8%B7%B3%E9%A2%91%E7%8E%87/" style="font-size: 16px; color: #999">心跳频率</a> <a href="/tags/%E6%95%A3%E6%96%87/" style="font-size: 16px; color: #999">散文</a> <a href="/tags/%E6%96%B0%E5%86%A0/" style="font-size: 22.67px; color: #99a6b9">新冠</a> <a href="/tags/%E6%9D%82%E6%96%87/" style="font-size: 16px; color: #999">杂文</a> <a href="/tags/%E7%9B%AE%E5%BD%95/" style="font-size: 16px; color: #999">目录</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 18.67px; color: #999ea6">算法</a> <a href="/tags/%E7%BD%91%E5%9D%80%E5%AF%BC%E8%88%AA/" style="font-size: 16px; color: #999">网址导航</a> <a href="/tags/%E8%82%A1%E5%B8%82/" style="font-size: 16px; color: #999">股市</a> <a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 16px; color: #999">英语</a> <a href="/tags/%E8%AF%97%E8%AF%8D/" style="font-size: 18.67px; color: #999ea6">诗词</a> <a href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" style="font-size: 18.67px; color: #999ea6">负载均衡</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 17.33px; color: #999c9f">软件</a> <a href="/tags/%E9%80%9F%E8%AF%BB/" style="font-size: 16px; color: #999">速读</a> <a href="/tags/%E9%9B%86%E7%BE%A4/" style="font-size: 17.33px; color: #999c9f">集群</a> <a href="/tags/%E9%AB%98%E5%8F%AF%E7%94%A8/" style="font-size: 16px; color: #999">高可用</a> <a href="/tags/%E9%BA%BB%E5%B0%86/" style="font-size: 16px; color: #999">麻将</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fa fa-archive" aria-hidden="true"></i><span>归档</span></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/"><span class="archive-list-date">2020年03月</span><span class="archive-list-count">20</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/"><span class="archive-list-date">2020年02月</span><span class="archive-list-count">1</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/"><span class="archive-list-date">2019年03月</span><span class="archive-list-count">2</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/"><span class="archive-list-date">2018年10月</span><span class="archive-list-count">3</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/"><span class="archive-list-date">2017年07月</span><span class="archive-list-count">4</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/"><span class="archive-list-date">2017年05月</span><span class="archive-list-count">1</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/"><span class="archive-list-date">2017年04月</span><span class="archive-list-count">3</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/"><span class="archive-list-date">2016年10月</span><span class="archive-list-count">4</span></a></li><li class="archive-list-item"><a class="archive-list-link-more" href="/archives" >查看更多</a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fa fa-line-chart" aria-hidden="true"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">72</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" start_date="3/2/2014 00:00:00">     </div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2014 - 2020 By 蕾米亚</div><div class="framework-info"><span>驱动 </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text"><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/fireworks.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/canvas-nest.js"></script><script src="https://cdn.jsdelivr.net/npm/activate-power-mode/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = true; 
-document.body.addEventListener('input', POWERMODE);
-</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
- <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body></html>
+  appId: 'x8zJ7Nuyh3yChQgtKcdg4zwC-MdYXbMMI',
+  appKey: 'pWRle3EfOO23aYlB3O1SyOQs',
+  notify: false,
+  verify: false,
+  placeholder: 'Please leave your footprints',
+  avatar: 'monsterid',
+  meta: guestInfo,
+  pageSize: '10',
+  lang: 'zh-cn',
+  recordIP: false,
+  serverURLs: '',
+  emojiCDN: '',
+  emojiMaps: "",
+  enableQQ: false,
+  requiredFields: requiredFields
+});</script></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/img/longmao.gif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">蕾米亚</div><div class="author-info__description">愿我如星君如月，夜夜流光相皎洁。</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">127</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">51</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">23</div></a></div></div><div class="card-info-bookmark is-center"><a class="bookmark button--primary button--animated" id="bookmark-it" href="javascript:;" title="加入书签" target="_self"><i class="fa fa-bookmark" aria-hidden="true"></i><span>加入书签</span></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/jerryc127" target="_blank" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a><a class="social-icon" href="mailto:xxxxxxx@gmail.com" target="_blank" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fa fa-bullhorn card-announcement-animation" aria-hidden="true"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fa fa-history" aria-hidden="true"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/2020/dbf13a83.html"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover5.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" title="绝赞Windows应用" alt="绝赞Windows应用"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/dbf13a83.html" title="绝赞Windows应用">绝赞Windows应用</div><time class="aside-post_meta post-meta__date" title="发表于 2020-05-01 14:05:41">2020-05-01</time></div></a></div><div class="aside-recent-post"><a href="/2020/c72e2148.html"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover0.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" title="20200501新冠新闻" alt="20200501新冠新闻"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/c72e2148.html" title="20200501新冠新闻">20200501新冠新闻</div><time class="aside-post_meta post-meta__date" title="发表于 2020-05-01 09:59:54">2020-05-01</time></div></a></div><div class="aside-recent-post"><a href="/2020/8adef9b7.html"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover5.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" title="windows CMD命令大全及详细解释和语法" alt="windows CMD命令大全及详细解释和语法"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/8adef9b7.html" title="windows CMD命令大全及详细解释和语法">windows CMD命令大全及详细解释和语法</div><time class="aside-post_meta post-meta__date" title="发表于 2020-04-30 22:52:17">2020-04-30</time></div></a></div><div class="aside-recent-post"><a href="/2020/df2206fe.html"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover4.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" title="20200430新冠新闻" alt="20200430新冠新闻"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/df2206fe.html" title="20200430新冠新闻">20200430新冠新闻</div><time class="aside-post_meta post-meta__date" title="发表于 2020-04-30 21:43:48">2020-04-30</time></div></a></div><div class="aside-recent-post"><a href="/2020/c5b8ed60.html"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" title="20200429新冠新闻" alt="20200429新冠新闻"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/c5b8ed60.html" title="20200429新冠新闻">20200429新冠新闻</div><time class="aside-post_meta post-meta__date" title="发表于 2020-04-29 18:46:31">2020-04-29</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fa fa-folder-open" aria-hidden="true"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item"><a class="card-category-list-link" href="/categories/Blog/"><span class="card-category-list-name">Blog</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/Hexo/"><span class="card-category-list-name">Hexo</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/Python/"><span class="card-category-list-name">Python</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/Windows/"><span class="card-category-list-name">Windows</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/english/"><span class="card-category-list-name">english</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item"><a class="card-category-list-link" href="/categories/kindle/"><span class="card-category-list-name">kindle</span><span class="card-category-list-count">1</span></a></li>
+            <li class="card-category-list-item more is-center"><a class="card-category-list-link-more" href="/categories">
+                <span>查看更多</span><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>           
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fa fa-tags" aria-hidden="true"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Believe/" style="font-size: 16px; color: #999">Believe</a> <a href="/tags/Blog/" style="font-size: 16px; color: #999">Blog</a> <a href="/tags/DNS/" style="font-size: 16px; color: #999">DNS</a> <a href="/tags/DR/" style="font-size: 16px; color: #999">DR</a> <a href="/tags/Hexo/" style="font-size: 19px; color: #99a1ac">Hexo</a> <a href="/tags/Keepalived/" style="font-size: 16px; color: #999">Keepalived</a> <a href="/tags/LVS/" style="font-size: 20px; color: #99a4b2">LVS</a> <a href="/tags/Linux/" style="font-size: 21px; color: #99a6b9">Linux</a> <a href="/tags/Nagios/" style="font-size: 16px; color: #999">Nagios</a> <a href="/tags/PHP/" style="font-size: 16px; color: #999">PHP</a> <a href="/tags/Python/" style="font-size: 16px; color: #999">Python</a> <a href="/tags/RS/" style="font-size: 16px; color: #999">RS</a> <a href="/tags/Vim/" style="font-size: 18px; color: #999ea6">Vim</a> <a href="/tags/Windows/" style="font-size: 20px; color: #99a4b2">Windows</a> <a href="/tags/WordPress/" style="font-size: 16px; color: #999">WordPress</a> <a href="/tags/android/" style="font-size: 16px; color: #999">android</a> <a href="/tags/bash/" style="font-size: 17px; color: #999c9f">bash</a> <a href="/tags/cmd/" style="font-size: 16px; color: #999">cmd</a> <a href="/tags/docker/" style="font-size: 17px; color: #999c9f">docker</a> <a href="/tags/english/" style="font-size: 16px; color: #999">english</a> <a href="/tags/hexo/" style="font-size: 18px; color: #999ea6">hexo</a> <a href="/tags/ios/" style="font-size: 16px; color: #999">ios</a> <a href="/tags/kindle/" style="font-size: 16px; color: #999">kindle</a> <a href="/tags/python/" style="font-size: 20px; color: #99a4b2">python</a> <a href="/tags/squid/" style="font-size: 16px; color: #999">squid</a> <a href="/tags/tunnel/" style="font-size: 16px; color: #999">tunnel</a> <a href="/tags/virtualenv/" style="font-size: 16px; color: #999">virtualenv</a> <a href="/tags/windows/" style="font-size: 17px; color: #999c9f">windows</a> <a href="/tags/%E4%B8%83%E5%B1%82/" style="font-size: 16px; color: #999">七层</a> <a href="/tags/%E5%8F%8C%E6%9C%BA%E7%83%AD%E5%A4%87/" style="font-size: 17px; color: #999c9f">双机热备</a> <a href="/tags/%E5%9B%9B%E5%B1%82/" style="font-size: 16px; color: #999">四层</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 16px; color: #999">备份</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 16px; color: #999">工具</a> <a href="/tags/%E5%BF%83%E8%B7%B3%E9%A2%91%E7%8E%87/" style="font-size: 16px; color: #999">心跳频率</a> <a href="/tags/%E6%95%A3%E6%96%87/" style="font-size: 16px; color: #999">散文</a> <a href="/tags/%E6%96%B0%E5%86%A0/" style="font-size: 22px; color: #99a9bf">新冠</a> <a href="/tags/%E6%9D%82%E6%96%87/" style="font-size: 19px; color: #99a1ac">杂文</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 16px; color: #999">电影</a> <a href="/tags/%E7%9B%AE%E5%BD%95/" style="font-size: 16px; color: #999">目录</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 18px; color: #999ea6">算法</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fa fa-archive" aria-hidden="true"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">39</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/03/"><span class="card-archive-list-date">三月 2020</span><span class="card-archive-list-count">34</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/02/"><span class="card-archive-list-date">二月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/03/"><span class="card-archive-list-date">三月 2019</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/10/"><span class="card-archive-list-date">十月 2018</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2017/07/"><span class="card-archive-list-date">七月 2017</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2017/05/"><span class="card-archive-list-date">五月 2017</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item more is-center"><a class="card-archive-list-link-more" href="/archives">
+              <span>查看更多</span><i class="fa fa-angle-right" aria-hidden="true"></i></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fa fa-line-chart" aria-hidden="true"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">127</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" start_date="3/2/2014 00:00:00">     </div></div><div class="webinfo-item"><div class="webinfo-site-wordcount-name">本站总字数 :</div><div class="webinfo-site-wordcount">616.8k</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2014 - 2020 By 蕾米亚</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text"><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script id="ribbon_piao" mobile="true" src="/js/third-party/piao.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="/js/third-party/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/search/local-search.js"></script><script>var endLoading = function () {
+  document.body.style.overflow = 'auto';
+  document.getElementById('loading-box').classList.add("loaded")
+}
+window.addEventListener('load',endLoading)</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body></html>

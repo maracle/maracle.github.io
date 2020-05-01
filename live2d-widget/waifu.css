@@ -1,4 +1,4 @@
-<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script></head><body>#waifu-toggle {
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>#waifu-toggle {
 	background-color: #fa0;
 	border-radius: 5px;
 	bottom: 66px;
@@ -307,4 +307,3 @@
 		transform: translate(0, 0) rotate(0);
 	}
 }
-</body></html>
