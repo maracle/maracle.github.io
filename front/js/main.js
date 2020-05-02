@@ -140,10 +140,10 @@ $(function() {
       box_shadow: '#3279ea',
       icon: 'img/xiaozhong.png',
     }, {
-      name: '谷歌',
-      link: 'https://www.google.com/',
+      name: '威锋论坛',
+      link: 'https://www.feng.com/forum',
       box_shadow: '#62677b',
-      icon: 'img/google-xs.png',
+      icon: 'img/weifeng.png',
     }, {
       name: '水木社区',
       link: 'https://www.newsmth.net/nForum/#!mainpage',
