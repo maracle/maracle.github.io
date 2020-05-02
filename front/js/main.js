@@ -75,15 +75,15 @@ function rgb2hex(rgb) {
 $(function() {
   var bookmark = {
     data: [{
-      name: '开发日志',
-      link: 'http://kksan.top/posts/12023/',
+      name: '哔哩哔哩',
+      link: 'https://www.bilibili.com/',
       box_shadow: '#F18033',
-      icon: 'img/log.png',
+      icon: 'img/bilibili-xs.png',
     }, {
-      name: '酷安',
-      link: 'https://www.coolapk.com',
+      name: '淘宝',
+      link: 'https://www.taobao.com/',
       box_shadow: '#11B063',
-      icon: 'img/coolapk.png',
+      icon: 'img/taobao-xs.png',
     }, {
       name: 'Via插件',
       link: 'http://via-app.cn',
@@ -95,20 +95,20 @@ $(function() {
       box_shadow: '#F2584A',
       icon: 'img/headline.png',
     }, {
-      name: '知乎',
-      link: 'https://www.zhihu.com/',
+      name: '扇贝',
+      link: 'https://www.shanbay.com/',
       box_shadow: '#0078D8',
-      icon: 'img/zhihulogo.png',
+      icon: 'img/shanbay.png',
     }, {
       name: '小米商城',
       link: 'https://www.mi.com/',
       box_shadow: '#F57923',
       icon: 'img/mi.png',
     }, {
-      name: 'unsplash',
-      link: 'https://unsplash.com/',
+      name: '微博',
+      link: 'https://www.weibo.com/',
       box_shadow: '#2C2C2C',
-      icon: 'img/unsplash.png',
+      icon: 'img/weibo-xs.png',
     }, {
       name: '豆瓣',
       link: 'https://www.douban.com/',
@@ -125,10 +125,10 @@ $(function() {
       box_shadow: '#fe7700',
       icon: 'img/douyu.png',
     }, {
-      name: 'XDA',
-      link: 'https://www.xda-developers.com/',
+      name: '吾爱破解',
+      link: 'https://www.52pojie.cn/',
       box_shadow: '#AC6E2F',
-      icon: 'img/xda.png',
+      icon: 'img/wuaipojie.png',
     }, {
       name: '少数派',
       link: 'https://sspai.com/',
@@ -140,10 +140,35 @@ $(function() {
       box_shadow: '#3279ea',
       icon: 'img/xiaozhong.png',
     }, {
-      name: '数字尾巴',
-      link: 'https://www.dgtle.com/',
+      name: '谷歌',
+      link: 'https://www.google.com/',
       box_shadow: '#62677b',
-      icon: 'img/shuziweiba.png',
+      icon: 'img/google-xs.png',
+    }, {
+      name: '水木社区',
+      link: 'https://www.newsmth.net/nForum/#!mainpage',
+      box_shadow: '#7C5DC7',
+      icon: 'img/shuimu.png',
+    }, {
+      name: 'V2EX',
+      link: 'https://www.v2ex.com/',
+      box_shadow: '#7C5DC7',
+      icon: 'img/v2ex.png',
+    }, {
+      name: '千千音乐',
+      link: 'http://music.taihe.com/',
+      box_shadow: '#7C5DC7',
+      icon: 'img/qianqianyinyue.png',
+    }, {
+      name: '九天音乐',
+      link: 'http://www.9sky.com/',
+      box_shadow: '#7C5DC7',
+      icon: 'img/jiutianyinyue.png',
+    }, {
+      name: '网易云音乐',
+      link: 'https://music.163.com/',
+      box_shadow: '#7C5DC7',
+      icon: 'img/wangyiyunyinyue.png',
     }, {
       name: '疫情跟踪',
       link: 'https://ncov.dxy.cn/ncovh5/view/pneumonia',
@@ -164,8 +189,8 @@ $(function() {
     }
     $('#folder ul').append(addList);
   }
-  var hint2 = '<p><br>2020.04.04，深切哀悼。<br>愿逝者安息，生者奋发，祖国昌盛。</p>';
-  $('#hint2').append(hint2);
+  // var hint2 = '<p><br>2020.04.04，深切哀悼。<br>愿逝者安息，生者奋发，祖国昌盛。</p>';
+  // $('#hint2').append(hint2);
 })
 // 添加书签结束
 
