@@ -253,7 +253,8 @@ ul {
 
 .folder-item-box p {
 	font-size: 12px;
-	color: #969696;
+	color: #FDFEFE;
+	/* #969696; */
 	width: 100%;
 	margin: 10px 0 0 0;
 	text-align: center;

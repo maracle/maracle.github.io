@@ -170,6 +170,56 @@ $(function() {
       box_shadow: '#7C5DC7',
       icon: 'img/wangyiyunyinyue.png',
     }, {
+      name: '网易云音乐',
+      link: 'https://music.163.com/',
+      box_shadow: '#7C5DC7',
+      icon: 'img/wangyiyunyinyue.png',
+    }, {
+      name: '网易云音乐',
+      link: 'https://music.163.com/',
+      box_shadow: '#7C5DC7',
+      icon: 'img/wangyiyunyinyue.png',
+    }, {
+      name: '网易云音乐',
+      link: 'https://music.163.com/',
+      box_shadow: '#7C5DC7',
+      icon: 'img/wangyiyunyinyue.png',
+    }, {
+      name: '网易云音乐',
+      link: 'https://music.163.com/',
+      box_shadow: '#7C5DC7',
+      icon: 'img/wangyiyunyinyue.png',
+    }, {
+      name: '网易云音乐',
+      link: 'https://music.163.com/',
+      box_shadow: '#7C5DC7',
+      icon: 'img/wangyiyunyinyue.png',
+    }, {
+      name: '网易云音乐',
+      link: 'https://music.163.com/',
+      box_shadow: '#7C5DC7',
+      icon: 'img/wangyiyunyinyue.png',
+    }, {
+      name: '网易云音乐',
+      link: 'https://music.163.com/',
+      box_shadow: '#7C5DC7',
+      icon: 'img/wangyiyunyinyue.png',
+    }, {
+      name: '网易云音乐',
+      link: 'https://music.163.com/',
+      box_shadow: '#7C5DC7',
+      icon: 'img/wangyiyunyinyue.png',
+    }, {
+      name: '网易云音乐',
+      link: 'https://music.163.com/',
+      box_shadow: '#7C5DC7',
+      icon: 'img/wangyiyunyinyue.png',
+    }, {
+      name: '网易云音乐',
+      link: 'https://music.163.com/',
+      box_shadow: '#7C5DC7',
+      icon: 'img/wangyiyunyinyue.png',
+    }, {
       name: '疫情跟踪',
       link: 'https://ncov.dxy.cn/ncovh5/view/pneumonia',
       box_shadow: '#7C5DC7',

@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>二十世纪十大算法 | 彭彭和丁满</title><meta name="description" content="转载自：https:&#x2F;&#x2F;zhangshuqiao.org&#x2F;2020-02&#x2F;二十世纪十大算法&#x2F; 算法（Algorithm）一词来源于公元九世纪的波斯数学家、天文学家及地理学家花拉子米（Muhammad ibn Musa al-Khwarizmi）（「Algorithm」一词本身兴起于 1950 年左右。虽然对其起源的考证有很多不同的观点，但一种较为可靠的说法是「Algorism」，由此可以追溯到花拉"><meta name="keywords" content="算法"><meta name="author" content="蕾米亚"><meta name="copyright" content="蕾米亚"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://hm.baidu.com"/><link rel="dns-prefetch" href="https://hm.baidu.com"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="二十世纪十大算法"><meta name="twitter:description" content="转载自：https:&#x2F;&#x2F;zhangshuqiao.org&#x2F;2020-02&#x2F;二十世纪十大算法&#x2F; 算法（Algorithm）一词来源于公元九世纪的波斯数学家、天文学家及地理学家花拉子米（Muhammad ibn Musa al-Khwarizmi）（「Algorithm」一词本身兴起于 1950 年左右。虽然对其起源的考证有很多不同的观点，但一种较为可靠的说法是「Algorism」，由此可以追溯到花拉"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/52.png"><meta property="og:type" content="article"><meta property="og:title" content="二十世纪十大算法"><meta property="og:url" content="http://omimo.ga/2017/84415d41.html"><meta property="og:site_name" content="彭彭和丁满"><meta property="og:description" content="转载自：https:&#x2F;&#x2F;zhangshuqiao.org&#x2F;2020-02&#x2F;二十世纪十大算法&#x2F; 算法（Algorithm）一词来源于公元九世纪的波斯数学家、天文学家及地理学家花拉子米（Muhammad ibn Musa al-Khwarizmi）（「Algorithm」一词本身兴起于 1950 年左右。虽然对其起源的考证有很多不同的观点，但一种较为可靠的说法是「Algorism」，由此可以追溯到花拉"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/52.png"><meta property="article:published_time" content="2017-07-16T10:42:34.000Z"><meta property="article:modified_time" content="2020-03-13T09:02:07.353Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="http://omimo.ga/2017/84415d41.html"><link rel="prev" title="Python基础知识之文件与IO" href="http://omimo.ga/2017/2e3889bd.html"><link rel="next" title="Python—Virtualenv---pyenv简明教程(MAC版)" href="http://omimo.ga/2017/5c1674cb.html"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?568a96aacae5c6fda285d9376b556b06";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"http://www.omimo.ga","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: true  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/img/longmao.gif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">129</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">51</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">23</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 列表</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-folder-open"></i><span> 书籍</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/front/"><i class="fa-fw fa fa-link"></i><span> 导航</span></a></li><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#蒙特卡洛方法"><span class="toc-number">1.</span> <span class="toc-text">蒙特卡洛方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线性规划的单纯形法"><span class="toc-number">2.</span> <span class="toc-text">线性规划的单纯形法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Krylov-子空间迭代法"><span class="toc-number">3.</span> <span class="toc-text">Krylov 子空间迭代法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Householder-形式化矩阵计算"><span class="toc-number">4.</span> <span class="toc-text">Householder 形式化矩阵计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化的-Fortran-编译器"><span class="toc-number">5.</span> <span class="toc-text">优化的 Fortran 编译器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QR-分解"><span class="toc-number">6.</span> <span class="toc-text">QR 分解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快速排序"><span class="toc-number">7.</span> <span class="toc-text">快速排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快速傅里叶变换"><span class="toc-number">8.</span> <span class="toc-text">快速傅里叶变换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#整数关系探测算法"><span class="toc-number">9.</span> <span class="toc-text">整数关系探测算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快速多极算法"><span class="toc-number">10.</span> <span class="toc-text">快速多极算法</span></a></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><div class="post-bg" id="nav" style="background-image: url(https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/52.png)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">彭彭和丁满</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 列表</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-folder-open"></i><span> 书籍</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/front/"><i class="fa-fw fa fa-link"></i><span> 导航</span></a></li><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">二十世纪十大算法</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2017-07-16 18:42:34"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2017-07-16</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-03-13 17:02:07"><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-03-13</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>字数总计:</span><span class="word-count">5.4k</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>阅读时长: 18 分钟</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-comment-o" aria-hidden="true"></i><span>评论数:</span><a href="/2017/84415d41.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2017/84415d41.html" itemprop="commentCount"></span></a></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><p>转载自：<a href="https://zhangshuqiao.org/2020-02/二十世纪十大算法/" target="_blank" rel="noopener">https://zhangshuqiao.org/2020-02/二十世纪十大算法/</a></p>
+<p>算法（Algorithm）一词来源于公元九世纪的波斯数学家、天文学家及地理学家花拉子米（Muhammad ibn Musa al-Khwarizmi）（「Algorithm」一词本身兴起于 1950 年左右。虽然对其起源的考证有很多不同的观点，但一种较为可靠的说法是「Algorism」，由此可以追溯到花拉子米。比较有趣的是，「代数」（Algebra）一词亦与花拉子米有关 —— 这来源于他的一本与代数没有什么联系的著作）。而世界上最早的算法，出现的甚至比这更早 —— 欧几里得的辗转相除法，诞生于公元三世纪。今日我们所说的算法，可以参见高德纳（Donald Ervin Knuth）在他的著作《计算机程序设计艺术（The Art of Computer Programming）》里的描述（可参阅《计算机程序设计艺术（中文版）第一卷第三版：基本算法》的第 3 至 4 页）：</p>
+<ul>
+<li>输入：一个算法必须有零个或以上输入量。</li>
+<li>输出：一个算法应有一个或以上输出量，输出量是算法计算的结果。</li>
+<li>明确性：算法的描述必须无歧义，以保证算法的实际执行结果是精确地匹配要求或期望，通常要求实际运行结果是确定的。</li>
+<li>有限性：依据图灵的定义，一个算法是能够被任何图灵完全系统模拟的一串运算，而图灵机只有有限个状态、有限个输入符号和有限个转移函数（指令）。而一些定义更规定算法必须在有限个步骤内完成任务。</li>
+<li>有效性：又称可行性。能够实现，算法中描述的操作都是可以通过已经实现的基本运算执行有限次来实现。</li>
+</ul>
+<p>本文将要介绍的二十世纪十大算法，最早由 Jack Dongarra 和 Francis Sullivan 在 2000 年提出（SIAM 上的一篇报道使其广泛传播）。他们选择了「对 20 世纪科学与工程的发展和实践影响最大的 10 种算法」，分别是：</p>
+<ul>
+<li>蒙特卡洛方法（Monte Carlo method），John von Neumann, Stan Ulam 和 Nick Metropolis 在 1946 年提出</li>
+<li>线性规划的单纯形法（Simplex method for linear programming），George Dantzig 在 1947 年提出</li>
+<li>Krylov 子空间迭代法（Krylov subspace iteration methods），Magnus Hestenes, Eduard Stiefel 和 Cornelius Lanczos 在 1950 年提出</li>
+<li>Householder 形式化矩阵计算（Decompositional approach to matrix computations），Alston Householder 在 1951 年提出</li>
+<li>优化的 Fortran 编译器（Fortran optimizing compiler），John Backus 在 1957 年提出</li>
+<li>QR 分解（QR algorithm），J.G.F. Francis 在 1959-61 年提出</li>
+<li>快速排序（Quicksort），Tony Hoare 在 1962 年提出</li>
+<li>快速傅里叶变换（Fast Fourier transform），James Cooley 和 John Tukey 在 1965 年提出</li>
+<li>整数关系探测算法（Integer relation detection algorithm），Helaman Ferguson 和 Rodney Forcade 在 1977 年提出</li>
+<li>快速多极算法（Fast multipole algorithm），Leslie Greengard 和 Vladimir Rokhlin 在 1987 年提出</li>
+</ul>
+<p>下面将逐一介绍这些算法。为了明确地表达思想，这里会给出一些示例代码。</p>
+<h2 id="蒙特卡洛方法"><a href="#蒙特卡洛方法" class="headerlink" title="蒙特卡洛方法"></a>蒙特卡洛方法</h2><blockquote>
+<p>蒙特卡洛方法是 1940 年代中期由于科学技术的发展和电子计算机的发明，而提出的一种以概率统计理论为指导的数值计算方法。是指使用随机数（或更常见的伪随机数）来解决很多计算问题的方法。</p>
+</blockquote>
+<blockquote>
+<p>20 世纪 40 年代，冯・诺伊曼，斯塔尼斯拉夫・乌拉姆和尼古拉斯・梅特罗波利斯在洛斯阿拉莫斯国家实验室为核武器计划工作时，发明了蒙特卡洛方法。乌拉姆的叔叔经常在摩纳哥的蒙特卡洛赌场输钱，而蒙特卡洛方法正是以概率为基础的方法，故因此得名。（这一段历史来自维基百科中的「蒙地卡羅方法」词条）</p>
+</blockquote>
+<p>蒙特卡洛方法又称随机抽样或统计试验方法。其核心正是取样的思想，因而它常用来通过随机模拟计算概率或者期望。除此之外，它的另一个重要作用是计算积分：在积分区间上随机撒点，通过计算这些点上的函数值，再进行平均，得到积分结果。在计算高维的积分时，这将会特别有用 —— 例如平衡态统计物理中的伊辛模型（Ising model）。在组态足够多的情况下，常规的积分算法没有任何希望完成路径积分。而用蒙特卡洛方法做重点取样，却可以较少的代价完成计算。这时的问题就转化为如何寻找要计算的组态。</p>
+<p>一种可行的方法是，按照一定规则以及通过随机演化构造出下一个组态，在这个过程中，每个组态只依赖于它之前的那个组态，这个过程被称为马尔可夫过程。</p>
+<p>下面是一个用 Metropolis 算法（Metropolis algorithm）来实现马尔可夫过程的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">x &#x3D; np.ones(20)</span><br><span class="line">def S(x):</span><br><span class="line">  return np.sum(np.power(np.diff(x), 2)) \</span><br><span class="line">    + np.sum(np.power(x, 2)) &#x2F; 4</span><br><span class="line">def update(x):</span><br><span class="line">  print(x)</span><br><span class="line">  for j in range(20):</span><br><span class="line">    s &#x3D; S(x)</span><br><span class="line">    xi &#x3D; np.random.random() * 2.8 - 1.4</span><br><span class="line">    tmp &#x3D; x[j]</span><br><span class="line">    x[j] +&#x3D; xi</span><br><span class="line">    delta &#x3D; S(x) - s</span><br><span class="line">    if delta &lt; 0:</span><br><span class="line">      continue</span><br><span class="line">    eta &#x3D; np.random.random()</span><br><span class="line">    if np.exp(-delta) &gt; eta:</span><br><span class="line">      continue</span><br><span class="line">    x[j] &#x3D; tmp</span><br><span class="line">for i in range(1000):</span><br><span class="line">  update(x)</span><br></pre></td></tr></table></figure>
+
+<p>这是一个数值路径积分的案例，其物理背景是谐振子。其中为位移，为格点上的作用量，不难得到：其中为谐振子势，可以取。</p>
+<p>先给定一组初始的组态满足周期性边界条件。这里取为 20，初始组态为。依次从到进行更新。对于第个元素的更新：在区间之间产生一个随机数，然后更新，并计算 。如果，接收新的；如果，在之间产生一个随机数，如果，接收新的值，否则放弃。这里不能取得太大，否则接收率很低；也不能太小，否则每次更新组态变动很小。这样，用 Metropolis 算法就可以产生足够多的组态。</p>
+<h2 id="线性规划的单纯形法"><a href="#线性规划的单纯形法" class="headerlink" title="线性规划的单纯形法"></a>线性规划的单纯形法</h2><p>所谓线性规划，简单的说，就是在给定一组线性约束条件（包括等式和不等式）下，最优化一个线性函数。</p>
+<p>假设有 n 个变量和 m 个约束。线性规划的标准形式如下：</p>
+<p>几何上，线性约束条件的集合相当于一个凸包或凸集，叫做可行域。而单纯形是维中的个顶点的凸包。单纯形算法利用凸包的顶点构造一个可能的解，然后沿着凸包的边走到目标函数值更高的另一个顶点，不断执行此过程，直至到达最优解为止。（除了可能遇到的病态的情况，需要进行额外的判断）</p>
+<p>单纯形法的一般解题步骤可归纳如下：</p>
+<ul>
+<li>把线性规划问题的约束方程组表达成典范型方程组，找出基本可行解作为初始基可行解。</li>
+<li>若基本可行解不存在，即约束条件有矛盾，则问题无解。</li>
+<li>若基本可行解存在，从初始基可行解作为起点，根据最优性条件和可行性条件，引入非基变量取代某一基变量，找出目标函数值更优的另一基本可行解。</li>
+<li>按步骤 3 进行迭代，直到对应检验数满足最优性条件（这时目标函数值不能再改善），即得到问题的最优解。</li>
+<li>若迭代过程中发现问题的目标函数值无界，则终止迭代。</li>
+</ul>
+<h2 id="Krylov-子空间迭代法"><a href="#Krylov-子空间迭代法" class="headerlink" title="Krylov 子空间迭代法"></a>Krylov 子空间迭代法</h2><p>Krylov 子空间迭代法是一个求多维函数的极值的算法。它包含两部分：C. Lanczos 提出的构建 Krylov 子空间的方法；以及由 M. Hestenes 和 E. Stiefel 提出来的共轭梯度（Conjugate gradient）算法。</p>
+<p>我们考虑线性方程组的求解问题。假设 是阶实对称正定矩阵。求解线性方程组的其中一种思路是将它转化为在维向量空间求函数最小值的问题，这个函数是下面的 元二次函数这个最小值点必定满足条件 ，不难证明，这样得到的 n 个方程就是线性方程组。这说明方程组的解就是 元二次函数 的极小点，现在的问题是如何有效地寻找多元二次函数的最小值。</p>
+<p>给定初始向量 ，第一步选负梯度方向为搜索方向，即 ，于是有接下来，共轭梯度法的想法是，搜索方向不仅仅考虑，而是在过点 由向量 和 所张成的平面内寻找函数的最小值，记为</p>
+<p>直接计算可得到两个方程</p>
+<p>其解写为。假设要求的极小值为 ，那么可以令新的搜索方向则为<br>令，得到那么就可以直接写成另外，搜索步长是由 给出的，我们可以令，有下一个迭代的解为<br>而新的残差定义为<br>可以继续迭代下去，直到机器精度的限制。</p>
+<p>综上所述，Krylov 子空间迭代法用伪代码表示为</p>
+<h2 id="Householder-形式化矩阵计算"><a href="#Householder-形式化矩阵计算" class="headerlink" title="Householder 形式化矩阵计算"></a>Householder 形式化矩阵计算</h2><p>Householder 形式化矩阵中的一个重要内容是 Householder 变换。对于维的欧氏空间，我们可以对指定的矢量进行镜面反射（归根结底来说，就是让矢量与「镜面」平行的分量不变，而与之垂直的分量反向），而这个「镜面」是一个维的子空间，可以由它的法向量唯一确定。换句话说，对于，可以构造如下的矩阵：其中是矢量的欧氏模方。当我们将这个矩阵乘以时，即，就实现了镜面反射。</p>
+<p>这个变换就是 Householder 变换，相应的称为 Householder 矢量，称为与相对应的 Householder 矩阵。由于它具有很好的性质，实际的计算通过矢量的内积即可完成，具有的复杂度；而无需计算更复杂的矩阵乘法。</p>
+<p>进一步的，我们可以把 通过 Householder 变换，变换成为只有第 个方向有非零分量的矢量：</p>
+<p>这里只需要把 取为 ，而矢量取为 。重复此操作，即可将矩阵约化为上三角形式。</p>
+<p>下面是 Householder 变换的一种实现。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">def householder(matrix):</span><br><span class="line">  N &#x3D; len(matrix)</span><br><span class="line">  Q &#x3D; 1</span><br><span class="line">  R &#x3D; matrix.copy()</span><br><span class="line">  for i in range(N - 1):</span><br><span class="line">    x &#x3D; np.array([[R[j, i] for j in range(i, N)]])</span><br><span class="line">    sigma &#x3D; np.linalg.norm(x)</span><br><span class="line">    x[0, 0] -&#x3D; sigma</span><br><span class="line">    v &#x3D; x &#x2F; np.linalg.norm(x)</span><br><span class="line">    H_hat &#x3D; np.identity(N - i) - 2 * v * v.transpose()</span><br><span class="line">    H &#x3D; np.zeros((N, N))</span><br><span class="line">    for m in range(N):</span><br><span class="line">      for n in range(N):</span><br><span class="line">        if m &lt; i and n &lt; i and m &#x3D;&#x3D; n:</span><br><span class="line">          H[m, n] &#x3D; 1</span><br><span class="line">        elif m &gt;&#x3D; i and n &gt;&#x3D; i:</span><br><span class="line">          H[m, n] &#x3D; H_hat[m - i, n - i]</span><br><span class="line">    Q *&#x3D; H</span><br><span class="line">    R &#x3D; H * R</span><br><span class="line">    print(R)</span><br><span class="line">  return [Q, R]</span><br><span class="line"></span><br><span class="line">mat &#x3D; np.matrix([[0, -15, 14], [4, 32, 2], [3, -1, 4]])</span><br><span class="line">print(householder(mat))</span><br></pre></td></tr></table></figure>
+
+<p>不过在实际计算中，更常见的是通过 Hessenberg-Householder<br>约化 (Hessenberg-Householder reduction) 将矩阵变换为 Hessenberg 形式，再利用后面的 QR 分解进行进一步处理。过程如下：</p>
+<h2 id="优化的-Fortran-编译器"><a href="#优化的-Fortran-编译器" class="headerlink" title="优化的 Fortran 编译器"></a>优化的 Fortran 编译器</h2><p>严格来说，这并不是一个「算法」，而是一套完整的编译系统。</p>
+<p>Fortran 语言是为了满足数值计算的需求而发展出来的。早在 1953 年，IBM 的 John Backus 便提出了开发全新的计算机语言的想法。四年后，他所领导的团队成功开发出了第一套 Fortran 语言，这也是世界上第一个被正式采用并流传至今的高级编程语言。</p>
+<p>Fortran 可以直接对矩阵和复数进行运算，这点被 Matlab 继承。对于矩阵中「行优先」还是「列优先」的问题，甚至可以在 numpy 中看到 Fortran 的影子。</p>
+<p>在 1998 年出版的 <em>IEEE Annals of the History of Computing</em> 中，John Backus 回忆道：</p>
+<blockquote>
+<p>(The compiler) produced code of such efficiency that its output would startle the programmers who studied it.</p>
+</blockquote>
+<p>虽然今日 Fortran 已经不再是数值分析和科学计算的绝对选择（C++，Python，Matlab 和 R 等后起之秀都在诸多领域发挥着作用，一些语言在效率上与 Fortran 不相上下，而开发成本更低。，但它却是那个时代浓墨重彩的一笔，为推动计算机科学的发展做出了巨大的贡献。</p>
+<h2 id="QR-分解"><a href="#QR-分解" class="headerlink" title="QR 分解"></a>QR 分解</h2><p>QR 算法是目前各界应用的最为广泛的数值求解本征值和本征矢量的算法之一。为了求出一个矩阵的全部本征值和本征矢量，一种思路是这样的：对于，构造正交变换，使得是一个上三角矩阵，而是实正交矩阵。正交变换保证了的本征值与完全一致，而上三角矩阵的本征值就是对角元，由此得解。</p>
+<p>QR 分解的两种典型方法是 Householder 变换和 Givens 旋转。Householder 变换是前述的 Householder 形式化矩阵计算的一部分。因此这里重点介绍 QR 分解的 Givens 旋转方法。</p>
+<p>Givens 旋转的基本原理非常简单，我们取：</p>
+<p>称为 Givens 变换矩阵。由此可以消去向量的某个分量，例如：</p>
+<p>其中，且</p>
+<p>通过不断地构造这样的 Givens 变换矩阵，我们可以对矩阵中任何一列进行消去操作。最终可以达到这样的效果：第一列中第一行以下的元素变为 0，第二列中第二行以下的元素变为 0…… 直到得到一个上三角矩阵，完成 QR 分解。</p>
+<p>一种实现如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">def givens(matrix):</span><br><span class="line">  N &#x3D; len(matrix)</span><br><span class="line">  Q &#x3D; 1.0</span><br><span class="line">  R &#x3D; matrix.copy()</span><br><span class="line">  for i in range(N - 1):</span><br><span class="line">    for j in range(i + 1, N):</span><br><span class="line">      if R[i, j] &#x3D;&#x3D; 0:</span><br><span class="line">        continue</span><br><span class="line">      norm &#x3D; (R[i, i] ** 2 + R[j, i] ** 2) ** 0.5</span><br><span class="line">      cos &#x3D; R[i, i] &#x2F; norm</span><br><span class="line">      sin &#x3D; R[j, i] &#x2F; norm</span><br><span class="line">      G &#x3D; np.identity(N)</span><br><span class="line">      G[i, i] &#x3D; G[j, j] &#x3D; cos</span><br><span class="line">      G[i, j] &#x3D; sin</span><br><span class="line">      G[j, i] &#x3D; -sin</span><br><span class="line">      Q *&#x3D; G.transpose()</span><br><span class="line">      R &#x3D; G * R</span><br><span class="line">      print(R)</span><br><span class="line">  return [Q, R]</span><br><span class="line"></span><br><span class="line">mat &#x3D; np.matrix([[0, -15, 14], [4, 32, 2], [3, -1, 4]])</span><br><span class="line">print(givens(mat))</span><br></pre></td></tr></table></figure>
+
+<p>考虑到在进行 Givens 变换时，许多元素是不变的，这个算法还有优化的余地，即不必直接进行矩阵乘法。（对于 Python 本身来讲，这样也不错了，毕竟 numpy 的效率还是有保证的）不过，它已经足够展现出 Givens 变换实现 QR 分解的过程。</p>
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>快速排序是对冒泡排序的一种改进，由 Tony Hoare 在 1962 年提出。快速排序使用分治法（Divide and conquer, D&amp;C）策略来把一个序列分为两个子序列，然后递归地进行排序。其步骤为：</p>
+<ul>
+<li>从数列中挑出一个元素，称为「基准」（pivot），</li>
+<li>重新排序数列，所有比基准值小的元素移到基准前面，所有比基准值大的元素移到基准后面。在这个操作结束之后，该基准就处于数列的中间位置。</li>
+<li>递归地把小于基准值元素的子数列和大于基准值元素的子数列排序。</li>
+</ul>
+<p>递归到最后时，每个子数列的元素个数是零或一，也就是已经排序好了。</p>
+<p>该算法的平均时间复杂度为，最坏情况下则为。下面是一种实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">def quickSort(alist, first, last):</span><br><span class="line">  if first &gt;&#x3D; last:</span><br><span class="line">    return</span><br><span class="line"></span><br><span class="line">  pivot &#x3D; alist[first]</span><br><span class="line">  left &#x3D; first + 1</span><br><span class="line">  right &#x3D; last</span><br><span class="line">  while right &gt;&#x3D; left:</span><br><span class="line">    while left &lt;&#x3D; right and alist[left] &lt;&#x3D; pivot:</span><br><span class="line">      left +&#x3D; 1</span><br><span class="line"></span><br><span class="line">    while right &gt;&#x3D; left and alist[right] &gt;&#x3D; pivot:</span><br><span class="line">      right -&#x3D; 1</span><br><span class="line"></span><br><span class="line">    if right &gt;&#x3D; left:</span><br><span class="line">      alist[left], alist[right] &#x3D; alist[right], alist[left]</span><br><span class="line"></span><br><span class="line">  alist[first], alist[right] &#x3D; alist[right], alist[first]</span><br><span class="line"></span><br><span class="line">  quickSort(alist, first, right - 1)</span><br><span class="line">  quickSort(alist, right + 1, last) </span><br><span class="line"></span><br><span class="line">alist &#x3D; [np.random.randint(0, 100) for i in range(20)]</span><br><span class="line">quickSort(alist, 0, len(alist) - 1)</span><br><span class="line">print(alist)</span><br></pre></td></tr></table></figure>
+
+<h2 id="快速傅里叶变换"><a href="#快速傅里叶变换" class="headerlink" title="快速傅里叶变换"></a>快速傅里叶变换</h2><p>快速傅里叶变换，或者说 FFT，是快速计算序列的离散傅里叶变换（Discrete Fourier Transform, DFT）或其逆变换的方法。对于长度为的序列，将这个数据的相因子记为它实际上是 1 在复平面的次方根。那么其离散傅里叶变换可写为直接按这个定义求值的复杂度为。我们可以进一步将求和中的奇数和偶数的分开这个公式又被称为 Danielson-Lanczos 引理 (Danielson-Lanscos lemma)，它将一个长度为的傅里叶变换改写为两个长度为的傅里叶变换的线性组合。它的最大作用在于，这种改写可以继续迭代地进行下去，直到求解的问题变为一个长度为 1 的傅里叶变换 —— 即不需要变换（值得注意的是，在某些情况下，需要提前向序列中填充 0 元素，使其元素个数为 2 的幂次，才能递归进行到长度为 1 的傅里叶变换。从数学上来讲，这不会对结果产生影响，并且由于 FFT 算法在时间复杂度上的优势，大部分情况下这仍然会远远优于传统的 DFT 算法）。这就是 Cooley-Tukey FFT 算法，由 James Cooley 和 John Tukey 提出。可见，这也是一个使用分治法的例子。</p>
+<p>一种实现如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">def DFT(x):</span><br><span class="line">  N &#x3D; x.shape[0]</span><br><span class="line">  n &#x3D; np.arange(N)</span><br><span class="line">  k &#x3D; n.reshape((N, 1))</span><br><span class="line">  M &#x3D; np.exp(-2j * np.pi * k * n &#x2F; N)</span><br><span class="line">  return np.dot(M, x)</span><br><span class="line">def FFT(x):</span><br><span class="line">  N &#x3D; x.shape[0]</span><br><span class="line">  if N &#x3D;&#x3D; 1:</span><br><span class="line">    return x</span><br><span class="line">  elif N % 2 &gt; 0:</span><br><span class="line">    raise ValueError(&quot;Size of x must be a power of 2&quot;)</span><br><span class="line">  else:</span><br><span class="line">    X_even &#x3D; FFT(x[::2])</span><br><span class="line">    X_odd &#x3D; FFT(x[1::2])</span><br><span class="line">    factor &#x3D; np.exp(-2j * np.pi * np.arange(N) &#x2F; N)</span><br><span class="line">    return np.concatenate([</span><br><span class="line">      X_even + factor[:int(N &#x2F; 2)] * X_odd,</span><br><span class="line">      X_even + factor[int(N &#x2F; 2):] * X_odd</span><br><span class="line">    ])</span><br><span class="line">x &#x3D; np.random.random(1024)</span><br><span class="line">print(np.allclose(DFT(x), np.fft.fft(x)))</span><br><span class="line">print(np.allclose(FFT(x), np.fft.fft(x)))</span><br></pre></td></tr></table></figure>
+
+<h2 id="整数关系探测算法"><a href="#整数关系探测算法" class="headerlink" title="整数关系探测算法"></a>整数关系探测算法</h2><p>整数关系探测的内容是：给定一组实数，是否存在不全为零的整数，使得：。</p>
+<p>这是一个古老的问题，其历史甚至可以追溯到欧几里德的时代 —— 对于的情况，基于前面提到的欧几里得的辗转相除法的拓展，即可得到解决。关于任意的情况的研究，在 20 世纪 80 年代得到了大量的成果，这一时期诞生了包括 LLL 算法、HJLS 算法、PSOS 算法和 PSLQ 算法在内的诸多整数关系探测算法实现。现代的 LLL 算法已经可以解决时的问题。</p>
+<p>该算法可用于简化量子场论中的 Feynman 图的计算、对高次多项式进行因式分解和实现 Inverse Symbolic Calculator（即给出一个近似值，反推它可能是由哪些科学常数组合成的）。</p>
+<h2 id="快速多极算法"><a href="#快速多极算法" class="headerlink" title="快速多极算法"></a>快速多极算法</h2><p>在物理学中，多极展开的方法应用极为广泛。无论是质量分布产生的重力场、电荷分布产生的电势或电场、电流分布产生的磁矢势和磁场还是电磁波的传播等问题，都可以在一些近似下使用多极展开。这些物理量都可以表达为单极项、偶极项、四极项、八极项等的叠加。在近代物理中，一个典型的范例是，通过原子核的外部多极矩与电子轨域的内部多极矩之间的交互作用能量，计算求得原子的原子核外多极矩。由于从原子核的外多极矩可以给出原子核内部的电荷分布，籍此可以研究原子核的形状。</p>
+<p>下面给出一个在经典电动力学中，电势多极展开的例子。注意到在原点的泰勒级数为</p>
+<p>将这展开式代入电势的方程式，则可得到</p>
+<p>我们关注展开式的前三项。将总电荷（电单极矩）、电偶极矩、电四极矩（Electric quadrupole moment）分别定义为</p>
+<p>则电势的电单极矩、电偶极矩、电四极矩等「笛卡儿多极矩」项的总贡献为</p>
+<p>多极展开在数值模拟领域用途很多。对于相互作用的粒子组成的物理系统，快速多极算法是高效率运算这系统的能量与作用力常使用的一种方法。具体来说，该方法分解所有粒子为几个小群，每一个小群内的粒子正常地互相作用（即通过全部势能），而小群与小群之间的互相作用则是由其多极矩计算求得。</p>
+<p>无论是银河系中的星体的运行，或者蛋白质中的原子间的相互作用，都可以应用快速多极算法进行数值计算。</p>
+<hr>
+<p>在撰写此文时，笔者参考了《算法导论》和《计算物理导论》中有关这些算法的介绍。当然，这是一个庞大的主题，试图用以上这些微不足道的文字去阐述其全部内涵是不现实的。它涉及到了诸多领域的内容，而这篇文章只是介绍了一些皮毛，只有通过理论与实践的结合，才能真正体会到一个算法的精妙，体会到这些前辈们的智慧。</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">蕾米亚</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://omimo.ga/2017/84415d41.html">http://omimo.ga/2017/84415d41.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://omimo.ga" target="_blank">彭彭和丁满</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div><div class="post_share"></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付寶"/><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2017/2e3889bd.html"><img class="prev_cover lazyload" data-src="/pictures/%E4%B8%81%E6%BB%A1.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Python基础知识之文件与IO</div></div></a></div><div class="next-post pull_right"><a href="/2017/5c1674cb.html"><img class="next_cover lazyload" data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover2.gif" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Python—Virtualenv---pyenv简明教程(MAC版)</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2016/d60d8bad.html" title="常见对称和非对称加密算法"><img class="relatedPosts_cover lazyload"data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover0.gif"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2016-09-28</div><div class="relatedPosts_title">常见对称和非对称加密算法</div></div></a></div><div class="relatedPosts_item"><a href="/2015/4afb99c.html" title="LVS的调度算法"><img class="relatedPosts_cover lazyload"data-src="https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/pictures/default_cover5.gif"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2015-02-14</div><div class="relatedPosts_title">LVS的调度算法</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var requestSetting = function (from,set) {
+  var from = from
+  var setting = set.split(',').filter(function(item){
+  return from.indexOf(item) > -1
+  });
+  setting = setting.length == 0 ? from :setting;
+  return setting
+}
+
+var guestInfo = requestSetting(['nick','mail','link'],'nick,mail,link')
+var requiredFields = requestSetting(['nick','mail','link'],'nick,mail')
+
+window.valine = new Valine({
+  el:'#vcomment',
+  appId: 'x8zJ7Nuyh3yChQgtKcdg4zwC-MdYXbMMI',
+  appKey: 'pWRle3EfOO23aYlB3O1SyOQs',
+  notify: false,
+  verify: false,
+  placeholder: 'Please leave your footprints',
+  avatar: 'monsterid',
+  meta: guestInfo,
+  pageSize: '10',
+  lang: 'zh-cn',
+  recordIP: false,
+  serverURLs: '',
+  emojiCDN: '',
+  emojiMaps: "",
+  enableQQ: false,
+  requiredFields: requiredFields
+});</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2014 - 2020 By 蕾米亚</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text"><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script id="ribbon_piao" mobile="true" src="/js/third-party/piao.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="/js/third-party/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/search/local-search.js"></script><script>var endLoading = function () {
+  document.body.style.overflow = 'auto';
+  document.getElementById('loading-box').classList.add("loaded")
+}
+window.addEventListener('load',endLoading)</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body></html>
