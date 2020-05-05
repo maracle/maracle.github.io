@@ -78,127 +78,127 @@ $(function() {
       name: '哔哩哔哩',
       link: 'https://www.bilibili.com/',
       box_shadow: '#F18033',
-      icon: 'img/bilibili-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/bilibili-xs.png',
     }, {
       name: '淘宝',
       link: 'https://www.taobao.com/',
       box_shadow: '#11B063',
-      icon: 'img/taobao-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/taobao-xs.png',
     }, {
       name: 'Via插件',
       link: 'http://via-app.cn',
       box_shadow: '#FA7199',
-      icon: 'img/via.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/via.png',
     }, {
       name: '今日热榜',
       link: 'https://tophub.today/',
       box_shadow: '#F2584A',
-      icon: 'img/headline.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/headline.png',
     }, {
       name: '扇贝',
       link: 'https://www.shanbay.com/',
       box_shadow: '#0078D8',
-      icon: 'img/shanbay.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/shanbay.png',
     }, {
       name: '小米商城',
       link: 'https://www.mi.com/',
       box_shadow: '#F57923',
-      icon: 'img/mi.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/mi.png',
     }, {
       name: '微博',
       link: 'https://www.weibo.com/',
       box_shadow: '#2C2C2C',
-      icon: 'img/weibo-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/weibo-xs.png',
     }, {
       name: '豆瓣',
       link: 'https://www.douban.com/',
       box_shadow: '#37bf4c',
-      icon: 'img/douban.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/douban.png',
     }, {
       name: '虎扑',
       link: 'https://www.hupu.com/',
       box_shadow: '#c01d2f',
-      icon: 'img/hupu.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/hupu.png',
     }, {
       name: '斗鱼',
       link: 'https://www.douyu.com/',
       box_shadow: '#fe7700',
-      icon: 'img/douyu.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/douyu.png',
     }, {
       name: '吾爱破解',
       link: 'https://www.52pojie.cn/',
       box_shadow: '#AC6E2F',
-      icon: 'img/wuaipojie.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/wuaipojie.png',
     }, {
       name: '少数派',
       link: 'https://sspai.com/',
       box_shadow: '#D7191A',
-      icon: 'img/sspai.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/sspai.png',
     }, {
       name: '小众软件',
       link: 'https://www.appinn.com/',
       box_shadow: '#3279ea',
-      icon: 'img/xiaozhong.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/xiaozhong.png',
     }, {
       name: '威锋论坛',
       link: 'https://www.feng.com/forum',
       box_shadow: '#62677b',
-      icon: 'img/weifeng.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/weifeng.png',
     }, {
       name: '水木社区',
       link: 'https://www.newsmth.net/nForum/#!mainpage',
       box_shadow: '#7C5DC7',
-      icon: 'img/shuimu.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/shuimu.png',
     }, {
       name: 'V2EX',
       link: 'https://www.v2ex.com/',
       box_shadow: '#7C5DC7',
-      icon: 'img/v2ex.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/v2ex.png',
     }, {
       name: '千千音乐',
       link: 'http://music.taihe.com/',
       box_shadow: '#7C5DC7',
-      icon: 'img/qianqianyinyue.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/qianqianyinyue.png',
     }, {
       name: '九天音乐',
       link: 'http://www.9sky.com/',
       box_shadow: '#7C5DC7',
-      icon: 'img/jiutianyinyue.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/jiutianyinyue.png',
     }, {
       name: '咪咕音乐',
       link: 'http://music.migu.cn/v3',
       box_shadow: '#7C5DC7',
-      icon: 'img/miguyinyue.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/miguyinyue.png',
     }, {
       name: 'python cookbook',
       link: 'https://python3-cookbook.readthedocs.io/zh_CN/latest/',
       box_shadow: '#7C5DC7',
-      icon: 'img/python.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/python.png',
     }, {
       name: '天涯社区',
       link: 'http://focus.tianya.cn/',
       box_shadow: '#7C5DC7',
-      icon: 'img/tianya.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/tianya.png',
     }, {
       name: '下厨房',
       link: 'http://www.xiachufang.com/',
       box_shadow: '#7C5DC7',
-      icon: 'img/xiachufang.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/xiachufang.png',
     }, {
       name: '东方财富',
       link: 'https://www.eastmoney.com/',
       box_shadow: '#7C5DC7',
-      icon: 'img/dongfangcaifu.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/dongfangcaifu.png',
     }, {
       name: '疫情跟踪',
       link: 'https://ncov.dxy.cn/ncovh5/view/pneumonia',
       box_shadow: '#7C5DC7',
-      icon: 'img/ding.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/ding.png',
     }, {
       name: '疫情辟谣',
       link: 'https://vp.fact.qq.com/home',
       box_shadow: '#00A0E9',
-      icon: 'img/true.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/true.png',
     }]
   }
   for (var i = 0; i < bookmark.data.length; i++) {
@@ -219,140 +219,140 @@ $(function() {
   var search = {
     data: [{
       name: 'baidu',
-      icon: 'img/baidu-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/baidu-xs.png',
       searchlink: 'https://www.baidu.com/s',
       searchname: 'wd',
       color: '#3245df',
       placeholder: '百度一下...'
     }, {
       name: 'google',
-      icon: 'img/google-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/google-xs.png',
       searchlink: 'https://www.google.com/search',
       searchname: 'q',
       color: '#4285f4',
       placeholder: '咕噜咕噜...'
     }, {
       name: 'bing',
-      icon: 'img/bing-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/bing-xs.png',
       searchlink: 'https://cn.bing.com/search',
       searchname: 'q',
       color: '#00868B',
       placeholder: 'Bing搜索...'
     }, {
       name: 'yahoo',
-      icon: 'img/yahoo-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/yahoo-xs.png',
       searchlink: 'https://search.yahoo.com/search',
       searchname: 'p',
       color: '#5f01d1',
       placeholder: 'Yahoo~'
     }, {
       name: 'magi',
-      icon: 'img/magi-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/magi-xs.png',
       searchlink: 'https://magi.com/search',
       searchname: 'q',
       color: 'black',
       placeholder: 'Mag[i]...'
     }, {
       name: 'miji',
-      icon: 'img/miji-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/miji-xs.png',
       searchlink: 'https://mijisou.com/',
       searchname: 'q',
       color: '#575757',
       placeholder: '不追踪你的搜索引擎...'
     }, {
       name: 'sougou',
-      icon: 'img/sougou-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/sougou-xs.png',
       searchlink: 'https://www.sogou.com/web',
       searchname: 'query',
       color: '#f94c18',
       placeholder: '搜狗搜索...'
     }, {
       name: 'duckduckgo',
-      icon: 'img/duckduckgo-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/duckduckgo-xs.png',
       searchlink: 'https://duckduckgo.com',
       searchname: 'q',
       color: '#de5833',
       placeholder: '嘎嘎嘎...'
     }, {
       name: 'doge',
-      icon: 'img/doge-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/doge-xs.png',
       searchlink: 'https://www.dogedoge.com/results',
       searchname: 'q',
       color: '#ffca74',
       placeholder: '手动狗头.jpg'
     }, {
       name: 'wechat',
-      icon: 'img/wechat-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/wechat-xs.png',
       searchlink: 'https://weixin.sogou.com/weixin',
       searchname: 'query',
       color: '#2ca43a',
       placeholder: '搜微信文章...'
     }, {
       name: 'seeres',
-      icon: 'img/seeres-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/seeres-xs.png',
       searchlink: 'https://seeres.com/search',
       searchname: 'q',
       color: '#414baa',
       placeholder: 'private search...'
     }, {
       name: 'quark',
-      icon: 'img/quark-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/quark-xs.png',
       searchlink: 'https://quark.sm.cn/s',
       searchname: 'q',
       color: '#6182f6',
       placeholder: '夸克搜索...'
     }, {
       name: 'taobao',
-      icon: 'img/taobao-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/taobao-xs.png',
       searchlink: 'https://s.taobao.com/search',
       searchname: 'q',
       color: '#FF5B00',
       placeholder: '淘，我喜欢...'
     }, {
       name: 'jingdong',
-      icon: 'img/jingdong-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/jingdong-xs.png',
       searchlink: 'https://search.jd.com/Search',
       searchname: 'keyword',
       color: '#F30213',
       placeholder: '多，快，好，省...'
     }, {
       name: 'bilibili',
-      icon: 'img/bilibili-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/bilibili-xs.png',
       searchlink: 'https://search.bilibili.com/all',
       searchname: 'keyword',
       color: '#e47494',
       placeholder: 'b站是一个学习网站...'
     }, {
       name: 'github',
-      icon: 'img/github-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/github-xs.png',
       searchlink: 'https://github.com/search',
       searchname: 'q',
       color: '#24292e',
       placeholder: '全球最大的开源社区...'
     }, {
       name: 'toutiao',
-      icon: 'img/toutiao-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/toutiao-xs.png',
       searchlink: 'https://m.toutiao.com/search',
       searchname: 'keyword',
       color: '#ed2f28',
       placeholder: '搜今日头条...'
     }, {
       name: 'weibo',
-      icon: 'img/weibo-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/weibo-xs.png',
       searchlink: 'https://s.weibo.com/weibo',
       searchname: 'q',
       color: '#e6162d',
       placeholder: '搜微博...'
     }, {
       name: 'zhihu',
-      icon: 'img/zhihu-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/zhihu-xs.png',
       searchlink: 'https://www.zhihu.com/search',
       searchname: 'q',
       color: '#1087eb',
       placeholder: '我们都是有问题的人...'
     }, {
       name: 'kuaidi',
-      icon: 'img/kuaidi-xs.png',
+      icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/kuaidi-xs.png',
       searchlink: 'https://m.kuaidi100.com/result.jsp',
       searchname: 'nu',
       color: '#317EE7',
@@ -369,12 +369,12 @@ $(function() {
     var id = e.target.id;
     for (var i = 0; i < search.data.length; i++) {
       if (id == search.data[i].name) {
-        document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='img/" + search.data[i].name + ".png'></a>";
+        document.getElementById("state").innerHTML = "<a href='folder://'><img style='width:300px;' src='https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/" + search.data[i].name + ".png'></a>";
         $('#submitButton').css('background-color', search.data[i].color); //按钮bg
         $('#Select').css('color', search.data[i].color); //选择器
         $('#nav').css('display', 'none');
         $('#folder').css('display', 'block');
-        document.getElementById("Select").innerHTML = "<hr>书签 <img src='img/search-change.svg?v=2ae7ab8'>";
+        document.getElementById("Select").innerHTML = "<hr>书签 <img src='https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/search-change.svg?v=2ae7ab8'>";
         $("#inputText").attr("placeholder", search.data[i].placeholder);
         $("#form").attr("action", search.data[i].searchlink);
         $("#inputText").attr("name", search.data[i].searchname);
@@ -437,7 +437,7 @@ $(function() {
 // 显示/干掉壁纸
 var width = $(document).width();
 $('#bg').click(function() {
-  width < 768 ? ($('#main').css('background-image') == 'none' ? ($('#main').css('background-image', 'url(img/bg-xs.jpg)')) : ($('#main').css('background-image', 'none'))) : $('#main').css('background-image') == 'none' ? ($('#main').css('background-image', 'url(img/bg.jpg)')) : ($('#main').css('background-image', 'none'));
+  width < 768 ? ($('#main').css('background-image') == 'none' ? ($('#main').css('background-image', 'url(https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/bg-xs.jpg)')) : ($('#main').css('background-image', 'none'))) : $('#main').css('background-image') == 'none' ? ($('#main').css('background-image', 'url(https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/bg.jpg)')) : ($('#main').css('background-image', 'none'));
   var background = $('#main').css('background-image');
   storage.bg = [background];
 })
@@ -472,7 +472,7 @@ if (time < 5) {
 
 //导航、引擎选择器
 function select() {
-  $('#folder').css('display') == 'block' ? ($('#folder').css('display', 'none'), $('#nav').css('display', 'block'), document.getElementById("Select").innerHTML = "<hr>搜索引擎 <img src='img/search-change.svg?v=2ae7ab8'>") : ($('#nav').css('display', 'none'), $('#folder').css('display', 'block'), document.getElementById("Select").innerHTML = "<hr>书签 <img src='img/search-change.svg?v=2ae7ab8'>");
+  $('#folder').css('display') == 'block' ? ($('#folder').css('display', 'none'), $('#nav').css('display', 'block'), document.getElementById("Select").innerHTML = "<hr>搜索引擎 <img src='https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/search-change.svg?v=2ae7ab8'>") : ($('#nav').css('display', 'none'), $('#folder').css('display', 'block'), document.getElementById("Select").innerHTML = "<hr>书签 <img src='https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/search-change.svg?v=2ae7ab8'>");
 }
 
 // 天气插件
