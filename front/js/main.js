@@ -185,8 +185,8 @@ $(function() {
       box_shadow: '#7C5DC7',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/xiachufang.png',
     }, {
-      name: '东方财富',
-      link: 'https://www.eastmoney.com/',
+      name: '英语口语',
+      link: 'http://www.skesl.com/',
       box_shadow: '#7C5DC7',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/dongfangcaifu.png',
     }, {
