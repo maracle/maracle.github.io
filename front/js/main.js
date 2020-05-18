@@ -187,7 +187,7 @@ $(function() {
     }, {
       name: '英语口语',
       link: 'http://www.skesl.com/',
-      box_shadow: '#7C5DC7',
+      box_shadow: '#EC5F08',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/dongfangcaifu.png',
     }, {
       name: '疫情跟踪',
