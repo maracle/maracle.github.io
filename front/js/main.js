@@ -77,12 +77,12 @@ $(function() {
     data: [{
       name: '哔哩哔哩',
       link: 'https://www.bilibili.com/',
-      box_shadow: '#F18033',
+      box_shadow: '#E47494',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/bilibili-xs.png',
     }, {
       name: '淘宝',
       link: 'https://www.taobao.com/',
-      box_shadow: '#11B063',
+      box_shadow: '#FF5011',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/taobao-xs.png',
     }, {
       name: 'Via插件',
@@ -97,7 +97,7 @@ $(function() {
     }, {
       name: '扇贝',
       link: 'https://www.shanbay.com/',
-      box_shadow: '#0078D8',
+      box_shadow: '#3CD0B5',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/shanbay.png',
     }, {
       name: '小米商城',
@@ -107,27 +107,27 @@ $(function() {
     }, {
       name: '微博',
       link: 'https://www.weibo.com/',
-      box_shadow: '#2C2C2C',
+      box_shadow: '#FB5555',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/weibo-xs.png',
     }, {
       name: '豆瓣',
       link: 'https://www.douban.com/',
-      box_shadow: '#37bf4c',
+      box_shadow: '#04AE0F',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/douban.png',
     }, {
       name: '虎扑',
       link: 'https://www.hupu.com/',
-      box_shadow: '#c01d2f',
+      box_shadow: '#C01D2F',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/hupu.png',
     }, {
       name: '斗鱼',
       link: 'https://www.douyu.com/',
-      box_shadow: '#fe7700',
+      box_shadow: '#FE7700',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/douyu.png',
     }, {
       name: '吾爱破解',
       link: 'https://www.52pojie.cn/',
-      box_shadow: '#AC6E2F',
+      box_shadow: '#FF1700',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/wuaipojie.png',
     }, {
       name: '少数派',
@@ -142,47 +142,47 @@ $(function() {
     }, {
       name: '威锋论坛',
       link: 'https://www.feng.com/forum',
-      box_shadow: '#62677b',
+      box_shadow: '#1B85FF',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/weifeng.png',
     }, {
       name: '水木社区',
-      link: 'https://www.newsmth.net/nForum/#!mainpage',
-      box_shadow: '#7C5DC7',
+      link: 'https://m.newsmth.net/',
+      box_shadow: '#0089CD',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/shuimu.png',
     }, {
       name: 'V2EX',
       link: 'https://www.v2ex.com/',
-      box_shadow: '#7C5DC7',
+      box_shadow: '#F5F5F5',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/v2ex.png',
     }, {
       name: '千千音乐',
       link: 'http://music.taihe.com/',
-      box_shadow: '#7C5DC7',
+      box_shadow: '#E70F1E',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/qianqianyinyue.png',
     }, {
       name: '九天音乐',
       link: 'http://www.9sky.com/',
-      box_shadow: '#7C5DC7',
+      box_shadow: '#FF3232',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/jiutianyinyue.png',
     }, {
       name: '咪咕音乐',
       link: 'http://music.migu.cn/v3',
-      box_shadow: '#7C5DC7',
+      box_shadow: '#FC3265',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/miguyinyue.png',
     }, {
       name: 'python cookbook',
       link: 'https://python3-cookbook.readthedocs.io/zh_CN/latest/',
-      box_shadow: '#7C5DC7',
+      box_shadow: '#FFD450',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/python.png',
     }, {
       name: '天涯社区',
       link: 'http://focus.tianya.cn/',
-      box_shadow: '#7C5DC7',
+      box_shadow: '#06A0F2',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/tianya.png',
     }, {
       name: '下厨房',
       link: 'http://www.xiachufang.com/',
-      box_shadow: '#7C5DC7',
+      box_shadow: '#E93925',
       icon: 'https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/xiachufang.png',
     }, {
       name: '英语口语',
@@ -437,7 +437,7 @@ $(function() {
 // 显示/干掉壁纸
 var width = $(document).width();
 $('#bg').click(function() {
-  width < 768 ? ($('#main').css('background-image') == 'none' ? ($('#main').css('background-image', 'url(https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/bg-xs.jpg)')) : ($('#main').css('background-image', 'none'))) : $('#main').css('background-image') == 'none' ? ($('#main').css('background-image', 'url(https://cdn.jsdelivr.net/gh/maracle/maracle.github.io@master/front/img/bg.jpg)')) : ($('#main').css('background-image', 'none'));
+  width < 768 ? ($('#main').css('background-image') == 'none' ? ($('#main').css('background-image', 'url(/front/img/bg-xs.jpg)')) : ($('#main').css('background-image', 'none'))) : $('#main').css('background-image') == 'none' ? ($('#main').css('background-image', 'url(/front/img/bg.jpg)')) : ($('#main').css('background-image', 'none'));
   var background = $('#main').css('background-image');
   storage.bg = [background];
 })
